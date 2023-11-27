@@ -1,3 +1,4 @@
+import Property from "./property.js";
 export default class Apartment extends Property {
 
   fee;
