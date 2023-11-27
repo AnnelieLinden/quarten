@@ -15,7 +15,7 @@ export async function addProperty(propertyObj) {
 }
 
 export async function login(userLogin) {
-  var response = await fetch('/user/');
+  var response = await fetch('/users/');
   response = await response.json();
   console.log(response);
   response.forEach(user => {
