@@ -1,7 +1,19 @@
 export async function getAllProperties() {
-  const res = await fetch('/data')
-  const data = await res.json()
-  return data
+  const res = await fetch('/data');
+  const data = await res.json();
+  return data;
+}
+
+export async function getAllGeneralMsg() {
+  const res = await fetch('/generalForms');
+  const data = await res.json();
+  return data;
+}
+
+export async function getAllSaleMsg() {
+  const res = await fetch('/saleForms');
+  const data = await res.json();
+  return data;
 }
 
 export async function addProperty(propertyObj) {
