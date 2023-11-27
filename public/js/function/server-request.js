@@ -30,7 +30,6 @@ export async function login(userLogin) {
   var response = await fetch('/users/');
   var validUser = false;
   response = await response.json();
-  console.log(response);
   response.forEach(user => {
     if (user.userName === userLogin.userName) {
       if (user.pass === userLogin.pass) {
