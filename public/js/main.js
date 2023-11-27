@@ -3,6 +3,8 @@ import { getAllProperties, addProperty, login, getOneProperty, getAllGeneralMsg,
 async function main() {
   console.log(await getAllProperties());
   console.log(await login({ "userName": "Sakuya", "pass": "4444" }));
+  console.log(await login({ "userName": "Yukina", "pass": "4444" }));
+  console.log(await login({ "userName": "Sakuya", "pass": "0000" }));
   //console.log(await addProperty({ home: " house" }));
   console.log(await getOneProperty(2));
   console.log(await getAllGeneralMsg());
