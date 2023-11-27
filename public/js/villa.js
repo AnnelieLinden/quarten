@@ -1,4 +1,4 @@
-class Villa extends Property {
+export default class Villa extends Property {
 
   lot;
   garage;

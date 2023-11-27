@@ -1,4 +1,4 @@
-class Apartment extends Property {
+export default class Apartment extends Property {
 
   fee;
   balcony;
