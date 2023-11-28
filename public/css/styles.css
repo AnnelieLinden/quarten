@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Quicksand:wght@300&family=Spirax&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 header>p {
   display: flex;
   justify-content: center;
@@ -39,11 +39,17 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   height: 70vh;
-  justify-content: center;
+
   align-items: center;
   justify-content: space-around;
 }
 
 #content>a {
   font-size: 50px;
+  font-family: 'acme';
+}
+/*---------salePage---------*/
+#saleForm {
+  display: flex;
+  flex-direction: column;
 }
