@@ -1,11 +1,12 @@
+const content = document.querySelector('#content')
+
 
 onhashchange = changePage;
 changePage()
-
 function changePage() {
   console.log('my page will be', location.hash);
   if (location.hash === "#homepage") {
-    document.querySelector('main').innerHTML = `<h1>This is homepage</h1>`;
+    renderHomepage();
   } else if (location.hash === "#sale") {
     document.querySelector('main').innerHTML = '<h1>This is sale page</h1>';
   } else if (location.hash === "#buy") {
@@ -18,21 +19,17 @@ function changePage() {
 }
 
 function renderHomepage() {
-  const content = document.querySelector('#content')
   const buyButton = document.createElement('a')
-  buyButton = document.setAttribute('href,')
-  buyButton.innerHTML= 'Köp'
-  const form1 = document.createElement('form')
+  buyButton.setAttribute('href', '#buy')
+  const linkText = document.createTextNode("Köp");
+  buyButton.appendChild(linkText);
   content.appendChild(buyButton)
 
+  const saleButton = document.createElement('a')
+  saleButton.setAttribute('href', '#sale')
+  const linkText2 = document.createTextNode("Sälj");
+  saleButton.appendChild(linkText2);
+  content.appendChild(saleButton)
 }
 
 
-/* 
-
-  const saleButton = document.createElement('a').addEventListener('click', function ());
-  saleButton.innerHTML = 'Sälj'
-  const form2 = document.createElement('form')
-
-
-  content.appendChild(saleButton)*/ 
