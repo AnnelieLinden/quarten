@@ -5,9 +5,10 @@ export default function createInputWhitLabel(idValue = "default") {
   if (idValue === "default") {
     idValue += "_0"
   }
-  lable.setAttribute("name", idValue);
+  lable.setAttribute("for", idValue);
+  lable.innerText = idValue;
   input.id = idValue;
-  returnArr.push(input);
   returnArr.push(lable);
+  returnArr.push(input);
   return returnArr;
 }
