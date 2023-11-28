@@ -18,11 +18,21 @@ function changePage() {
 }
 
 function renderHomepage() {
-  const buyButton = document.createElement('button');
-  const saleButton = document.createElement('button');
-  
+  const content = document.querySelector('#content')
+  const buyButton = document.createElement('a')
+  buyButton = document.setAttribute('href,')
+  buyButton.innerHTML= 'Köp'
+  const form1 = document.createElement('form')
+  content.appendChild(buyButton)
 
 }
 
 
+/* 
 
+  const saleButton = document.createElement('a').addEventListener('click', function ());
+  saleButton.innerHTML = 'Sälj'
+  const form2 = document.createElement('form')
+
+
+  content.appendChild(saleButton)*/ 
