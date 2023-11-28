@@ -19,17 +19,17 @@ function changePage() {
 }
 
 function renderHomepage() {
+    const saleButton = document.createElement('a')
+  saleButton.setAttribute('href', '#sale')
+  const linkText2 = document.createTextNode("Sälj");
+  saleButton.appendChild(linkText2);
+  content.appendChild(saleButton)
+
   const buyButton = document.createElement('a')
   buyButton.setAttribute('href', '#buy')
   const linkText = document.createTextNode("Köp");
   buyButton.appendChild(linkText);
   content.appendChild(buyButton)
-
-  const saleButton = document.createElement('a')
-  saleButton.setAttribute('href', '#sale')
-  const linkText2 = document.createTextNode("Sälj");
-  saleButton.appendChild(linkText2);
-  content.appendChild(saleButton)
 }
 
 
