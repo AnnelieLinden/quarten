@@ -1,4 +1,5 @@
 import { getAllProperties, addProperty, login, getOneProperty, getAllGeneralMsg, getAllSaleMsg, updateUser } from "./function/server-request.js";
+import createForm from "./function/createForm.js";
 
 async function main() {
   console.log(await getAllProperties());
@@ -9,5 +10,6 @@ async function main() {
   console.log(await getOneProperty(2));
   console.log(await getAllGeneralMsg());
   console.log(await getAllSaleMsg());
+  document.body.appendChild(createForm());
 }
 main()
