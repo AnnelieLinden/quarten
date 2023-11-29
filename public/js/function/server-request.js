@@ -16,6 +16,26 @@ export async function getAllSaleMsg() {
   return data;
 }
 
+export async function addSaleForm(saleForm) {
+  var response = await fetch('saleForms', {
+    method: 'post',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(saleForm)
+  })
+  response = await response.json();
+  console.log(response);
+}
+
+export async function addGenaralForm(generalForm) {
+  var response = await fetch('generalForms', {
+    method: 'post',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(generalForm)
+  })
+  response = await response.json();
+  console.log(response);
+}
+
 export async function addProperty(propertyObj) {
   var response = await fetch('/data', {
     method: 'post',
