@@ -1,3 +1,6 @@
+import { getAllProperties, addProperty, addGenaralForm, login, getOneProperty, getAllGeneralMsg, getAllSaleMsg, addSaleForm, updateUser } from "./function/server-request.js";
+import createForm from "./function/createForm.js";
+
 
 onhashchange = changePage;
 changePage()
@@ -21,7 +24,7 @@ function renderHomepage() {
   const content = document.querySelector('#content')
   const buyButton = document.createElement('a')
   buyButton = document.setAttribute('href,')
-  buyButton.innerHTML= 'Köp'
+  buyButton.innerHTML = 'Köp'
   const form1 = document.createElement('form')
   content.appendChild(buyButton)
 
@@ -35,4 +38,4 @@ function renderHomepage() {
   const form2 = document.createElement('form')
 
 
-  content.appendChild(saleButton)*/ 
+  content.appendChild(saleButton)*/
