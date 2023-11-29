@@ -3,11 +3,11 @@ import { login } from "./server-request.js";
 
 export default function createLoginForm() {
   const form = document.createElement("form");
-  var inputWhitLableArrUname = createInputWhitLabel("userName");
+  const inputWhitLableArrUname = createInputWhitLabel("userName");
   form.appendChild(inputWhitLableArrUname[0]);
   form.appendChild(inputWhitLableArrUname[1]);
 
-  var inputWhitLableArrPass = createInputWhitLabel("pass");
+  const inputWhitLableArrPass = createInputWhitLabel("pass");
   form.appendChild(inputWhitLableArrPass[0]);
   form.appendChild(inputWhitLableArrPass[1]);
 
