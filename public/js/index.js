@@ -1,3 +1,6 @@
+import { getAllProperties, addProperty, addGenaralForm, login, getOneProperty, getAllGeneralMsg, getAllSaleMsg, addSaleForm, updateUser } from "./function/server-request.js";
+import createForm from "./function/createForm.js";
+
 const content = document.querySelector('#content')
 const form = document.createElement('form')
 
