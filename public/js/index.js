@@ -1,5 +1,5 @@
 const content = document.querySelector('#content')
-
+const form = document.createElement('form')
 
 onhashchange = changePage;
 changePage()
@@ -34,7 +34,6 @@ function renderHomepage() {
   content.appendChild(buyButton)
 }
 function renderSaleForm() {
-  const form = document.createElement('form')
   form.setAttribute("id", "saleForm")
   const propertyLabel = document.createElement('label')
   propertyLabel.innerText = "Fastighetsbeteckning:"
@@ -45,6 +44,7 @@ function renderSaleForm() {
   const buildYearLabel = document.createElement('label')
   buildYearLabel.innerText = "Byggnadsår:"
   const buildYearInput = document.createElement('input')
+  buildYearInput.setAttribute('type','number')
   const addressLabel = document.createElement('label')
   addressLabel.innerText = "Adress:"
   const addressInput = document.createElement('input')
@@ -57,6 +57,7 @@ function renderSaleForm() {
   const infoLabel = document.createElement('label')
   infoLabel.innerText = "Info:"
   const infoInput = document.createElement('input')
+  infoInput.setAttribute('id', 'infoInput')
   const apartmentType = document.createElement('input')
   const villaType = document.createElement('input')
   apartmentType.setAttribute('type', 'radio', 'name', 'propertyType', 'value', 'Bostadsrätt')
@@ -65,7 +66,10 @@ function renderSaleForm() {
   villaType.setAttribute('type', 'radio', 'name', 'propertyType', 'value', 'Villa')
   const villaTypeLabel = document.createElement('label')
   villaTypeLabel.innerText = "Villa:"
-
+  form.appendChild(apartmentTypeLabel)
+  form.appendChild(apartmentType)
+  form.appendChild(villaTypeLabel)  
+  form.appendChild(villaType)
   form.appendChild(propertyLabel)  
   form.appendChild(propertyInput)  
   form.appendChild(addressLabel)  
@@ -80,26 +84,20 @@ function renderSaleForm() {
   form.appendChild(buildYearInput)
   form.appendChild(infoLabel)
   form.appendChild(infoInput)
-  form.appendChild(apartmentTypeLabel)
-  form.appendChild(apartmentType)
-  form.appendChild(villaTypeLabel)  
-  form.appendChild(villaType)
   content.appendChild(form)
   apartmentSaleForm()
   villaSaleForm()
 }
-
 function apartmentSaleForm() {
-  const form = document.createElement('form')
-  const label = document.createElement('form')
-  label.innerText = "Lägenhet formulär"
-  form.setAttribute('id', 'apartmentSaleForm')
+
+  const label = document.createElement('label')
+  label.innerText = "Bostadsrätt:"
   const elevatorLabel = document.createElement('label')
   const elevatorLabel1 = document.createElement('label')
   elevatorLabel.innerText = "Hiss:" 
   elevatorLabel1.innerText = "Ja" 
   const elevatorInput = document.createElement('input')
-  elevatorInput.setAttribute('type', 'checkbox', 'name', 'elevator','value', 'True')
+  elevatorInput.setAttribute('type', 'checkbox', 'name', 'elevator','value', 'checked')
   const feeLabel = document.createElement('label')
   feeLabel.innerText = "Avgift:"
   const feeInput = document.createElement('input')
@@ -108,25 +106,27 @@ function apartmentSaleForm() {
   const balconyInput = document.createElement('input')
   const balconyLabel1 = document.createElement('label')
   balconyLabel1.innerText = "Ja"
-  balconyInput.setAttribute('type', 'checkbox', 'name', 'balcony', 'value', 'true')
+  balconyInput.setAttribute('type', 'checkbox', 'name', 'balcony', 'value', 'checked')
   const floorLabel = document.createElement('label')
   floorLabel.innerText = "Våning:"
   const floorInput = document.createElement('input')
   const storeHouseLabel = document.createElement('label')
-  storeHouseLabel.innerText = "Förråd:"
+  storeHouseLabel.innerText = `Kryssa i rutan om följande finns
+  Förråd:`
   const storeHouseInput = document.createElement('input')
+  storeHouseInput.setAttribute('type', 'checkbox', 'name', 'storeHouse', 'value', 'checked')
   const parkingLabel = document.createElement('label')
   parkingLabel.innerText = "Parkering:"
   const parkingInput = document.createElement('input')
+  parkingInput.setAttribute('type', 'checkbox', 'name', 'parking', 'value', 'checked')
   const patioLabel = document.createElement('label')
   patioLabel.innerText = "Uteplats:"
   const patioInput = document.createElement('input')
-  patioInput.setAttribute('type', 'checkbox', 'name', 'patio', 'value', 'true')
+  patioInput.setAttribute('type', 'checkbox', 'name', 'patio', 'value', 'checked')
   
   form.appendChild(label)
   form.appendChild(feeLabel)
   form.appendChild(feeInput)
- 
   form.appendChild(floorLabel)
   form.appendChild(floorInput)
   form.appendChild(storeHouseLabel)
@@ -142,20 +142,18 @@ function apartmentSaleForm() {
   form.appendChild(patioInput)
   content.appendChild(form)
 }
-
 function villaSaleForm() {
-  const form = document.createElement('form')
-  form.setAttribute('id', 'villaSaleForm')
   const label = document.createElement('label')
-  label.innerText = "Villa formulär"
+  label.innerText = "Villa:"
   const lotLabel = document.createElement('label')
   lotLabel.innerText = "Tomtyta:"
   const lotInput = document.createElement('input')
   const garageLabel = document.createElement('label')
   const garageLabel1 = document.createElement('label')
-  garageLabel.innerText = "Garage:"
+  garageLabel.innerText = `Kryssa i rutan om följande finns
+  Garage:`
   const garageInput = document.createElement('input')
-  garageInput.setAttribute('type','checkbox','name','garage','value', 'true')
+  garageInput.setAttribute('type','checkbox','name','garage','value', 'checked')
   const waterAndSewerLabel = document.createElement('label')
   waterAndSewerLabel.innerText = "Vatten/avlopp:"
   const waterAndSewerInput = document.createElement('input')

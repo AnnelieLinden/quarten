@@ -29,7 +29,6 @@ a {
 }
 
 body {
-
   background-color: antiquewhite;
   margin: 0%;
 }
@@ -41,28 +40,23 @@ body {
   flex-wrap: nowrap;
   height: 70vh;
   margin: 10px;
-  align-items: center;
   justify-content: space-around;
 }
 
 #content>a {
   font-size: 50px;
   font-family: 'acme';
-
+  align-self: center;
 }
 
 /*---------salePage---------*/
 #saleForm {
   display: flex;
   flex-direction: column;
-}
+  height:100%;
+  width:80%;
 
-#apartmentSaleForm {
-  display: flex;
-  flex-direction: column;
 }
-
-#villaSaleForm {
-  display: flex;
-  flex-direction: column;
+#infoInput {
+ height: 130px;
 }
