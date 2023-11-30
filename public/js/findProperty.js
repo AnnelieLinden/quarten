@@ -7,8 +7,8 @@ export default function findProperty(buyForm) {
   buyForm.setAttribute("id", "buyForm")
 
   const propertyLabel = document.createElement('label')
-  propertyLabel.innerText = "Välj Bostadstyp:"
-  const propertyInput = document.createElement('input')
+  propertyLabel.innerText = "Bostadstyp:"
+ // const propertyInput = document.createElement('input')
 
 
   const villaLabel = document.createElement('label')
@@ -48,23 +48,133 @@ export default function findProperty(buyForm) {
 
 
   const neighborhoodLabel = document.createElement('label') //bostadsområde
-  neighborhoodLabel.innerText = "Bostadsområde:"
-  const neighborhoodInput = document.createElement('input')
+  neighborhoodLabel.innerText = "Område:"
+  //const neighborhoodInput = document.createElement('input')
 
-
+  const communityLabel = document.createElement('label')
+  const communityLabel1 = document.createElement('label')
+  const communityLabel2 = document.createElement('label')
+  const communityLabel3 = document.createElement('label')
+  const communityLabel4 = document.createElement('label')
+  const communityLabel5 = document.createElement('label')
+  const communityLabel6 = document.createElement('label')
+  const communityLabel7 = document.createElement('label')
   
+  communityLabel.innerText = "Karlskrona:"
+  communityLabel1.innerText = "Ja"
+  const communityInput = document.createElement('input')
+  communityInput.setAttribute('type', 'checkbox')
+  communityInput.setAttribute('name', 'community')
+  communityInput.setAttribute('value', 'checked')
 
+  communityLabel2.innerText = "Malmö:"
+  communityLabel3.innerText = "Ja"
+  const communityInput2 = document.createElement('input')
+  communityInput2.setAttribute('type', 'checkbox')
+  communityInput2.setAttribute('name', 'community')
+  communityInput2.setAttribute('value', 'checked')
+
+  communityLabel4.innerText = "Ronneby:"
+  communityLabel5.innerText = "Ja"
+  const communityInput4 = document.createElement('input')
+  communityInput4.setAttribute('type', 'checkbox')
+  communityInput4.setAttribute('name', 'community')
+  communityInput4.setAttribute('value', 'checked')
+
+  communityLabel6.innerText = "Stockholm:"
+  communityLabel7.innerText = "Ja"
+  const communityInput6 = document.createElement('input')
+  communityInput6.setAttribute('type', 'checkbox')
+  communityInput6.setAttribute('name', 'community')
+  communityInput6.setAttribute('value', 'checked')
+
+ 
   const priceLabel = document.createElement('label')
-  priceLabel.innerText = "Utgångspris:"
-  const priceInput = document.createElement('input')
+  priceLabel.innerText = "Max pris:"
+  //const priceInput = document.createElement('input')
+
+  const maxPriceLabel = document.createElement('label')
+  const maxPriceLabel1 = document.createElement('label')
+  const maxPriceLabel2 = document.createElement('label')
+  const maxPriceLabel3 = document.createElement('label')
+  const maxPriceLabel4 = document.createElement('label')
+  const maxPriceLabel5 = document.createElement('label')
+  const maxPriceLabel6 = document.createElement('label')
+  const maxPriceLabel7 = document.createElement('label')
+
+  maxPriceLabel.innerText = 1500000 +" SEK"
+  maxPriceLabel1.innerText = "Ja"
+  const maxPriceInput = document.createElement('input')
+  maxPriceInput.setAttribute('type', 'checkbox')
+  maxPriceInput.setAttribute('name', 'community')
+  maxPriceInput.setAttribute('value', 'checked')
+
+  maxPriceLabel2.innerText = 2500000 + " SEK"
+  maxPriceLabel3.innerText = "Ja"
+  const maxPriceInput2 = document.createElement('input')
+  maxPriceInput2.setAttribute('type', 'checkbox')
+  maxPriceInput2.setAttribute('name', 'community')
+  maxPriceInput2.setAttribute('value', 'checked')
+
+  maxPriceLabel4.innerText = 4000000 + " SEK"
+  maxPriceLabel5.innerText = "Ja"
+  const maxPriceInput4 = document.createElement('input')
+  maxPriceInput4.setAttribute('type', 'checkbox')
+  maxPriceInput4.setAttribute('name', 'community')
+  maxPriceInput4.setAttribute('value', 'checked')
+
+  maxPriceLabel6.innerText = 5500000 + " SEK"
+  maxPriceLabel7.innerText = "Ja"
+  const maxPriceInput6 = document.createElement('input')
+  maxPriceInput6.setAttribute('type', 'checkbox')
+  maxPriceInput6.setAttribute('name', 'community')
+  maxPriceInput6.setAttribute('value', 'checked')
 
   const areaLabel = document.createElement('label')
-  areaLabel.innerText = "Bostadsyta:"
-  const areaInput = document.createElement('input')
+  areaLabel.innerText = "Minsta bostadsarea:"
+  //const areaInput = document.createElement('input')
+
+  const minAreaLabel = document.createElement('label')
+  const minAreaLabel1 = document.createElement('label')
+  const minAreaLabel2 = document.createElement('label')
+  const minAreaLabel3 = document.createElement('label')
+  const minAreaLabel4 = document.createElement('label')
+  const minAreaLabel5 = document.createElement('label')
+  const minAreaLabel6 = document.createElement('label')
+  const minAreaLabel7 = document.createElement('label')
+
+  minAreaLabel.innerText = 30 + " kvm"
+  minAreaLabel1.innerText = "Ja"
+  const minAreaInput = document.createElement('input')
+  minAreaInput.setAttribute('type', 'checkbox')
+  minAreaInput.setAttribute('name', 'community')
+  minAreaInput.setAttribute('value', 'checked')
+
+  minAreaLabel2.innerText = 90 + " kvm"
+  minAreaLabel3.innerText = "Ja"
+  const minAreaInput2 = document.createElement('input')
+  minAreaInput2.setAttribute('type', 'checkbox')
+  minAreaInput2.setAttribute('name', 'community')
+  minAreaInput2.setAttribute('value', 'checked')
+
+  minAreaLabel4.innerText = 150 + " kvm"
+  minAreaLabel5.innerText = "Ja"
+  const minAreaInput4 = document.createElement('input')
+  minAreaInput4.setAttribute('type', 'checkbox')
+  minAreaInput4.setAttribute('name', 'community')
+  minAreaInput4.setAttribute('value', 'checked')
+
+  minAreaLabel6.innerText = 200 + " kvm"
+  minAreaLabel7.innerText = "Ja"
+  const minAreaInput6 = document.createElement('input')
+  minAreaInput6.setAttribute('type', 'checkbox')
+  minAreaInput6.setAttribute('name', 'community')
+  minAreaInput6.setAttribute('value', 'checked')
+
 
   buyForm.appendChild(pTag)
   buyForm.appendChild(propertyLabel)
-  buyForm.appendChild(propertyInput)
+  //buyForm.appendChild(propertyInput)
   
 //radioknapp
  /* buyForm.appendChild(apartmentInputLabel)
@@ -78,11 +188,39 @@ export default function findProperty(buyForm) {
   buyForm.appendChild(apartmentLabel)
   buyForm.appendChild(apartmentInput)
   buyForm.appendChild(neighborhoodLabel)
-  buyForm.appendChild(neighborhoodInput)
+  //buyForm.appendChild(neighborhoodInput)
+  buyForm.appendChild(communityLabel)
+  buyForm.appendChild(communityInput)
+  buyForm.appendChild(communityLabel2)
+  buyForm.appendChild(communityInput2)
+  buyForm.appendChild(communityLabel4)
+  buyForm.appendChild(communityInput4)
+  buyForm.appendChild(communityLabel6)
+  buyForm.appendChild(communityInput6)
+  
   buyForm.appendChild(priceLabel)
-  buyForm.appendChild(priceInput)
+  //buyForm.appendChild(priceInput)
+  buyForm.appendChild(maxPriceLabel)
+  buyForm.appendChild(maxPriceInput)
+  buyForm.appendChild(maxPriceLabel2)
+  buyForm.appendChild(maxPriceInput2)
+  buyForm.appendChild(maxPriceLabel4)
+  buyForm.appendChild(maxPriceInput4)
+  buyForm.appendChild(maxPriceLabel6)
+  buyForm.appendChild(maxPriceInput6)
+
   buyForm.appendChild(areaLabel)
-  buyForm.appendChild(areaInput)
+  buyForm.appendChild(minAreaLabel)
+  buyForm.appendChild(minAreaInput)
+  buyForm.appendChild(minAreaLabel2)
+  buyForm.appendChild(minAreaInput2)
+  buyForm.appendChild(minAreaLabel4)
+  buyForm.appendChild(minAreaInput4)
+  buyForm.appendChild(minAreaLabel6)
+  buyForm.appendChild(minAreaInput6)
+
+  
+ // buyForm.appendChild(areaInput)
 
   content.appendChild(buyForm)
 
