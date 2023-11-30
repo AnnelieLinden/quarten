@@ -1,5 +1,6 @@
 import { getAllProperties, addProperty, addGenaralForm, login, getOneProperty, getAllGeneralMsg, getAllSaleMsg, addSaleForm, updateUser } from "./function/server-request.js";
 import createForm from "./function/createForm.js";
+import generalForm from "./generalForm.js";
 
 const content = document.querySelector('#content')
 const form = document.createElement('form')
@@ -18,7 +19,10 @@ function changePage() {
     document.querySelector('main');
   } else if (location.hash === "#login") {
     document.querySelector('main');
-  } else {
+  } else if (location.hash === "#contact-us") {
+    generalForm();
+  }
+  else {
     document.querySelector('main');
   }
 }

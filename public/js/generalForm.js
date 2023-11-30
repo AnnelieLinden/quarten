@@ -1,41 +1,46 @@
-const generalForm = {
-  firstName: '',
-  lastName: '',
-  phoneNumber: '',
-  mailAddress: '',
-  messageInfo: ''
-};
+export default function generalForm() {
 
-const generalFormNames = ['Firstname: ', 'Lastname: ', 'Phonenumber: ', 'Mailaddress:', 'Message: ']
+  const generalFormObj = {
+    firstName: '',
+    lastName: '',
+    phoneNumber: '',
+    mailAddress: '',
+    messageInfo: ''
+  };
 
-const generalFormCreate = document.createElement('form');
+  const generalFormNames = ['Förnamn: ', 'Efternamn: ', 'Telefonnummer: ', 'E-mail:', 'Meddelande: ']
 
-const container = document.querySelector('main');
+  const generalFormCreate = document.createElement('form');
 
-
-container.appendChild(generalFormCreate); 
-
-for (let i = 0; i < 5; i++)
-{
-  const label = document.createElement('label');
-  const input = document.createElement('input');
-  input.type = "text";
-  label.innerText = generalFormNames[i];
-  container.appendChild(label);
-  container.appendChild(input);  
-}
-
-const submitBtn = document.createElement('input');
-submitBtn.setAttribute('type', 'submit');
-submitBtn.innerText = 'Send Message'; 
+  const container = document.querySelector('main');
 
 
-container.appendChild(submitBtn); 
+  container.appendChild(generalFormCreate);
 
-let sendMessage = "";
+  for (let i = 0; i < 5; i++) {
+    const label = document.createElement('label');
+    const input = document.createElement('input');
+    const lineBreak = document.createElement('br');
+    input.type = "text";
+    label.innerText = generalFormNames[i];
+    container.appendChild(label);
+    container.appendChild(input);
+    container.appendChild(lineBreak);
+  }
 
-container.addEventListener('submit', function (event) {
-  event.preventDefault();
+  const submitBtn = document.createElement('input');
+  submitBtn.setAttribute('type', 'submit');
+  submitBtn.innerText = 'Send Message';
+
+
+  container.appendChild(submitBtn);
+
+  let sendMessage = "";
+
+  container.addEventListener('submit', function (event) {
+    event.preventDefault();
   
-}); 
+  });
+  
+}
 
