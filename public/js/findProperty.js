@@ -29,6 +29,18 @@ export default function findProperty(buyForm) {
   apartmentInput.setAttribute('name', 'apartment')
   apartmentInput.setAttribute('value', 'checked')
 
+
+  const fieldset10 = document.createElement('fieldset')
+  fieldset10.setAttribute('id', 'fieldset') //för att få bort ramen runt fältet
+  fieldset10.appendChild(villaLabel)
+  fieldset10.appendChild(villaInput)
+  fieldset10.appendChild(apartmentLabel)
+  fieldset10.appendChild(apartmentInput)
+  
+  
+ //content.appendChild(buyForm)
+
+
 //radioknapp
   /*const apartmentInput = document.createElement('input')
   const villaInput = document.createElement('input')
@@ -88,6 +100,17 @@ export default function findProperty(buyForm) {
   communityInput6.setAttribute('name', 'community')
   communityInput6.setAttribute('value', 'checked')
 
+  const fieldset20 = document.createElement('fieldset')
+  fieldset20.setAttribute('id', 'fieldset') //för att få bort ramen runt fältet 
+  fieldset20.appendChild(communityLabel)
+  fieldset20.appendChild(communityInput)
+  fieldset20.appendChild(communityLabel2)
+  fieldset20.appendChild(communityInput2)
+  fieldset20.appendChild(communityLabel4)
+  fieldset20.appendChild(communityInput4)
+  fieldset20.appendChild(communityLabel6)
+  fieldset20.appendChild(communityInput6)
+
  
   const priceLabel = document.createElement('label')
   priceLabel.innerText = "Max pris:"
@@ -130,6 +153,19 @@ export default function findProperty(buyForm) {
   maxPriceInput6.setAttribute('name', 'community')
   maxPriceInput6.setAttribute('value', 'checked')
 
+
+  const fieldset30 = document.createElement('fieldset')
+  fieldset30.setAttribute('id', 'fieldset') //för att få bort ramen runt fältet 
+  fieldset30.appendChild(maxPriceLabel)
+  fieldset30.appendChild(maxPriceInput)
+  fieldset30.appendChild(maxPriceLabel2)
+  fieldset30.appendChild(maxPriceInput2)
+  fieldset30.appendChild(maxPriceLabel4)
+  fieldset30.appendChild(maxPriceInput4)
+  fieldset30.appendChild(maxPriceLabel6)
+  fieldset30.appendChild(maxPriceInput6)
+
+
   const areaLabel = document.createElement('label')
   areaLabel.innerText = "Minsta bostadsarea:"
   //const areaInput = document.createElement('input')
@@ -171,6 +207,17 @@ export default function findProperty(buyForm) {
   minAreaInput6.setAttribute('name', 'community')
   minAreaInput6.setAttribute('value', 'checked')
 
+  const fieldset40 = document.createElement('fieldset')
+  fieldset40.setAttribute('id', 'fieldset') //för att få bort ramen runt fältet 
+  fieldset40.appendChild(minAreaLabel)
+  fieldset40.appendChild(minAreaInput)
+  fieldset40.appendChild(minAreaLabel2)
+  fieldset40.appendChild(minAreaInput2)
+  fieldset40.appendChild(minAreaLabel4)
+  fieldset40.appendChild(minAreaInput4)
+  fieldset40.appendChild(minAreaLabel6)
+  fieldset40.appendChild(minAreaInput6)
+
 
   buyForm.appendChild(pTag)
   buyForm.appendChild(propertyLabel)
@@ -182,42 +229,46 @@ export default function findProperty(buyForm) {
   buyForm.appendChild(villaInputLabel)
   buyForm.appendChild(villaInput)*/
   
- 
-  buyForm.appendChild(villaLabel)
+  buyForm.appendChild(fieldset10) //för att gruppera bostadstyp
+   /*buyForm.appendChild(villaLabel)
   buyForm.appendChild(villaInput)
   buyForm.appendChild(apartmentLabel)
-  buyForm.appendChild(apartmentInput)
+  buyForm.appendChild(apartmentInput)*/
+
   buyForm.appendChild(neighborhoodLabel)
   //buyForm.appendChild(neighborhoodInput)
-  buyForm.appendChild(communityLabel)
+  buyForm.appendChild(fieldset20) //för att gruppera områden
+  /*buyForm.appendChild(communityLabel)
   buyForm.appendChild(communityInput)
   buyForm.appendChild(communityLabel2)
   buyForm.appendChild(communityInput2)
   buyForm.appendChild(communityLabel4)
   buyForm.appendChild(communityInput4)
   buyForm.appendChild(communityLabel6)
-  buyForm.appendChild(communityInput6)
+  buyForm.appendChild(communityInput6)*/
   
   buyForm.appendChild(priceLabel)
   //buyForm.appendChild(priceInput)
-  buyForm.appendChild(maxPriceLabel)
+  buyForm.appendChild(fieldset30) //för att gruppera maxpris
+ /* buyForm.appendChild(maxPriceLabel)
   buyForm.appendChild(maxPriceInput)
   buyForm.appendChild(maxPriceLabel2)
   buyForm.appendChild(maxPriceInput2)
   buyForm.appendChild(maxPriceLabel4)
   buyForm.appendChild(maxPriceInput4)
   buyForm.appendChild(maxPriceLabel6)
-  buyForm.appendChild(maxPriceInput6)
+  buyForm.appendChild(maxPriceInput6)*/
 
   buyForm.appendChild(areaLabel)
-  buyForm.appendChild(minAreaLabel)
+  buyForm.appendChild(fieldset40) //för att gruppera bostadsarea
+  /*buyForm.appendChild(minAreaLabel)
   buyForm.appendChild(minAreaInput)
   buyForm.appendChild(minAreaLabel2)
   buyForm.appendChild(minAreaInput2)
   buyForm.appendChild(minAreaLabel4)
   buyForm.appendChild(minAreaInput4)
   buyForm.appendChild(minAreaLabel6)
-  buyForm.appendChild(minAreaInput6)
+  buyForm.appendChild(minAreaInput6)*/
 
   
  // buyForm.appendChild(areaInput)
