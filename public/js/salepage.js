@@ -1,3 +1,6 @@
+import Property from "./property.js"
+import Villa from villaSaleForm.js
+
 export default function renderSaleForm(form) {
   const pTag = document.createElement('p')
   pTag.setAttribute('id', 'pTag')
