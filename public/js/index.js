@@ -8,6 +8,7 @@ const content = document.querySelector('#content')
 let form;
 
 onhashchange = changePage;
+
 changePage()
 function changePage() {
   document.querySelector('main').textContent = ""
@@ -18,7 +19,8 @@ function changePage() {
     form = document.createElement('form')
     renderSaleForm(form)
   } else if (location.hash === "#buy") {
-    findProperty()
+    const buyForm = document.createElement('form')
+    findProperty(buyForm)
   } else if (location.hash === "#login") {
     document.querySelector('main');
   } else {

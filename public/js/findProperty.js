@@ -1,5 +1,7 @@
-export default function findProperty() {
-  form.setAttribute("id", "buyForm")
+export default function findProperty(buyForm) {
+
+
+  buyForm.setAttribute("id", "buyForm")
 
   const propertyLabel = document.createElement('label')
   propertyLabel.innerText = "Bostadstyp:"
@@ -17,16 +19,16 @@ export default function findProperty() {
   areaLabel.innerText = "Bostadsyta:"
   const areaInput = document.createElement('input')
 
-  form.appendChild(propertyLabel)
-  form.appendChild(propertyInput)
-  form.appendChild(neighborhoodLabel)
-  form.appendChild(neighborhoodInput)
-  form.appendChild(priceLabel)
-  form.appendChild(priceInput)
-  form.appendChild(areaLabel)
-  form.appendChild(areaInput)
+  buyForm.appendChild(propertyLabel)
+  buyForm.appendChild(propertyInput)
+  buyForm.appendChild(neighborhoodLabel)
+  buyForm.appendChild(neighborhoodInput)
+  buyForm.appendChild(priceLabel)
+  buyForm.appendChild(priceInput)
+  buyForm.appendChild(areaLabel)
+  buyForm.appendChild(areaInput)
 
-  content.appendChild(form)
+  content.appendChild(buyForm)
 
   findProperty()
 
