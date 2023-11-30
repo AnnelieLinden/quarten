@@ -34,21 +34,58 @@ const data2 = {
 
 export default function createDitailedVeiw() {
   const section = createSection();
-  const propertyInfoArticle = createArticle();
-  const apartmentInfoArticle = createArticle();
-  const villaInfoArticle = createArticle();
-
+  const Villa = villaInfo();
+  const apartment = apartmentInfo();
+  const property = propertyInfo();
+  section.appendChild(property);
+  section.appendChild(Villa);
   return section;
 }
 
-function propertyInfo(article, propertyObj) {
-
+function dataGet() {
+  const dataArr = [];
+  dataArr.push(data.address);
+  dataArr.push(data.amountRoom);
+  dataArr.push(data.buildYear);
+  dataArr.push(data.fiberConnection);
+  dataArr.push(data.garage);
+  dataArr.push(data.info);
+  dataArr.push(data.kvmArea);
+  dataArr.push(data.lot);
+  dataArr.push(data.startBid);
+  dataArr.push(data.waterAndSewer);
+  return dataArr;
 }
 
-function apartmentInfo(article, propertyObj) {
-
+function propertyInfo() {
+  const infoData = dataGet();
+  const propertyInfoArticle = createArticle();
+  for (var i = 0; i < 6; i++) {
+    const p = createParagraf();
+    p.innerText = infoData[i];
+    propertyInfoArticle.appendChild(p);
+  }
+  return propertyInfoArticle;
 }
 
-function villaInfo(article, propertyObj) {
+function apartmentInfo() {
+  const infoData = dataGet();
+  const apartmentInfoArticle = createArticle();
+  for (var i = 6; i < infoData.length; i++) {
+    const p = createParagraf();
+    p.innerText = infoData[i];
+    apartmentInfoArticle.appendChild(p);
+  }
+  return apartmentInfoArticle;
+}
 
+function villaInfo() {
+  const infoData = dataGet();
+  const villaInfoArticle = createArticle();
+  for (var i = 6; i < infoData.length; i++) {
+    const p = createParagraf();
+    p.innerText = infoData[i];
+    villaInfoArticle.appendChild(p);
+  }
+  return villaInfoArticle;
 }
