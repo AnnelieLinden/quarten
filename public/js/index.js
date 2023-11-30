@@ -1,5 +1,8 @@
 import { getAllProperties, addProperty, addGenaralForm, login, getOneProperty, getAllGeneralMsg, getAllSaleMsg, addSaleForm, updateUser } from "./function/server-request.js";
 import createForm from "./function/createForm.js";
+import renderSaleForm from "./salepage.js";
+import Villa from "./villa.js"
+import findProperty from "./findProperty.js"
 
 const content = document.querySelector('#content')
 const form = document.createElement('form')
@@ -15,7 +18,7 @@ function changePage() {
   } else if (location.hash === "#sale") {
     renderSaleForm()
   } else if (location.hash === "#buy") {
-    document.querySelector('main');
+    findProperty()
   } else if (location.hash === "#login") {
     document.querySelector('main');
   } else {
@@ -47,7 +50,7 @@ function renderSaleForm() {
   const buildYearLabel = document.createElement('label')
   buildYearLabel.innerText = "Byggnadsår:"
   const buildYearInput = document.createElement('input')
-  buildYearInput.setAttribute('type','number')
+  buildYearInput.setAttribute('type', 'number')
   const addressLabel = document.createElement('label')
   addressLabel.innerText = "Adress:"
   const addressInput = document.createElement('input')
@@ -71,11 +74,11 @@ function renderSaleForm() {
   villaTypeLabel.innerText = "Villa:"
   form.appendChild(apartmentTypeLabel)
   form.appendChild(apartmentType)
-  form.appendChild(villaTypeLabel)  
+  form.appendChild(villaTypeLabel)
   form.appendChild(villaType)
-  form.appendChild(propertyLabel)  
-  form.appendChild(propertyInput)  
-  form.appendChild(addressLabel)  
+  form.appendChild(propertyLabel)
+  form.appendChild(propertyInput)
+  form.appendChild(addressLabel)
   form.appendChild(addressInput)
   form.appendChild(startBidLabel)
   form.appendChild(startBidInput)
@@ -97,10 +100,10 @@ function apartmentSaleForm() {
   label.innerText = "Bostadsrätt:"
   const elevatorLabel = document.createElement('label')
   const elevatorLabel1 = document.createElement('label')
-  elevatorLabel.innerText = "Hiss:" 
-  elevatorLabel1.innerText = "Ja" 
+  elevatorLabel.innerText = "Hiss:"
+  elevatorLabel1.innerText = "Ja"
   const elevatorInput = document.createElement('input')
-  elevatorInput.setAttribute('type', 'checkbox', 'name', 'elevator','value', 'checked')
+  elevatorInput.setAttribute('type', 'checkbox', 'name', 'elevator', 'value', 'checked')
   const feeLabel = document.createElement('label')
   feeLabel.innerText = "Avgift:"
   const feeInput = document.createElement('input')
@@ -126,7 +129,7 @@ function apartmentSaleForm() {
   patioLabel.innerText = "Uteplats:"
   const patioInput = document.createElement('input')
   patioInput.setAttribute('type', 'checkbox', 'name', 'patio', 'value', 'checked')
-  
+
   form.appendChild(label)
   form.appendChild(feeLabel)
   form.appendChild(feeInput)
@@ -136,7 +139,7 @@ function apartmentSaleForm() {
   form.appendChild(storeHouseInput)
   form.appendChild(parkingLabel)
   form.appendChild(parkingInput)
-  form.appendChild(elevatorLabel) 
+  form.appendChild(elevatorLabel)
   form.appendChild(elevatorInput)
   form.appendChild(balconyLabel)
   form.appendChild(balconyLabel)
@@ -156,7 +159,7 @@ function villaSaleForm() {
   garageLabel.innerText = `Kryssa i rutan om följande finns
   Garage:`
   const garageInput = document.createElement('input')
-  garageInput.setAttribute('type','checkbox','name','garage','value', 'checked')
+  garageInput.setAttribute('type', 'checkbox', 'name', 'garage', 'value', 'checked')
   const waterAndSewerLabel = document.createElement('label')
   waterAndSewerLabel.innerText = "Vatten/avlopp:"
   const waterAndSewerInput = document.createElement('input')
@@ -166,7 +169,7 @@ function villaSaleForm() {
   const heatingLabel = document.createElement('label')
   heatingLabel.innerText = "Uppvärming:"
   const heatingInput = document.createElement('input')
- 
+
   form.appendChild(label)
   form.appendChild(lotLabel)
   form.appendChild(lotInput)
