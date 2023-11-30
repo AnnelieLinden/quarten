@@ -273,6 +273,11 @@ export default function findProperty(buyForm) {
   
  // buyForm.appendChild(areaInput)
 
+  const searchbtn = document.createElement('input')
+  searchbtn.setAttribute('type', 'submit', 'value', 'Search')
+  
+  buyForm.appendChild(searchbtn)
+    
   content.appendChild(buyForm)
 
   findProperty()
