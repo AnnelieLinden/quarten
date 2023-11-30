@@ -1,5 +1,5 @@
 import Property from "./property.js"
-import Villa from villaSaleForm.js
+import Villa from "./villa.js"
 
 export default function renderSaleForm(form) {
   const pTag = document.createElement('p')
