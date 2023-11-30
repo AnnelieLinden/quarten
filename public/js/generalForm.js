@@ -1,5 +1,6 @@
 export default function generalForm() {
 
+  
   const generalFormObj = {
     firstName: '',
     lastName: '',
@@ -20,12 +21,13 @@ export default function generalForm() {
   for (let i = 0; i < 5; i++) {
     const label = document.createElement('label');
     const input = document.createElement('input');
-    const lineBreak = document.createElement('br');
+    const lineBreak = document.createElement("br");
     input.type = "text";
-    label.innerText = generalFormNames[i];
-    container.appendChild(label);
+    label.innerText = generalFormNames[i];    
+    container.appendChild(label);    
     container.appendChild(input);
     container.appendChild(lineBreak);
+    
   }
 
   const submitBtn = document.createElement('input');
