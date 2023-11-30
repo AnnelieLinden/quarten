@@ -80,3 +80,12 @@ body {
 #pTag {
   font-size: 30px;
 }
+
+/*-------buyPage---------*/
+#buyForm {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 80%;
+  font-family: 'Oswald';
+}
