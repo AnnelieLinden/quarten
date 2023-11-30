@@ -55,7 +55,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 80%;
+  width: 70%;
   font-family: 'Oswald';
 }
 
@@ -79,4 +79,7 @@ body {
 
 #pTag {
   font-size: 30px;
+}
+fieldset {
+  margin: 10px;
 }

@@ -3,7 +3,7 @@ import createForm from "./function/createForm.js";
 import renderSaleForm from "./salepage.js";
 
 const content = document.querySelector('#content')
-let form;
+
 
 onhashchange = changePage;
 changePage()
@@ -13,8 +13,8 @@ function changePage() {
   if (location.hash === "#homepage") {
     renderHomepage();
   } else if (location.hash === "#sale") {
-    form = document.createElement('form')
-    renderSaleForm(form)
+    const saleForm = document.createElement('form')
+    renderSaleForm(saleForm)
   } else if (location.hash === "#buy") {
     document.querySelector('main');
   } else if (location.hash === "#login") {
