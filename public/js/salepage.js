@@ -23,6 +23,7 @@ let connectionInput;
 let heatingInput;
 
 export default function renderSaleForm(saleForm) {
+  saleForm.addEventListener('submit', saveSaleInfo)
   const pTag = document.createElement('p')
   pTag.setAttribute('id', 'pTag')
   pTag.innerText="Är det dags att sälja din bostad?"
@@ -171,7 +172,10 @@ function villaSaleForm(saleForm) {
   heatingInput = document.createElement('input')
   const fieldset2 = document.createElement('fieldset')
   const submitbtn = document.createElement('input')
-  submitbtn.setAttribute('type', 'submit', 'value', 'Skicka till mäklare')
+  submitbtn.setAttribute('type', 'submit') 
+  submitbtn.setAttribute('value', 'Skicka till mäklare')
+  
+
  
   
   saleForm.appendChild(label)
@@ -188,18 +192,40 @@ function villaSaleForm(saleForm) {
   saleForm.appendChild(fieldset2)
   saleForm.appendChild(submitbtn)
   content.appendChild(saleForm)
-  sendToBroker()
+ 
 }
-function sendToBroker(submitbtn) {
-  submitbtn
-  saveSaleInfo()
-}
-function saveSaleInfo() {
-  if (apartmentType==checked) {
-    new Apartment(feeInput.value, balconyInput.value, floorInput.value, elevatorInput.value, storeHouseInput.value, parkingInput.value, patioInput.value, addressInput.value, startBidInput.value, spaceInput.value, buildYearInput.value, amountRoomInput.value, infoInput.value)
-  } else if (villaType==checked) {
-    new Villa(lotInput.value, garageInput.value, waterAndSewerInput.value, connectionInput.value, heatingInput.value, addressInput, startBidInput, spaceInput, amountRoomInput, buildYearInput, infoInput)
-  }
-  return Apartment(), Villa()
-} 
 
+function saveSaleInfo(event) {
+  event.preventDefault()
+  console.log(event.target.elements)
+  const savedSales = allValues(event.target.elements)
+  console.log(savedSales)
+} 
+//sätt id på alla elementenoch byt ut mot exempelvis feeInput
+function allValues(elements) {
+  elements.feeInput.value
+  elements.balconyInput.value
+  elements.floorInput.value
+  elements.elevatorInput.value
+  elements.storeHouseInput.value
+  elements.parkingInput.value
+  elements.patioInput.Valie
+  elements.addressInput.value
+  elements.startBidInput.value
+  elements.spaceInput.value
+  elements.amountRoomInput.value
+  elements.buildYearInput.value
+  elements.infoInput.value
+  elements.lotInput.value
+  elements.garageInput.value
+  elements.waterAndSewerInput.value
+  elements.connectionInput.value
+  elements.heatingInput.Value
+
+  if (apartmentType.checked) {
+    return new Apartment(feeInput.value, balconyInput.value, floorInput.value, elevatorInput.value, storeHouseInput.value, parkingInput.value, patioInput.value, addressInput.value, startBidInput.value, spaceInput.value, buildYearInput.value, amountRoomInput.value, infoInput.value)
+  } else if (villaType.checked) {
+    return new Villa(lotInput.value, garageInput.value, waterAndSewerInput.value, connectionInput.value, heatingInput.value, addressInput, startBidInput, spaceInput, amountRoomInput, buildYearInput, infoInput)
+  }
+
+}
