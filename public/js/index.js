@@ -25,8 +25,8 @@ function changePage() {
     const buyForm = document.createElement('form')
     findProperty(buyForm)
   } else if (location.hash === "#login") {
-    const logInForm = document.createElement('form');
-    createLoginForm(logInForm);
+    document.querySelector('main').appendChild(createForm());
+
   } else if (location.hash === "#contact-us") {
     generalForm()
   }
