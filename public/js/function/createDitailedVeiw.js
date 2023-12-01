@@ -3,7 +3,7 @@ import createArticle from "./minorComponets/createArticle.js";
 import createParagraf from "./minorComponets/createParagraf.js";
 
 const data = {
-  address: texvägen,
+  address: "texvägen",
   startBid: 500,
   kvmArea: 400,
   buildYear: 1900,
@@ -17,7 +17,7 @@ const data = {
 }
 
 const data2 = {
-  address: texvägen,
+  address: "texvägen",
   startBid: 500,
   kvmArea: 40,
   buildYear: 1999,
@@ -35,7 +35,7 @@ const data2 = {
 export default function createDitailedVeiw() {
   const section = createSection();
   const Villa = villaInfo();
-  const apartment = apartmentInfo();
+  //Sconst apartment = apartmentInfo();
   const property = propertyInfo();
   section.appendChild(property);
   section.appendChild(Villa);
