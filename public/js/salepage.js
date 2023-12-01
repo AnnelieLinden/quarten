@@ -1,5 +1,6 @@
 import Villa from "./villa.js"
 import Apartment from "./apartment.js"
+import { addSaleForm } from "./function/server-request.js";
 let apartmentType;
 
 let villaType;
@@ -27,7 +28,7 @@ export default function renderSaleForm(saleForm) {
   saleForm.addEventListener('submit', saveSaleInfo)
   const pTag = document.createElement('p')
   pTag.setAttribute('id', 'pTag')
-  pTag.innerText="Är det dags att sälja din bostad?"
+  pTag.innerText = "Är det dags att sälja din bostad?"
   saleForm.setAttribute("id", "saleForm")
   const startBidLabel = document.createElement('label')
   startBidLabel.innerText = "Utgångspris:"
@@ -35,7 +36,7 @@ export default function renderSaleForm(saleForm) {
   startBidInput.setAttribute('type', 'number')
   const buildYearLabel = document.createElement('label')
   buildYearLabel.innerText = "Byggnadsår:"
-   buildYearInput = document.createElement('input')
+  buildYearInput = document.createElement('input')
   buildYearInput.setAttribute('type', 'number')
   const addressLabel = document.createElement('label')
   addressLabel.innerText = "Adress:"
@@ -96,7 +97,7 @@ export default function renderSaleForm(saleForm) {
   content.appendChild(saleForm)
 
   apartmentSaleForm(saleForm, feeInput, balconyInput, floorInput, elevatorInput, storeHouseInput, parkingInput, patioInput)
-  villaSaleForm(saleForm,lotInput, garageInput, waterAndSewerInput, connectionInput, heatingInput)
+  villaSaleForm(saleForm, lotInput, garageInput, waterAndSewerInput, connectionInput, heatingInput)
 }
 
 function apartmentSaleForm(saleForm) {
@@ -198,7 +199,7 @@ function villaSaleForm(saleForm) {
   heatingInput = document.createElement('input')
   const fieldset2 = document.createElement('fieldset')
   const submitbtn = document.createElement('input')
-  submitbtn.setAttribute('type', 'submit') 
+  submitbtn.setAttribute('type', 'submit')
   submitbtn.setAttribute('value', 'Skicka till mäklare')
 
   lotInput.setAttribute('id', 'lot')
@@ -206,7 +207,7 @@ function villaSaleForm(saleForm) {
   waterAndSewerInput.setAttribute('id', 'wAndS')
   connectionInput.setAttribute('id', 'connections')
   heatingInput.setAttribute('id', 'heating')
- 
+
   saleForm.appendChild(label)
   saleForm.appendChild(lotLabel)
   saleForm.appendChild(lotInput)
@@ -228,9 +229,10 @@ function saveSaleInfo(event) {
   event.preventDefault()
   console.log(event.target.elements)
   const savedSales = allValues(event.target.elements)
+  addSaleForm(savedSales);
   console.log(savedSales)
 
-} 
+}
 //sätt id på alla elementen och byt ut mot exempelvis feeInput
 function allValues(elements) {
   elements.villa.value
@@ -255,9 +257,9 @@ function allValues(elements) {
   elements.heating.Value
 
   if (apartmentType.checked) {
-    return new Apartment(fee.value, balcony.value, floor.value, elevator.value, storage.value,parking.value,patio.value,address.value,startBid.value,kvm.value,built.value,rooms.value,info.value)
+    return new Apartment(fee.value, balcony.value, floor.value, elevator.value, storage.value, parking.value, patio.value, address.value, startBid.value, kvm.value, built.value, rooms.value, info.value)
   } else if (villaType.checked) {
-    return new Villa(lot.value,garage.value,wAndS.value,connections.value, heating.value,address.value,startBid.value,kvm.value,built.value,rooms.value,info.value)
+    return new Villa(lot.value, garage.value, wAndS.value, connections.value, heating.value, address.value, startBid.value, kvm.value, built.value, rooms.value, info.value)
   }
 
 }
