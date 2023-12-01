@@ -18,7 +18,7 @@ function changePage() {
   } else if (location.hash === "#buy") {
     document.querySelector('main');
   } else if (location.hash === "#login") {
-    document.querySelector('main');
+    createForm();
   } else {
     document.querySelector('main');
   }

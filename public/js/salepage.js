@@ -1,7 +1,6 @@
 import Villa from "./villa.js"
 import Apartment from "./apartment.js"
 let apartmentType;
-
 let villaType;
 let addressInput;
 let startBidInput;
@@ -21,7 +20,7 @@ let garageInput;
 let waterAndSewerInput;
 let connectionInput;
 let heatingInput;
-
+let communityInput;
 
 export default function renderSaleForm(saleForm) {
   saleForm.addEventListener('submit', saveSaleInfo)
@@ -65,7 +64,12 @@ export default function renderSaleForm(saleForm) {
   const villaTypeLabel = document.createElement('label')
   villaTypeLabel.innerText = "Villa:"
   const fieldset = document.createElement('fieldset')
+  fieldset.setAttribute('id', 'fieldsetSale')
+  const communityInput = document.createElement('input')
+  const communitylabel = document.createElement('label')
+  communitylabel.innerTedxt = ""
 
+  communityInput.setAttribute('id', 'community')
   buildYearInput.setAttribute('id', 'built')
   amountRoomInput.setAttribute('id', 'rooms')
   spaceInput.setAttribute('id', 'kvm')
@@ -81,6 +85,8 @@ export default function renderSaleForm(saleForm) {
   fieldset.appendChild(villaTypeLabel)
   fieldset.appendChild(villaType)
   saleForm.appendChild(fieldset)
+  saleForm.appendChild(communitylabel)
+  saleForm.appendChild(communityInput)
   saleForm.appendChild(addressLabel)
   saleForm.appendChild(addressInput)
   saleForm.appendChild(startBidLabel)
@@ -95,7 +101,7 @@ export default function renderSaleForm(saleForm) {
   saleForm.appendChild(infoInput)
   content.appendChild(saleForm)
 
-  apartmentSaleForm(saleForm, feeInput, balconyInput, floorInput, elevatorInput, storeHouseInput, parkingInput, patioInput)
+  apartmentSaleForm(saleForm, feeInput, balconyInput, floorInput, elevatorInput, storeHouseInput, parkingInput, patioInput, communityInput)
   villaSaleForm(saleForm,lotInput, garageInput, waterAndSewerInput, connectionInput, heatingInput)
 }
 
@@ -145,6 +151,7 @@ function apartmentSaleForm(saleForm) {
   patioInput.setAttribute('name', 'patio')
   patioInput.setAttribute('value', 'checked')
   const fieldset1 = document.createElement('fieldset')
+  fieldset1.setAttribute('id', 'fieldsetSale')
 
   floorInput.setAttribute('id', 'floor')
   elevatorInput.setAttribute('id', 'elevator')
@@ -172,6 +179,7 @@ function apartmentSaleForm(saleForm) {
   saleForm.appendChild(fieldset1)
   content.appendChild(saleForm)
 }
+
 function villaSaleForm(saleForm) {
   const label = document.createElement('label')
   label.innerText = "Villa:"
@@ -197,6 +205,7 @@ function villaSaleForm(saleForm) {
   heatingLabel.innerText = "Uppvärming:"
   heatingInput = document.createElement('input')
   const fieldset2 = document.createElement('fieldset')
+  fieldset2.setAttribute('id', 'fieldsetSale')
   const submitbtn = document.createElement('input')
   submitbtn.setAttribute('type', 'submit') 
   submitbtn.setAttribute('value', 'Skicka till mäklare')
@@ -221,17 +230,14 @@ function villaSaleForm(saleForm) {
   saleForm.appendChild(fieldset2)
   saleForm.appendChild(submitbtn)
   content.appendChild(saleForm)
-
 }
 
 function saveSaleInfo(event) {
   event.preventDefault()
-  console.log(event.target.elements)
   const savedSales = allValues(event.target.elements)
   console.log(savedSales)
-
 } 
-//sätt id på alla elementen och byt ut mot exempelvis feeInput
+
 function allValues(elements) {
   elements.villa.value
   elements.apartment.value
@@ -259,5 +265,5 @@ function allValues(elements) {
   } else if (villaType.checked) {
     return new Villa(lot.value,garage.value,wAndS.value,connections.value, heating.value,address.value,startBid.value,kvm.value,built.value,rooms.value,info.value)
   }
-
 }
+
