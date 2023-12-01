@@ -1,7 +1,7 @@
-import Property from "./property.js"
 import Villa from "./villa.js"
 import Apartment from "./apartment.js"
 let apartmentType;
+
 let villaType;
 let addressInput;
 let startBidInput;
@@ -22,6 +22,7 @@ let waterAndSewerInput;
 let connectionInput;
 let heatingInput;
 
+
 export default function renderSaleForm(saleForm) {
   saleForm.addEventListener('submit', saveSaleInfo)
   const pTag = document.createElement('p')
@@ -31,6 +32,7 @@ export default function renderSaleForm(saleForm) {
   const startBidLabel = document.createElement('label')
   startBidLabel.innerText = "Utgångspris:"
   startBidInput = document.createElement('input')
+  startBidInput.setAttribute('type', 'number')
   const buildYearLabel = document.createElement('label')
   buildYearLabel.innerText = "Byggnadsår:"
    buildYearInput = document.createElement('input')
@@ -41,9 +43,11 @@ export default function renderSaleForm(saleForm) {
   const spaceLabel = document.createElement('label')
   spaceLabel.innerText = "Bostadsyta:"
   spaceInput = document.createElement('input')
+  spaceInput.setAttribute('type', 'number')
   const amountRoomLabel = document.createElement('label')
   amountRoomLabel.innerText = "Antal rum:"
   amountRoomInput = document.createElement('input')
+  amountRoomInput.setAttribute('type', 'number')
   const infoLabel = document.createElement('label')
   infoLabel.innerText = "Info:"
   infoInput = document.createElement('input')
@@ -61,6 +65,16 @@ export default function renderSaleForm(saleForm) {
   const villaTypeLabel = document.createElement('label')
   villaTypeLabel.innerText = "Villa:"
   const fieldset = document.createElement('fieldset')
+
+  buildYearInput.setAttribute('id', 'built')
+  amountRoomInput.setAttribute('id', 'rooms')
+  spaceInput.setAttribute('id', 'kvm')
+  startBidInput.setAttribute('id', 'startBid')
+  addressInput.setAttribute('id', 'address')
+  apartmentType.setAttribute('id', 'apartment')
+  villaType.setAttribute('id', 'villa')
+  infoInput.setAttribute('id', 'info')
+
   saleForm.appendChild(pTag)
   fieldset.appendChild(apartmentTypeLabel)
   fieldset.appendChild(apartmentType)
@@ -98,6 +112,7 @@ function apartmentSaleForm(saleForm) {
   const feeLabel = document.createElement('label')
   feeLabel.innerText = "Avgift:"
   feeInput = document.createElement('input')
+  feeInput.setAttribute('type', 'number')
   const balconyLabel = document.createElement('label')
   balconyLabel.innerText = "Balkong:"
   balconyInput = document.createElement('input')
@@ -109,6 +124,7 @@ function apartmentSaleForm(saleForm) {
   const floorLabel = document.createElement('label')
   floorLabel.innerText = "Våning:"
   floorInput = document.createElement('input')
+  floorInput.setAttribute('type', 'number')
   const storeHouseLabel = document.createElement('label')
   storeHouseLabel.innerText = `Kryssa i rutan om följande finns
   Förråd:`
@@ -129,6 +145,15 @@ function apartmentSaleForm(saleForm) {
   patioInput.setAttribute('name', 'patio')
   patioInput.setAttribute('value', 'checked')
   const fieldset1 = document.createElement('fieldset')
+
+  floorInput.setAttribute('id', 'floor')
+  elevatorInput.setAttribute('id', 'elevator')
+  parkingInput.setAttribute('id', 'parking')
+  balconyInput.setAttribute('id', 'balcony')
+  storeHouseInput.setAttribute('id', 'storage')
+  feeInput.setAttribute('id', 'fee')
+  patioInput.setAttribute('id', 'patio')
+
   saleForm.appendChild(label)
   saleForm.appendChild(feeLabel)
   saleForm.appendChild(feeInput)
@@ -154,6 +179,7 @@ function villaSaleForm(saleForm) {
   const lotLabel = document.createElement('label')
   lotLabel.innerText = "Tomtyta:"
   lotInput = document.createElement('input')
+  lotInput.setAttribute('type', 'number')
   const garageLabel = document.createElement('label')
   garageLabel.innerText = `Kryssa i rutan om följande finns
   Garage:`
@@ -174,10 +200,13 @@ function villaSaleForm(saleForm) {
   const submitbtn = document.createElement('input')
   submitbtn.setAttribute('type', 'submit') 
   submitbtn.setAttribute('value', 'Skicka till mäklare')
-  
 
+  lotInput.setAttribute('id', 'lot')
+  garageInput.setAttribute('id', 'garage')
+  waterAndSewerInput.setAttribute('id', 'wAndS')
+  connectionInput.setAttribute('id', 'connections')
+  heatingInput.setAttribute('id', 'heating')
  
-  
   saleForm.appendChild(label)
   saleForm.appendChild(lotLabel)
   saleForm.appendChild(lotInput)
@@ -192,7 +221,7 @@ function villaSaleForm(saleForm) {
   saleForm.appendChild(fieldset2)
   saleForm.appendChild(submitbtn)
   content.appendChild(saleForm)
- 
+
 }
 
 function saveSaleInfo(event) {
@@ -200,32 +229,35 @@ function saveSaleInfo(event) {
   console.log(event.target.elements)
   const savedSales = allValues(event.target.elements)
   console.log(savedSales)
+
 } 
-//sätt id på alla elementenoch byt ut mot exempelvis feeInput
+//sätt id på alla elementen och byt ut mot exempelvis feeInput
 function allValues(elements) {
-  elements.feeInput.value
-  elements.balconyInput.value
-  elements.floorInput.value
-  elements.elevatorInput.value
-  elements.storeHouseInput.value
-  elements.parkingInput.value
-  elements.patioInput.Valie
-  elements.addressInput.value
-  elements.startBidInput.value
-  elements.spaceInput.value
-  elements.amountRoomInput.value
-  elements.buildYearInput.value
-  elements.infoInput.value
-  elements.lotInput.value
-  elements.garageInput.value
-  elements.waterAndSewerInput.value
-  elements.connectionInput.value
-  elements.heatingInput.Value
+  elements.villa.value
+  elements.apartment.value
+  elements.fee.value
+  elements.balcony.value
+  elements.floor.value
+  elements.elevator.value
+  elements.storage.value
+  elements.parking.value
+  elements.patio.Valie
+  elements.address.value
+  elements.startBid.value
+  elements.kvm.value
+  elements.rooms.value
+  elements.built.value
+  elements.info.value
+  elements.lot.value
+  elements.garage.value
+  elements.wAndS.value
+  elements.connections.value
+  elements.heating.Value
 
   if (apartmentType.checked) {
-    return new Apartment(feeInput.value, balconyInput.value, floorInput.value, elevatorInput.value, storeHouseInput.value, parkingInput.value, patioInput.value, addressInput.value, startBidInput.value, spaceInput.value, buildYearInput.value, amountRoomInput.value, infoInput.value)
+    return new Apartment(fee.value, balcony.value, floor.value, elevator.value, storage.value,parking.value,patio.value,address.value,startBid.value,kvm.value,built.value,rooms.value,info.value)
   } else if (villaType.checked) {
-    return new Villa(lotInput.value, garageInput.value, waterAndSewerInput.value, connectionInput.value, heatingInput.value, addressInput, startBidInput, spaceInput, amountRoomInput, buildYearInput, infoInput)
+    return new Villa(lot.value,garage.value,wAndS.value,connections.value, heating.value,address.value,startBid.value,kvm.value,built.value,rooms.value,info.value)
   }
 
 }
