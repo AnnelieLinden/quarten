@@ -2,7 +2,7 @@ import createSection from "./minorComponets/createSection.js";
 import createArticle from "./minorComponets/createArticle.js";
 import createParagraf from "./minorComponets/createParagraf.js";
 
-const data = {
+const property1 = {
   address: "texvägen",
   startBid: 500,
   kvmArea: 400,
@@ -16,7 +16,7 @@ const data = {
   heating: "yes"
 }
 
-const data2 = {
+const property2 = {
   address: "texvägen",
   startBid: 500,
   kvmArea: 40,
@@ -32,46 +32,52 @@ const data2 = {
   patio: "yes"
 }
 
-export default function createDitailedVeiw() {
+export default function createDitailedVeiw(propertyInfoData) {
+  const propertyData = propertyToArr(property2)
   const section = createSection();
-  const Villa = villaInfo();
-  //Sconst apartment = apartmentInfo();
-  const property = propertyInfo();
+
+  const property = propertyInfo(propertyData);
   section.appendChild(property);
-  section.appendChild(Villa);
+  if (false) {
+    const Villa = villaInfo(propertyData);
+    section.appendChild(Villa);
+  }
+  else {
+    const apartment = apartmentInfo(propertyData);
+    section.appendChild(apartment);
+  }
   return section;
 }
 
-function dataGet() {
+function propertyToArr(property) {
   const dataArr = [];
-  dataArr.push(data.address);
-  dataArr.push(data.amountRoom);
-  dataArr.push(data.buildYear);
-  dataArr.push(data.kvmArea);
-  dataArr.push(data.startBid);
-  dataArr.push(data.info);
+  dataArr.push(property.address);
+  dataArr.push(property.amountRoom);
+  dataArr.push(property.buildYear);
+  dataArr.push(property.kvmArea);
+  dataArr.push(property.startBid);
+  dataArr.push(property.info);
   if (false) {
-    dataArr.push(data.fiberConnection);
-    dataArr.push(data.garage);
-    dataArr.push(data.lot);
-    dataArr.push(data.waterAndSewer);
-    dataArr.push(data.heating);
+    dataArr.push(property.fiberConnection);
+    dataArr.push(property.garage);
+    dataArr.push(property.lot);
+    dataArr.push(property.waterAndSewer);
+    dataArr.push(property.heating);
 
   }
   else {
-    dataArr.push(data2.balcony);
-    dataArr.push(data2.elevator);
-    dataArr.push(data2.fee);
-    dataArr.push(data2.floor);
-    dataArr.push(data2.parking);
-    dataArr.push(data2.patio);
-    dataArr.push(data2.storeHouse);
+    dataArr.push(property.balcony);
+    dataArr.push(property.elevator);
+    dataArr.push(property.fee);
+    dataArr.push(property.floor);
+    dataArr.push(property.parking);
+    dataArr.push(property.patio);
+    dataArr.push(property.storeHouse);
   }
   return dataArr;
 }
 
-function propertyInfo() {
-  const infoData = dataGet();
+function propertyInfo(infoData) {
   const propertyInfoArticle = createArticle();
   for (var i = 0; i < 6; i++) {
     const p = createParagraf();
@@ -81,8 +87,7 @@ function propertyInfo() {
   return propertyInfoArticle;
 }
 
-function apartmentInfo() {
-  const infoData = dataGet();
+function apartmentInfo(infoData) {
   const apartmentInfoArticle = createArticle();
   for (var i = 6; i < infoData.length; i++) {
     const p = createParagraf();
