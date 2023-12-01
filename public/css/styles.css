@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Quicksand:wght@300&family=Spirax&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Permanent+Marker&family=Quicksand:wght@300&family=Spirax&display=swap');
 
 header>p {
   display: flex;
@@ -53,10 +54,32 @@ body {
 #saleForm {
   display: flex;
   flex-direction: column;
-  height:100%;
-  width:80%;
-
+  height: 100%;
+  width: 70%;
+  font-family: 'Oswald';
 }
+
+#apartmentTitel {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: blue;
+}
+
+#villaTitel {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #15a475;
+}
+
 #infoInput {
- height: 130px;
+  height: 130px;
+}
+
+#pTag {
+  font-size: 30px;
+}
+fieldset {
+  margin: 10px;
 }
