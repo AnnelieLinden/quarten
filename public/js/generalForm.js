@@ -41,6 +41,8 @@ export default function generalForm() {
 
   container.addEventListener('click', function (event) {
     event.preventDefault();
+    const allInput = document.querySelectorAll('input');
+    console.log(allInput);
     
   
   });
