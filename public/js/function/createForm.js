@@ -26,6 +26,6 @@ export default function createLoginForm(logInForm) {
   });
 
   logInForm.appendChild(button);
-  content.appendChild(logInForm)
-  return logInForm;
+  document.body.appendChild(logInForm)
+  //content.appendChild(logInForm)
 }

@@ -8,7 +8,7 @@ export default function findProperty(buyForm) {
 
   const propertyLabel = document.createElement('label')
   propertyLabel.innerText = "Bostadstyp:"
- //const propertyInput = document.createElement('input')
+ // const propertyInput = document.createElement('input')
 
 
   const villaLabel = document.createElement('label')

@@ -22,6 +22,9 @@ let waterAndSewerInput;
 let connectionInput;
 let heatingInput;
 let communityInput;
+let communityInput2;
+let communityInput3;
+let communityInput4;
 
 export default function renderSaleForm(saleForm) {
   saleForm.addEventListener('submit', saveSaleInfo)
@@ -68,55 +71,55 @@ export default function renderSaleForm(saleForm) {
   fieldset.setAttribute('id', 'fieldsetSale')
 
   //____________________________________________________________________
+
   const communityLabel = document.createElement('label')
-  const communityLabel1 = document.createElement('label')
-  const communityLabel2 = document.createElement('label')
-  const communityLabel3 = document.createElement('label')
-  const communityLabel4 = document.createElement('label')
-  const communityLabel5 = document.createElement('label')
-  const communityLabel6 = document.createElement('label')
-  const communityLabel7 = document.createElement('label')
+  const karlskronaLabel = document.createElement('label')
+  const malmoLabel = document.createElement('label')
+  const ronnebyLabel = document.createElement('label')
+  const stockholmLabel = document.createElement('label')
 
-  communityLabel.innerText = "Karlskrona:"
-  communityLabel1.innerText = "Ja"
-  const communityInput = document.createElement('input')
-  communityInput.setAttribute('type', 'checkbox')
+  communityLabel.innerText = "Område:"
+
+  karlskronaLabel.innerText = "Karlskrona:"
+  communityInput = document.createElement('input')
+  communityInput.setAttribute('type', 'radio')
   communityInput.setAttribute('name', 'community')
-  communityInput.setAttribute('value', 'checked')
+  communityInput.setAttribute('value', 'Karlskrona')
 
-  communityLabel2.innerText = "Malmö:"
-  communityLabel3.innerText = "Ja"
-  const communityInput2 = document.createElement('input')
-  communityInput2.setAttribute('type', 'checkbox')
+  malmoLabel.innerText = "Malmö:"
+  communityInput2 = document.createElement('input')
+  communityInput2.setAttribute('type', 'radio')
   communityInput2.setAttribute('name', 'community')
-  communityInput2.setAttribute('value', 'checked')
+  communityInput2.setAttribute('value', 'Malmö')
 
-  communityLabel4.innerText = "Ronneby:"
-  communityLabel5.innerText = "Ja"
-  const communityInput4 = document.createElement('input')
-  communityInput4.setAttribute('type', 'checkbox')
+  ronnebyLabel.innerText = "Ronneby:"
+  communityInput3 = document.createElement('input')
+  communityInput3.setAttribute('type', 'radio')
+  communityInput3.setAttribute('name', 'community')
+  communityInput3.setAttribute('value', 'Ronneby')
+
+  stockholmLabel.innerText = "Stockholm:"
+  communityInput4 = document.createElement('input')
+  communityInput4.setAttribute('type', 'radio')
   communityInput4.setAttribute('name', 'community')
-  communityInput4.setAttribute('value', 'checked')
-
-  communityLabel6.innerText = "Stockholm:"
-  communityLabel7.innerText = "Ja"
-  const communityInput6 = document.createElement('input')
-  communityInput6.setAttribute('type', 'checkbox')
-  communityInput6.setAttribute('name', 'community')
-  communityInput6.setAttribute('value', 'checked')
+  communityInput4.setAttribute('value', 'Stockholm')
 
   const fieldset20 = document.createElement('fieldset')
   fieldset20.setAttribute('id', 'fieldsetSales')
 
-  fieldset20.appendChild(communityLabel)
+
+  fieldset20.appendChild(karlskronaLabel)
   fieldset20.appendChild(communityInput)
-  fieldset20.appendChild(communityLabel2)
+  fieldset20.appendChild(malmoLabel)
   fieldset20.appendChild(communityInput2)
-  fieldset20.appendChild(communityLabel4)
+  fieldset20.appendChild(ronnebyLabel)
+  fieldset20.appendChild(communityInput3)
+  fieldset20.appendChild(stockholmLabel)
   fieldset20.appendChild(communityInput4)
-  fieldset20.appendChild(communityLabel6)
-  fieldset20.appendChild(communityInput6)
-//________________________________________________________________________________________________
+
+
+
+  //________________________________________________________________________________________________
 
   communityInput.setAttribute('id', 'community')
   buildYearInput.setAttribute('id', 'built')
@@ -136,6 +139,7 @@ export default function renderSaleForm(saleForm) {
   saleForm.appendChild(fieldset)
   saleForm.appendChild(addressLabel)
   saleForm.appendChild(addressInput)
+  saleForm.appendChild(communityLabel)
   saleForm.appendChild(fieldset20)
   saleForm.appendChild(startBidLabel)
   saleForm.appendChild(startBidInput)
@@ -287,7 +291,7 @@ function saveSaleInfo(event) {
   console.log(savedSales)
 
 }
-//sätt id på alla elementen och byt ut mot exempelvis feeInput
+
 function allValues(elements) {
   elements.community.value
   elements.villa.value
@@ -312,9 +316,9 @@ function allValues(elements) {
   elements.heating.Value
 
   if (apartmentType.checked) {
-    return new Apartment(fee.value, balcony.value, floor.value, elevator.value, storage.value, parking.value, patio.value, address.value, startBid.value, kvm.value, built.value, rooms.value, info.value)
+    return new Apartment(fee.value, balcony.value, floor.value, elevator.value, storage.value, parking.value, patio.value, address.value, community.value, startBid.value, kvm.value, built.value, rooms.value, info.value)
   } else if (villaType.checked) {
-    return new Villa(lot.value, garage.value, wAndS.value, connections.value, heating.value, address.value, startBid.value, kvm.value, built.value, rooms.value, info.value)
+    return new Villa(lot.value, garage.value, wAndS.value, connections.value, heating.value, address.value, community.Value, startBid.value, kvm.value, built.value, rooms.value, info.value)
   }
 }
 
