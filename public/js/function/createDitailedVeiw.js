@@ -2,43 +2,14 @@ import createSection from "./minorComponets/createSection.js";
 import createArticle from "./minorComponets/createArticle.js";
 import createParagraf from "./minorComponets/createParagraf.js";
 
-const property1 = {
-  address: "texvägen",
-  startBid: 500,
-  kvmArea: 400,
-  buildYear: 1900,
-  amountRoom: 8,
-  info: "lorem",
-  lot: "tex",
-  garage: "yes",
-  waterAndSewer: "yes",
-  fiberConnection: "yes",
-  heating: "yes"
-}
-
-const property2 = {
-  address: "texvägen",
-  startBid: 500,
-  kvmArea: 40,
-  buildYear: 1999,
-  amountRoom: 3,
-  info: "lorem",
-  fee: 20,
-  balcony: "no",
-  floor: 1,
-  elevator: "yes",
-  storeHouse: "yes",
-  parking: "no",
-  patio: "yes"
-}
-
-export default function createDitailedVeiw(propertyInfoData) {
-  const propertyData = propertyToArr(property2)
+export default function createDitailedVeiw(propertyInfoData, propertyType) {
+  const propertyData = propertyToArr(propertyInfoData, propertyType)
   const section = createSection();
+  propertyType = propertyType.toLowerCase().trim();
 
   const property = propertyInfo(propertyData);
   section.appendChild(property);
-  if (false) {
+  if (propertyType === "villa") {
     const Villa = villaInfo(propertyData);
     section.appendChild(Villa);
   }
@@ -49,7 +20,7 @@ export default function createDitailedVeiw(propertyInfoData) {
   return section;
 }
 
-function propertyToArr(property) {
+function propertyToArr(property, propertyType) {
   const dataArr = [];
   dataArr.push(property.address);
   dataArr.push(property.amountRoom);
@@ -57,7 +28,7 @@ function propertyToArr(property) {
   dataArr.push(property.kvmArea);
   dataArr.push(property.startBid);
   dataArr.push(property.info);
-  if (false) {
+  if (propertyType === "villa") {
     dataArr.push(property.fiberConnection);
     dataArr.push(property.garage);
     dataArr.push(property.lot);
@@ -97,8 +68,7 @@ function apartmentInfo(infoData) {
   return apartmentInfoArticle;
 }
 
-function villaInfo() {
-  const infoData = dataGet();
+function villaInfo(infoData) {
   const villaInfoArticle = createArticle();
   for (var i = 6; i < infoData.length; i++) {
     const p = createParagraf();
