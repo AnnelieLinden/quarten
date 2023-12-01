@@ -42,12 +42,17 @@ export default function generalForm() {
   container.addEventListener('click', function (event) {
     event.preventDefault();
     const allInput = document.querySelectorAll('input');
-    console.log(allInput);
+    
+
+    
+    generalFormObj.firstName = allInput[0].value
+    generalFormObj.lastName = allInput[1].value
+    generalFormObj.phoneNumber = allInput[2].value
+    generalFormObj.mailAddress = allInput[3].value
+    generalFormObj.messageInfo = allInput[4].value
     
   
-  });
-
-  
+  });  
   
 }
 
