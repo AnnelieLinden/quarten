@@ -89,9 +89,22 @@ body {
   width: 80%;
   font-family: 'Oswald';
 }
-#fieldset{
+
+#fieldset {
   border: 0 none;
 }
+
 #fieldsetSales {
   margin: 10px;
+}
+
+#buyTitle {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#marginCheckbox {
+  margin-left: 15px;
+  margin-right: 0px;
 }
