@@ -37,9 +37,19 @@ export default function generalForm() {
 
   content.addEventListener('click', function (event) {
     event.preventDefault();
+    const allInput = document.querySelectorAll('input');
+    
+
+    
+    generalFormObj.firstName = allInput[0].value
+    generalFormObj.lastName = allInput[1].value
+    generalFormObj.phoneNumber = allInput[2].value
+    generalFormObj.mailAddress = allInput[3].value
+    generalFormObj.messageInfo = allInput[4].value
     
   
   });
   content.appendChild(generalFormCreate);
 }
+
 
