@@ -80,6 +80,20 @@ body {
 #pTag {
   font-size: 30px;
 }
+
 #fieldsetSales {
   margin: 10px;
+}
+
+/*-------buyPage---------*/
+#buyForm {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 80%;
+  font-family: 'Oswald';
+}
+
+#fieldset {
+  border: 0 none;
 }

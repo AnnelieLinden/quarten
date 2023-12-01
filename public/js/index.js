@@ -1,11 +1,14 @@
 import { getAllProperties, addProperty, addGenaralForm, login, getOneProperty, getAllGeneralMsg, getAllSaleMsg, addSaleForm, updateUser } from "./function/server-request.js";
 import createForm from "./function/createForm.js";
 import renderSaleForm from "./salepage.js";
+import Villa from "./villa.js"
+import findProperty from "./findProperty.js"
 
 const content = document.querySelector('#content')
 
 
 onhashchange = changePage;
+
 changePage()
 function changePage() {
   document.querySelector('main').textContent = ""
@@ -16,7 +19,8 @@ function changePage() {
     const saleForm = document.createElement('form')
     renderSaleForm(saleForm)
   } else if (location.hash === "#buy") {
-    document.querySelector('main');
+    const buyForm = document.createElement('form')
+    findProperty(buyForm)
   } else if (location.hash === "#login") {
     createForm();
   } else {
@@ -37,4 +41,3 @@ function renderHomepage() {
   buyButton.appendChild(linkText);
   content.appendChild(buyButton)
 }
-
