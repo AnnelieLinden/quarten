@@ -1,15 +1,15 @@
 import createInputWhitLabel from "./createInput.js";
 import { login } from "./server-request.js";
+const content = document.querySelector('#content')
+export default function createLoginForm(logInForm) {
 
-export default function createLoginForm() {
-  const form = document.createElement("form");
   const inputWhitLableArrUname = createInputWhitLabel("userName");
-  form.appendChild(inputWhitLableArrUname[0]);
-  form.appendChild(inputWhitLableArrUname[1]);
+  logInForm.appendChild(inputWhitLableArrUname[0]);
+  logInForm.appendChild(inputWhitLableArrUname[1]);
 
   const inputWhitLableArrPass = createInputWhitLabel("pass");
-  form.appendChild(inputWhitLableArrPass[0]);
-  form.appendChild(inputWhitLableArrPass[1]);
+  logInForm.appendChild(inputWhitLableArrPass[0]);
+  logInForm.appendChild(inputWhitLableArrPass[1]);
 
   const button = document.createElement("button");
   const userName = inputWhitLableArrUname[1];
@@ -25,6 +25,7 @@ export default function createLoginForm() {
     console.log(await login(user));
   });
 
-  form.appendChild(button);
-  return form;
+  logInForm.appendChild(button);
+  content.appendChild(logInForm)
+  return logInForm;
 }

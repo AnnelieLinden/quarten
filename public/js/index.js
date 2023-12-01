@@ -3,8 +3,10 @@ import createForm from "./function/createForm.js";
 import renderSaleForm from "./salepage.js";
 import Villa from "./villa.js"
 import findProperty from "./findProperty.js"
+import createLoginForm from "./function/createForm.js";
 
 const content = document.querySelector('#content')
+
 
 
 onhashchange = changePage;
@@ -22,7 +24,8 @@ function changePage() {
     const buyForm = document.createElement('form')
     findProperty(buyForm)
   } else if (location.hash === "#login") {
-    createForm();
+    const logInForm = document.createElement("form");
+    createLoginForm(logInForm);
   } else {
     document.querySelector('main');
   }
