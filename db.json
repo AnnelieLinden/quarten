@@ -53,6 +53,26 @@
       "lastName": "-----",
       "home": "house",
       "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "address": "Soft Center",
+      "startBid": "1000000",
+      "kvmArea": "20000",
+      "buildYear": "2000",
+      "amountRoom": "200",
+      "info": "katt",
+      "lot": "2000",
+      "garage": "checked",
+      "waterAndSewer": "ja",
+      "fiberConnection": "ja",
+      "heating": "ja",
+      "id": 8
     }
   ],
   "generalForms": [

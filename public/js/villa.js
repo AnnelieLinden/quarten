@@ -9,7 +9,7 @@ export default class Villa extends Property {
 
   constructor(lot, garage, waterAndSewer, fiberConnection, heating, address, startBid, kvmArea, buildYear, amountRoom, info) {
 
-   super(address, startBid, kvmArea, buildYear, amountRoom, info); //ska det vara såhär eller bara egenskaper från property
+   super(address, community, startBid, kvmArea, buildYear, amountRoom, info); //ska det vara såhär eller bara egenskaper från property
 
     this.lot = lot;
     this.garage = garage;

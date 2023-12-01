@@ -1,22 +1,27 @@
 import { getAllProperties, addProperty, addGenaralForm, login, getOneProperty, getAllGeneralMsg, getAllSaleMsg, addSaleForm, updateUser } from "./function/server-request.js";
 import createForm from "./function/createForm.js";
 import generalForm from "./generalForm.js";
+import renderSaleForm from "./salepage.js";
+import Villa from "./villa.js"
+import findProperty from "./findProperty.js"
 
 const content = document.querySelector('#content')
-const form = document.createElement('form')
+
 
 onhashchange = changePage;
+
 changePage()
 function changePage() {
   document.querySelector('main').textContent = ""
-
   console.log('my page will be', location.hash);
   if (location.hash === "#homepage") {
     renderHomepage();
   } else if (location.hash === "#sale") {
-    renderSaleForm()
+    const saleForm = document.createElement('form')
+    renderSaleForm(saleForm)
   } else if (location.hash === "#buy") {
-    document.querySelector('main');
+    const buyForm = document.createElement('form')
+    findProperty(buyForm)
   } else if (location.hash === "#login") {
     document.querySelector('main');
   } else if (location.hash === "#contact-us") {
