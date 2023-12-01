@@ -47,13 +47,26 @@ function dataGet() {
   dataArr.push(data.address);
   dataArr.push(data.amountRoom);
   dataArr.push(data.buildYear);
-  dataArr.push(data.fiberConnection);
-  dataArr.push(data.garage);
-  dataArr.push(data.info);
   dataArr.push(data.kvmArea);
-  dataArr.push(data.lot);
   dataArr.push(data.startBid);
-  dataArr.push(data.waterAndSewer);
+  dataArr.push(data.info);
+  if (false) {
+    dataArr.push(data.fiberConnection);
+    dataArr.push(data.garage);
+    dataArr.push(data.lot);
+    dataArr.push(data.waterAndSewer);
+    dataArr.push(data.heating);
+
+  }
+  else {
+    dataArr.push(data2.balcony);
+    dataArr.push(data2.elevator);
+    dataArr.push(data2.fee);
+    dataArr.push(data2.floor);
+    dataArr.push(data2.parking);
+    dataArr.push(data2.patio);
+    dataArr.push(data2.storeHouse);
+  }
   return dataArr;
 }
 
