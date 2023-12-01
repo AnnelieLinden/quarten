@@ -12,7 +12,7 @@ export default class Apartment extends Property {
 
   constructor(fee, balcony, floor, elevator, storeHouse, parking, patio, address, startBid, kvmArea, buildYear, amountRoom, info) {
 
-   super(address, startBid, kvmArea, buildYear, amountRoom, info);
+   super(address, community, startBid, kvmArea, buildYear, amountRoom, info);
 
     this.fee = fee;
     this.balcony = balcony;
