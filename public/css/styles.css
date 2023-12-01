@@ -55,7 +55,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 80%;
+  width: 70%;
   font-family: 'Oswald';
 }
 
@@ -91,4 +91,7 @@ body {
 }
 #fieldset{
   border: 0 none;
+}
+#fieldsetSales {
+  margin: 10px;
 }

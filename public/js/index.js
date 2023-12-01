@@ -5,7 +5,7 @@ import Villa from "./villa.js"
 import findProperty from "./findProperty.js"
 
 const content = document.querySelector('#content')
-let form;
+
 
 onhashchange = changePage;
 
@@ -16,8 +16,8 @@ function changePage() {
   if (location.hash === "#homepage") {
     renderHomepage();
   } else if (location.hash === "#sale") {
-    form = document.createElement('form')
-    renderSaleForm(form)
+    const saleForm = document.createElement('form')
+    renderSaleForm(saleForm)
   } else if (location.hash === "#buy") {
     const buyForm = document.createElement('form')
     findProperty(buyForm)
