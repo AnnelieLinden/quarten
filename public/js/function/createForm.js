@@ -1,31 +1,32 @@
 import createInputWhitLabel from "./createInput.js";
 import { login } from "./server-request.js";
-const content = document.querySelector('#content')
-export default function createLoginForm(logInForm) {
 
-  const inputWhitLableArrUname = createInputWhitLabel("userName");
-  logInForm.appendChild(inputWhitLableArrUname[0]);
-  logInForm.appendChild(inputWhitLableArrUname[1]);
+export default function createLoginForm() {
+  const form = document.createElement("form");
+  form.setAttribute('id','logInForm')
+  const inputWhitLableArrUname = createInputWhitLabel("Användare");
+  form.appendChild(inputWhitLableArrUname[0]);
+  form.appendChild(inputWhitLableArrUname[1]);
 
-  const inputWhitLableArrPass = createInputWhitLabel("pass");
-  logInForm.appendChild(inputWhitLableArrPass[0]);
-  logInForm.appendChild(inputWhitLableArrPass[1]);
+  const inputWhitLableArrPass = createInputWhitLabel("Lösenord");
+  form.appendChild(inputWhitLableArrPass[0]);
+  form.appendChild(inputWhitLableArrPass[1]);
 
   const button = document.createElement("button");
   const userName = inputWhitLableArrUname[1];
   const pass = inputWhitLableArrPass[1];
 
-  button.innerText = "Submit";
+  button.innerText = "Logga in";
   button.addEventListener("click", async function (event) {
     event.preventDefault();
     const user = {
-      "userName": userName.value,
-      "pass": pass.value
+      "Användare": userName.value,
+      "Lösenord": pass.value
     }
     console.log(await login(user));
   });
 
-  logInForm.appendChild(button);
-  document.body.appendChild(logInForm)
-  //content.appendChild(logInForm)
+  form.appendChild(button);
+  return form;
 }
+ 
