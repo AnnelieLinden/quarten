@@ -39,10 +39,13 @@ export default function generalForm() {
 
   let sendMessage = "";
 
-  container.addEventListener('submit', function (event) {
+  container.addEventListener('click', function (event) {
     event.preventDefault();
+    
   
   });
+
+  
   
 }
 
