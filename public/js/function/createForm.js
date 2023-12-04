@@ -10,6 +10,7 @@ export default function createLoginForm() {
   form.appendChild(inputWhitLableArrUname[1]);
 
   const inputWhitLableArrPass = createInputWhitLabel("Lösenord");
+  inputWhitLableArrPass[1].setAttribute("type", "password");
   form.appendChild(inputWhitLableArrPass[0]);
   form.appendChild(inputWhitLableArrPass[1]);
 
