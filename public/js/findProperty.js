@@ -281,6 +281,5 @@ export default function findProperty(buyForm) {
     
   content.appendChild(buyForm)
 
-  findProperty()
 
 }

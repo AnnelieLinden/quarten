@@ -184,7 +184,7 @@ function apartmentSaleForm(saleForm) {
   floorInput = document.createElement('input')
   floorInput.setAttribute('type', 'number')
   const storeHouseLabel = document.createElement('label')
-  storeHouseLabel.innerText = `Kryssa i rutan om följande finns
+  storeHouseLabel.innerText = `Kryssa om följande finns
   Förråd:`
   storeHouseInput = document.createElement('input')
   storeHouseInput.setAttribute('type', 'checkbox')

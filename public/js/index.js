@@ -38,16 +38,13 @@ function changePage() {
 function renderHomepage() {
   const saleButton = document.createElement('a')
   saleButton.setAttribute('href', '#sale')
-  const linkText2 = document.createTextNode("Sälj");
+  const linkText2 = document.createTextNode("SÄLJ");
   saleButton.appendChild(linkText2);
   content.appendChild(saleButton)
 
   const buyButton = document.createElement('a')
   buyButton.setAttribute('href', '#buy')
-  const linkText = document.createTextNode("Köp");
+  const linkText = document.createTextNode("KÖP");
   buyButton.appendChild(linkText);
   content.appendChild(buyButton)
 }
-
-
-//kolla knapparna
