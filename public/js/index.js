@@ -5,8 +5,11 @@ import renderSaleForm from "./salepage.js";
 import Villa from "./villa.js"
 import findProperty from "./findProperty.js"
 import createLoginForm from "./function/createForm.js";
+import aboutUs from "./about-us.js";
+//import footer from "./footer.js"
 
 const content = document.querySelector('#content')
+//const footerElement = document.querySelector('#footer')
 
 
 
@@ -29,6 +32,9 @@ function changePage() {
 
   } else if (location.hash === "#contact-us") {
     generalForm()
+ 
+  } else if (location.hash === "#about-us") {
+    aboutUs()
   }
   else {
     document.querySelector('main');
@@ -48,3 +54,4 @@ function renderHomepage() {
   buyButton.appendChild(linkText);
   content.appendChild(buyButton)
 }
+

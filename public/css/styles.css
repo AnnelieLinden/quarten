@@ -37,7 +37,7 @@ body {
   justify-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  height: 70vh;
+  height: 100%;
   margin: 1vh;
   justify-content: space-around;
 }
@@ -48,11 +48,21 @@ body {
   align-self: center;
 }
 
+footer {
+  background-color: rgb(125 191 225);
+  justify-content: space-evenly;
+  display: flex;
+  margin-top: 5vh;
+  font-size: 3vh;
+  padding: 4vh;
+  font-family: 'Oswald';
+}
+
 /*---------salePage---------*/
 #saleForm {
   display: flex;
   flex-direction: column;
-  height: 220vh;
+  height: 200vh;
   width: 70%;
   font-family: 'Oswald';
 }
@@ -128,37 +138,54 @@ body {
   height: 20vh;
   margin: 3vh;
 }
+/*-------AboutUsPage---------*/
+#aboutSection {
+  justify-content: start;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: flex-start;
+  width: 80%;
+  height: 100%;
+  font-family: 'Oswald';
+}
+
 
 
 @media screen and (max-width: 450px) {
-#saleForm {
-  width: 80%;
-}
-#fieldsetSales {
-  margin-left: 0px;
-  width: 15vh;
-}
-#pTag {
-  font-size: 17px;
-}
-a {
-  font-size: small;
-}
-#generalQuestionsForm {
-  width: 80%;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  height: 100vh;
-}
+  #saleForm {
+    width: 80%;
+  }
 
-#messageLabel {
-  margin-left: 0px;
-}
+  #fieldsetSales {
+    margin-left: 0px;
+    width: 15vh;
+  }
 
-#message {
-  margin:0px;
-}
-#generalFormBtn {
-  margin-left: 0px;
-}
+  #pTag {
+    font-size: 17px;
+  }
+
+  a {
+    font-size: small;
+  }
+
+  #generalQuestionsForm {
+    width: 80%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    height: 100vh;
+  }
+
+  #messageLabel {
+    margin-left: 0px;
+  }
+
+  #message {
+    margin: 0px;
+  }
+
+  #generalFormBtn {
+    margin-left: 0px;
+  }
 }
