@@ -21,9 +21,10 @@ export default function createLoginForm() {
   button.addEventListener("click", async function (event) {
     event.preventDefault();
     const user = {
-      "Användare": userName.value,
-      "Lösenord": pass.value
+      "userName": userName.value,
+      "pass": pass.value
     }
+    console.log(user);
     console.log(await login(user));
     createSellerVeiw(await login(user));
 
