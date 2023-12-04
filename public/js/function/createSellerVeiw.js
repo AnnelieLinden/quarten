@@ -11,8 +11,8 @@ export default function createSellerVeiw(validUser, form) {
     const buttonSellerMsg = createButton();
     const sellerSection = createSection();
     const generalSection = createSection();
-    buttonGeneralMsg.innerText = "<=>";
-    buttonSellerMsg.innerText = "<->";
+    buttonGeneralMsg.innerText = "<v>";
+    buttonSellerMsg.innerText = "<-v->";
 
     buttonGeneralMsg.addEventListener("click", async function (event) {
       const generalMsg = await getAllGeneralMsg();
@@ -20,7 +20,7 @@ export default function createSellerVeiw(validUser, form) {
       sellerSection.innerHTML = "";
       for (var i = 0; i < generalMsg.length; i++) {
         const paragraf = createParagraf();
-        paragraf.innerText = generalMsg[i];
+        paragraf.innerText = Object.values(generalMsg[i]);
         generalSection.appendChild(paragraf);
         section.appendChild(generalSection);
       }
@@ -32,10 +32,15 @@ export default function createSellerVeiw(validUser, form) {
       sellerSection.innerHTML = "";
       for (var i = 0; i < sellerMsg.length; i++) {
         const paragraf = createParagraf();
-        paragraf.innerText = sellerMsg[i];
+        paragraf.innerText = Object.values(sellerMsg[i]);
         sellerSection.appendChild(paragraf);
         section.appendChild(sellerSection);
       }
+    });
+
+    sellerSection.addEventListener("click", async function (event) {
+      const data = event.target;
+      await addProperty(data);
     });
 
     section.appendChild(buttonGeneralMsg);
