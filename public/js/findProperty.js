@@ -1,7 +1,7 @@
 import { getAllProperties } from "./function/server-request.js"
 
 export default async function findProperty(buyForm) {
-  
+
   const propertyList = await getAllProperties(); //hämtar datan från json genom getAllProperties och data array i json, och i propertyList hamnar listan som objekt
 
   const pTag = document.createElement('p')
@@ -42,29 +42,7 @@ export default async function findProperty(buyForm) {
   fieldset10.appendChild(apartmentInput)
   fieldset10.appendChild(villaLabel)
   fieldset10.appendChild(villaInput)
-
-
-
-  //content.appendChild(buyForm)
-
-
-  //radioknapp
-  /*const apartmentInput = document.createElement('input')
-  const villaInput = document.createElement('input')
-
-  apartmentInput.setAttribute('type', 'radio')
-  apartmentInput.setAttribute('name', 'propertyType')
-  apartmentInput.setAttribute('value', 'Bostadsrätt')
-  const apartmentInputLabel = document.createElement('label')
-  apartmentInputLabel.innerText = "Bostadsrätt:"
-
-  villaInput.setAttribute('type', 'radio')
-  villaInput.setAttribute('name', 'propertyType')
-  villaInput.setAttribute('value', 'Villa')
-  const villaInputLabel = document.createElement('label')
-  villaInputLabel.innerText = "Villa:"*/
-
-
+  
 
   const neighborhoodLabel = document.createElement('label') //bostadsområde
   neighborhoodLabel.setAttribute('id', 'buyTitle')
@@ -149,42 +127,42 @@ export default async function findProperty(buyForm) {
   maxPriceLabel.innerText = 1000000 + " SEK"
   maxPriceLabel1.innerText = "Ja"
   const maxPriceInput = document.createElement('input')
-  maxPriceInput.setAttribute('type', 'checkbox')
+  maxPriceInput.setAttribute('type', 'radio')
   maxPriceInput.setAttribute('name', 'community')
   maxPriceInput.setAttribute('value', 'checked')
 
   maxPriceLabel2.innerText = 2000000 + " SEK"
   maxPriceLabel3.innerText = "Ja"
   const maxPriceInput2 = document.createElement('input')
-  maxPriceInput2.setAttribute('type', 'checkbox')
+  maxPriceInput2.setAttribute('type', 'radio')
   maxPriceInput2.setAttribute('name', 'community')
   maxPriceInput2.setAttribute('value', 'checked')
 
   maxPriceLabel4.innerText = 4000000 + " SEK"
   maxPriceLabel5.innerText = "Ja"
   const maxPriceInput4 = document.createElement('input')
-  maxPriceInput4.setAttribute('type', 'checkbox')
+  maxPriceInput4.setAttribute('type', 'radio')
   maxPriceInput4.setAttribute('name', 'community')
   maxPriceInput4.setAttribute('value', 'checked')
 
   maxPriceLabel6.innerText = 6000000 + " SEK"
   maxPriceLabel7.innerText = "Ja"
   const maxPriceInput6 = document.createElement('input')
-  maxPriceInput6.setAttribute('type', 'checkbox')
+  maxPriceInput6.setAttribute('type', 'radio')
   maxPriceInput6.setAttribute('name', 'community')
   maxPriceInput6.setAttribute('value', 'checked')
 
   maxPriceLabel8.innerText = 8000000 + " SEK"
   maxPriceLabel9.innerText = "Ja"
   const maxPriceInput8 = document.createElement('input')
-  maxPriceInput8.setAttribute('type', 'checkbox')
+  maxPriceInput8.setAttribute('type', 'radio')
   maxPriceInput8.setAttribute('name', 'community')
   maxPriceInput8.setAttribute('value', 'checked')
 
   maxPriceLabel10.innerText = 10000000 + " SEK"
   maxPriceLabel11.innerText = "Ja"
   const maxPriceInput10 = document.createElement('input')
-  maxPriceInput10.setAttribute('type', 'checkbox')
+  maxPriceInput10.setAttribute('type', 'radio')
   maxPriceInput10.setAttribute('name', 'community')
   maxPriceInput10.setAttribute('value', 'checked')
 
@@ -225,28 +203,28 @@ export default async function findProperty(buyForm) {
   minAreaLabel.innerText = 30 + " kvm"
   minAreaLabel1.innerText = "Ja"
   const minAreaInput = document.createElement('input')
-  minAreaInput.setAttribute('type', 'checkbox')
+  minAreaInput.setAttribute('type', 'radio')
   minAreaInput.setAttribute('name', 'community')
   minAreaInput.setAttribute('value', 'checked')
 
   minAreaLabel2.innerText = 90 + " kvm"
   minAreaLabel3.innerText = "Ja"
   const minAreaInput2 = document.createElement('input')
-  minAreaInput2.setAttribute('type', 'checkbox')
+  minAreaInput2.setAttribute('type', 'radio')
   minAreaInput2.setAttribute('name', 'community')
   minAreaInput2.setAttribute('value', 'checked')
 
   minAreaLabel4.innerText = 150 + " kvm"
   minAreaLabel5.innerText = "Ja"
   const minAreaInput4 = document.createElement('input')
-  minAreaInput4.setAttribute('type', 'checkbox')
+  minAreaInput4.setAttribute('type', 'radio')
   minAreaInput4.setAttribute('name', 'community')
   minAreaInput4.setAttribute('value', 'checked')
 
   minAreaLabel6.innerText = 200 + " kvm"
   minAreaLabel7.innerText = "Ja"
   const minAreaInput6 = document.createElement('input')
-  minAreaInput6.setAttribute('type', 'checkbox')
+  minAreaInput6.setAttribute('type', 'radio')
   minAreaInput6.setAttribute('name', 'community')
   minAreaInput6.setAttribute('value', 'checked')
 
