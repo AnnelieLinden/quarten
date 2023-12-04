@@ -26,7 +26,6 @@ nav {
 a {
   color: #313161;
   text-decoration: none;
-  justify-content: space-evenly;
 }
 
 body {
@@ -82,7 +81,9 @@ body {
 }
 
 #fieldsetSales {
-  margin: 10px;
+  margin-left: 30px;
+  border: 0;
+  margin-bottom: 20px;
 }
 
 /*-------buyPage---------*/
@@ -121,12 +122,50 @@ body {
   justify-content: flex-end;
 }
 
+#messageLabel {
+  margin-left: 20px;
+}
+
 #message {
   height: 100px;
   margin: 20px;
 }
 
 #generalFormBtn {
-  width: 50px;
+  width: 70px;
   margin-left: 70px;
+}
+
+
+@media screen and (max-width: 450px) {
+#saleForm {
+  width: 80%;
+}
+#fieldsetSales {
+  margin-left: 0px;
+  width: 92px;
+}
+#pTag {
+  font-size: 17px;
+}
+a {
+  font-size: small;
+}
+#generalQuestionsForm {
+  width: 80%;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+#messageLabel {
+  margin-left: 0px;
+}
+
+#message {
+  margin:0px;
+}
+#generalFormBtn {
+  margin-left: 0px;
+}
 }

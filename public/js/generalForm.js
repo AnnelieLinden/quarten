@@ -14,6 +14,9 @@ export default function generalForm() {
 
   for (let i = 0; i < 5; i++) {
     const label = document.createElement('label');
+    if (i == 4) {
+      label.id="messageLabel"
+    }
     const input = document.createElement('input');
     const lineBreak = document.createElement("br");
     input.type = "text";

@@ -68,7 +68,7 @@ export default function renderSaleForm(saleForm) {
   const villaTypeLabel = document.createElement('label')
   villaTypeLabel.innerText = "Villa:"
   const fieldset = document.createElement('fieldset')
-  fieldset.setAttribute('id', 'fieldsetSale')
+  fieldset.setAttribute('id', 'fieldsetSales')
 
   //____________________________________________________________________
 
@@ -137,10 +137,10 @@ export default function renderSaleForm(saleForm) {
   fieldset.appendChild(villaTypeLabel)
   fieldset.appendChild(villaType)
   saleForm.appendChild(fieldset)
-  saleForm.appendChild(addressLabel)
-  saleForm.appendChild(addressInput)
   saleForm.appendChild(communityLabel)
   saleForm.appendChild(fieldset20)
+  saleForm.appendChild(addressLabel)
+  saleForm.appendChild(addressInput)
   saleForm.appendChild(startBidLabel)
   saleForm.appendChild(startBidInput)
   saleForm.appendChild(spaceLabel)
@@ -203,7 +203,7 @@ function apartmentSaleForm(saleForm) {
   patioInput.setAttribute('name', 'patio')
   patioInput.setAttribute('value', 'checked')
   const fieldset1 = document.createElement('fieldset')
-  fieldset1.setAttribute('id', 'fieldsetSale')
+  fieldset1.setAttribute('id', 'fieldsetSales')
 
   floorInput.setAttribute('id', 'floor')
   elevatorInput.setAttribute('id', 'elevator')
@@ -257,7 +257,7 @@ function villaSaleForm(saleForm) {
   heatingLabel.innerText = "Uppvärming:"
   heatingInput = document.createElement('input')
   const fieldset2 = document.createElement('fieldset')
-  fieldset2.setAttribute('id', 'fieldsetSale')
+  fieldset2.setAttribute('id', 'fieldsetSales')
   const submitbtn = document.createElement('input')
   submitbtn.setAttribute('type', 'submit')
   submitbtn.setAttribute('value', 'Skicka till mäklare')
