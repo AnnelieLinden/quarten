@@ -42,7 +42,7 @@ export default async function findProperty(buyForm) {
   fieldset10.appendChild(apartmentInput)
   fieldset10.appendChild(villaLabel)
   fieldset10.appendChild(villaInput)
-  
+
 
   const neighborhoodLabel = document.createElement('label') //bostadsområde
   neighborhoodLabel.setAttribute('id', 'buyTitle')
@@ -301,7 +301,6 @@ export default async function findProperty(buyForm) {
   buyForm.appendChild(searchbtn)
 
   content.appendChild(buyForm)
-
 
 
 }

@@ -5,8 +5,11 @@ import renderSaleForm from "./salepage.js";
 import Villa from "./villa.js"
 import findProperty from "./findProperty.js"
 import createLoginForm from "./function/createForm.js";
+import aboutUs from "./about-us.js";
+//import footer from "./footer.js"
 
 const content = document.querySelector('#content')
+//const footerElement = document.querySelector('#footer')
 
 
 
@@ -29,6 +32,9 @@ function changePage() {
 
   } else if (location.hash === "#contact-us") {
     generalForm()
+ 
+  } else if (location.hash === "#about-us") {
+    aboutUs()
   }
   else {
     document.querySelector('main');
@@ -38,16 +44,14 @@ function changePage() {
 function renderHomepage() {
   const saleButton = document.createElement('a')
   saleButton.setAttribute('href', '#sale')
-  const linkText2 = document.createTextNode("Sälj");
+  const linkText2 = document.createTextNode("SÄLJ");
   saleButton.appendChild(linkText2);
   content.appendChild(saleButton)
 
   const buyButton = document.createElement('a')
   buyButton.setAttribute('href', '#buy')
-  const linkText = document.createTextNode("Köp");
+  const linkText = document.createTextNode("KÖP");
   buyButton.appendChild(linkText);
   content.appendChild(buyButton)
 }
 
-
-//kolla knapparna
