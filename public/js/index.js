@@ -1,10 +1,13 @@
 import { getAllProperties, addProperty, addGenaralForm, login, getOneProperty, getAllGeneralMsg, getAllSaleMsg, addSaleForm, updateUser } from "./function/server-request.js";
 import createForm from "./function/createForm.js";
+import generalForm from "./generalForm.js";
 import renderSaleForm from "./salepage.js";
 import Villa from "./villa.js"
 import findProperty from "./findProperty.js"
+import createLoginForm from "./function/createForm.js";
 
 const content = document.querySelector('#content')
+
 
 
 onhashchange = changePage;
@@ -22,8 +25,12 @@ function changePage() {
     const buyForm = document.createElement('form')
     findProperty(buyForm)
   } else if (location.hash === "#login") {
-    document.querySelector('main');
-  } else {
+    document.querySelector('main').appendChild(createForm());
+
+  } else if (location.hash === "#contact-us") {
+    generalForm()
+  }
+  else {
     document.querySelector('main');
   }
 }
@@ -41,3 +48,6 @@ function renderHomepage() {
   buyButton.appendChild(linkText);
   content.appendChild(buyButton)
 }
+
+
+//kolla knapparna

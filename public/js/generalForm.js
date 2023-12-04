@@ -1,41 +1,58 @@
-const generalForm = {
-  firstName: '',
-  lastName: '',
-  phoneNumber: '',
-  mailAddress: '',
-  messageInfo: ''
-};
+export default function generalForm() {
+  const generalFormObj = {
+    firstName: '',
+    lastName: '',
+    phoneNumber: '',
+    mailAddress: '',
+    messageInfo: ''
+  };
 
-const generalFormNames = ['Firstname: ', 'Lastname: ', 'Phonenumber: ', 'Mailaddress:', 'Message: ']
+  const generalFormNames = ['Förnamn: ', 'Efternamn: ', 'Telefonnummer: ', 'E-mail:', 'Meddelande: ']
+  const generalFormCreate = document.createElement('form');
+  generalFormCreate.setAttribute('id', 'generalQuestionsForm')
+  const content = document.querySelector('#content');
 
-const generalFormCreate = document.createElement('form');
+  for (let i = 0; i < 5; i++) {
+    const label = document.createElement('label');
+    if (i == 4) {
+      label.id="messageLabel"
+    }
+    const input = document.createElement('input');
+    const lineBreak = document.createElement("br");
+    input.type = "text";
+    if (i==4) {
+      input.id="message"
+    }
+    label.innerText = generalFormNames[i];    
+    generalFormCreate.appendChild(label);    
+    generalFormCreate.appendChild(input);
+    generalFormCreate.appendChild(lineBreak);
+   
+  }
+  
+  const submitBtn = document.createElement('input');
+  submitBtn.setAttribute('type', 'submit');
+  submitBtn.setAttribute('id', 'generalFormBtn')
+  submitBtn.innerText = 'Send Message';
+  generalFormCreate.appendChild(submitBtn);
 
-const container = document.querySelector('main');
+  let sendMessage = "";
 
+  content.addEventListener('click', function (event) {
+    event.preventDefault();
+    const allInput = document.querySelectorAll('input');
+    
 
-container.appendChild(generalFormCreate); 
-
-for (let i = 0; i < 5; i++)
-{
-  const label = document.createElement('label');
-  const input = document.createElement('input');
-  input.type = "text";
-  label.innerText = generalFormNames[i];
-  container.appendChild(label);
-  container.appendChild(input);  
+    
+    generalFormObj.firstName = allInput[0].value
+    generalFormObj.lastName = allInput[1].value
+    generalFormObj.phoneNumber = allInput[2].value
+    generalFormObj.mailAddress = allInput[3].value
+    generalFormObj.messageInfo = allInput[4].value
+    
+  
+  });
+  content.appendChild(generalFormCreate);
 }
 
-const submitBtn = document.createElement('input');
-submitBtn.setAttribute('type', 'submit');
-submitBtn.innerText = 'Send Message'; 
-
-
-container.appendChild(submitBtn); 
-
-let sendMessage = "";
-
-container.addEventListener('submit', function (event) {
-  event.preventDefault();
-  
-}); 
 

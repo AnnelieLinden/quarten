@@ -26,7 +26,6 @@ nav {
 a {
   color: #313161;
   text-decoration: none;
-  justify-content: space-evenly;
 }
 
 body {
@@ -81,6 +80,12 @@ body {
   font-size: 30px;
 }
 
+#fieldsetSales {
+  margin-left: 30px;
+  border: 0;
+  margin-bottom: 20px;
+}
+
 /*-------buyPage---------*/
 #buyForm {
   display: flex;
@@ -94,17 +99,73 @@ body {
   border: 0 none;
 }
 
-#fieldsetSales {
-  margin: 10px;
-}
-
-#buyTitle {
+/*-------LogInPage---------*/
+#logInForm {
+  margin: 30px;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
   font-size: 20px;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  font-family: 'Oswald';
 }
 
-#marginCheckbox {
-  margin-left: 15px;
-  margin-right: 0px;
+/*-------ContactUsPage---------*/
+#generalQuestionsForm {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 50vh;
+  flex-direction: column;
+  font-size: 20px;
+  font-family: 'Oswald';
+  justify-content: flex-end;
+}
+
+#messageLabel {
+  margin-left: 20px;
+}
+
+#message {
+  height: 100px;
+  margin: 20px;
+}
+
+#generalFormBtn {
+  width: 70px;
+  margin-left: 70px;
+}
+
+
+@media screen and (max-width: 450px) {
+#saleForm {
+  width: 80%;
+}
+#fieldsetSales {
+  margin-left: 0px;
+  width: 92px;
+}
+#pTag {
+  font-size: 17px;
+}
+a {
+  font-size: small;
+}
+#generalQuestionsForm {
+  width: 80%;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+#messageLabel {
+  margin-left: 0px;
+}
+
+#message {
+  margin:0px;
+}
+#generalFormBtn {
+  margin-left: 0px;
+}
 }

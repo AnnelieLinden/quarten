@@ -3,11 +3,12 @@ import { login } from "./server-request.js";
 
 export default function createLoginForm() {
   const form = document.createElement("form");
-  const inputWhitLableArrUname = createInputWhitLabel("userName");
+  form.setAttribute('id','logInForm')
+  const inputWhitLableArrUname = createInputWhitLabel("Användare");
   form.appendChild(inputWhitLableArrUname[0]);
   form.appendChild(inputWhitLableArrUname[1]);
 
-  const inputWhitLableArrPass = createInputWhitLabel("pass");
+  const inputWhitLableArrPass = createInputWhitLabel("Lösenord");
   form.appendChild(inputWhitLableArrPass[0]);
   form.appendChild(inputWhitLableArrPass[1]);
 
@@ -15,12 +16,12 @@ export default function createLoginForm() {
   const userName = inputWhitLableArrUname[1];
   const pass = inputWhitLableArrPass[1];
 
-  button.innerText = "Submit";
+  button.innerText = "Logga in";
   button.addEventListener("click", async function (event) {
     event.preventDefault();
     const user = {
-      "userName": userName.value,
-      "pass": pass.value
+      "Användare": userName.value,
+      "Lösenord": pass.value
     }
     console.log(await login(user));
   });
@@ -28,3 +29,4 @@ export default function createLoginForm() {
   form.appendChild(button);
   return form;
 }
+ 

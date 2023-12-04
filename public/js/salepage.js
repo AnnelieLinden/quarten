@@ -1,7 +1,7 @@
 import Villa from "./villa.js"
 import Apartment from "./apartment.js"
+import { addSaleForm } from "./function/server-request.js";
 let apartmentType;
-
 let villaType;
 let addressInput;
 let startBidInput;
@@ -21,13 +21,16 @@ let garageInput;
 let waterAndSewerInput;
 let connectionInput;
 let heatingInput;
-
+let communityInput;
+let communityInput2;
+let communityInput3;
+let communityInput4;
 
 export default function renderSaleForm(saleForm) {
   saleForm.addEventListener('submit', saveSaleInfo)
   const pTag = document.createElement('p')
   pTag.setAttribute('id', 'pTag')
-  pTag.innerText="Är det dags att sälja din bostad?"
+  pTag.innerText = "Är det dags att sälja din bostad?"
   saleForm.setAttribute("id", "saleForm")
   const startBidLabel = document.createElement('label')
   startBidLabel.innerText = "Utgångspris:"
@@ -35,7 +38,7 @@ export default function renderSaleForm(saleForm) {
   startBidInput.setAttribute('type', 'number')
   const buildYearLabel = document.createElement('label')
   buildYearLabel.innerText = "Byggnadsår:"
-   buildYearInput = document.createElement('input')
+  buildYearInput = document.createElement('input')
   buildYearInput.setAttribute('type', 'number')
   const addressLabel = document.createElement('label')
   addressLabel.innerText = "Adress:"
@@ -65,7 +68,60 @@ export default function renderSaleForm(saleForm) {
   const villaTypeLabel = document.createElement('label')
   villaTypeLabel.innerText = "Villa:"
   const fieldset = document.createElement('fieldset')
+  fieldset.setAttribute('id', 'fieldsetSales')
 
+  //____________________________________________________________________
+
+  const communityLabel = document.createElement('label')
+  const karlskronaLabel = document.createElement('label')
+  const malmoLabel = document.createElement('label')
+  const ronnebyLabel = document.createElement('label')
+  const stockholmLabel = document.createElement('label')
+
+  communityLabel.innerText = "Område:"
+
+  karlskronaLabel.innerText = "Karlskrona:"
+  communityInput = document.createElement('input')
+  communityInput.setAttribute('type', 'radio')
+  communityInput.setAttribute('name', 'community')
+  communityInput.setAttribute('value', 'Karlskrona')
+
+  malmoLabel.innerText = "Malmö:"
+  communityInput2 = document.createElement('input')
+  communityInput2.setAttribute('type', 'radio')
+  communityInput2.setAttribute('name', 'community')
+  communityInput2.setAttribute('value', 'Malmö')
+
+  ronnebyLabel.innerText = "Ronneby:"
+  communityInput3 = document.createElement('input')
+  communityInput3.setAttribute('type', 'radio')
+  communityInput3.setAttribute('name', 'community')
+  communityInput3.setAttribute('value', 'Ronneby')
+
+  stockholmLabel.innerText = "Stockholm:"
+  communityInput4 = document.createElement('input')
+  communityInput4.setAttribute('type', 'radio')
+  communityInput4.setAttribute('name', 'community')
+  communityInput4.setAttribute('value', 'Stockholm')
+
+  const fieldset20 = document.createElement('fieldset')
+  fieldset20.setAttribute('id', 'fieldsetSales')
+
+
+  fieldset20.appendChild(karlskronaLabel)
+  fieldset20.appendChild(communityInput)
+  fieldset20.appendChild(malmoLabel)
+  fieldset20.appendChild(communityInput2)
+  fieldset20.appendChild(ronnebyLabel)
+  fieldset20.appendChild(communityInput3)
+  fieldset20.appendChild(stockholmLabel)
+  fieldset20.appendChild(communityInput4)
+
+
+
+  //________________________________________________________________________________________________
+
+  communityInput.setAttribute('id', 'community')
   buildYearInput.setAttribute('id', 'built')
   amountRoomInput.setAttribute('id', 'rooms')
   spaceInput.setAttribute('id', 'kvm')
@@ -81,6 +137,8 @@ export default function renderSaleForm(saleForm) {
   fieldset.appendChild(villaTypeLabel)
   fieldset.appendChild(villaType)
   saleForm.appendChild(fieldset)
+  saleForm.appendChild(communityLabel)
+  saleForm.appendChild(fieldset20)
   saleForm.appendChild(addressLabel)
   saleForm.appendChild(addressInput)
   saleForm.appendChild(startBidLabel)
@@ -96,7 +154,7 @@ export default function renderSaleForm(saleForm) {
   content.appendChild(saleForm)
 
   apartmentSaleForm(saleForm, feeInput, balconyInput, floorInput, elevatorInput, storeHouseInput, parkingInput, patioInput)
-  villaSaleForm(saleForm,lotInput, garageInput, waterAndSewerInput, connectionInput, heatingInput)
+  villaSaleForm(saleForm, lotInput, garageInput, waterAndSewerInput, connectionInput, heatingInput)
 }
 
 function apartmentSaleForm(saleForm) {
@@ -145,6 +203,7 @@ function apartmentSaleForm(saleForm) {
   patioInput.setAttribute('name', 'patio')
   patioInput.setAttribute('value', 'checked')
   const fieldset1 = document.createElement('fieldset')
+  fieldset1.setAttribute('id', 'fieldsetSales')
 
   floorInput.setAttribute('id', 'floor')
   elevatorInput.setAttribute('id', 'elevator')
@@ -172,6 +231,7 @@ function apartmentSaleForm(saleForm) {
   saleForm.appendChild(fieldset1)
   content.appendChild(saleForm)
 }
+
 function villaSaleForm(saleForm) {
   const label = document.createElement('label')
   label.innerText = "Villa:"
@@ -197,8 +257,9 @@ function villaSaleForm(saleForm) {
   heatingLabel.innerText = "Uppvärming:"
   heatingInput = document.createElement('input')
   const fieldset2 = document.createElement('fieldset')
+  fieldset2.setAttribute('id', 'fieldsetSales')
   const submitbtn = document.createElement('input')
-  submitbtn.setAttribute('type', 'submit') 
+  submitbtn.setAttribute('type', 'submit')
   submitbtn.setAttribute('value', 'Skicka till mäklare')
 
   lotInput.setAttribute('id', 'lot')
@@ -206,7 +267,7 @@ function villaSaleForm(saleForm) {
   waterAndSewerInput.setAttribute('id', 'wAndS')
   connectionInput.setAttribute('id', 'connections')
   heatingInput.setAttribute('id', 'heating')
- 
+
   saleForm.appendChild(label)
   saleForm.appendChild(lotLabel)
   saleForm.appendChild(lotInput)
@@ -221,18 +282,18 @@ function villaSaleForm(saleForm) {
   saleForm.appendChild(fieldset2)
   saleForm.appendChild(submitbtn)
   content.appendChild(saleForm)
-
 }
 
 function saveSaleInfo(event) {
   event.preventDefault()
-  console.log(event.target.elements)
   const savedSales = allValues(event.target.elements)
+  addSaleForm(savedSales);
   console.log(savedSales)
 
-} 
-//sätt id på alla elementen och byt ut mot exempelvis feeInput
+}
+
 function allValues(elements) {
+  elements.community.value
   elements.villa.value
   elements.apartment.value
   elements.fee.value
@@ -255,9 +316,9 @@ function allValues(elements) {
   elements.heating.Value
 
   if (apartmentType.checked) {
-    return new Apartment(fee.value, balcony.value, floor.value, elevator.value, storage.value,parking.value,patio.value,address.value,startBid.value,kvm.value,built.value,rooms.value,info.value)
+    return new Apartment(fee.value, balcony.value, floor.value, elevator.value, storage.value, parking.value, patio.value, address.value, community.value, startBid.value, kvm.value, built.value, rooms.value, info.value)
   } else if (villaType.checked) {
-    return new Villa(lot.value,garage.value,wAndS.value,connections.value, heating.value,address.value,startBid.value,kvm.value,built.value,rooms.value,info.value)
+    return new Villa(lot.value, garage.value, wAndS.value, connections.value, heating.value, address.value, community.Value, startBid.value, kvm.value, built.value, rooms.value, info.value)
   }
-
 }
+
