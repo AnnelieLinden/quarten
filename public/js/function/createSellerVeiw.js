@@ -41,6 +41,7 @@ export default function createSellerVeiw(validUser, form) {
     sellerSection.addEventListener("click", async function (event) {
       const data = event.target;
       await addProperty(data);
+      alert("Data skickad");
     });
 
     section.appendChild(buttonGeneralMsg);
