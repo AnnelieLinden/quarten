@@ -25,9 +25,10 @@ export default function createLoginForm() {
       "userName": userName.value,
       "pass": pass.value
     }
-    console.log(await login(user));
     createSellerVeiw(await login(user), form);
-
+    if (!await login(user)) {
+      alert("Fel lösenord eller användaranamn");
+    }
   });
 
   form.appendChild(button);
