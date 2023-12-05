@@ -13,6 +13,7 @@ export default function createSellerVeiw(validUser, form) {
     const generalSection = createSection();
     buttonGeneralMsg.innerText = "<v>";
     buttonSellerMsg.innerText = "<-v->";
+    var dataStorage = "";
 
     buttonGeneralMsg.addEventListener("click", async function (event) {
       const generalMsg = await getAllGeneralMsg();
@@ -30,6 +31,7 @@ export default function createSellerVeiw(validUser, form) {
       const sellerMsg = await getAllSaleMsg();
       generalSection.innerHTML = "";
       sellerSection.innerHTML = "";
+      dataStorage = sellerMsg;
       for (var i = 0; i < sellerMsg.length; i++) {
         const paragraf = createParagraf();
         paragraf.innerText = Object.values(sellerMsg[i]);
@@ -39,9 +41,16 @@ export default function createSellerVeiw(validUser, form) {
     });
 
     sellerSection.addEventListener("click", async function (event) {
-      const data = event.target;
-      await addProperty(data);
-      alert("Data skickad");
+      const sellFormData = event.target.innerText;
+      for (var i = 0; i < dataStorage.length; i++) {
+        if (dataStorage[i].id == sellFormData[sellFormData.length - 1]) {
+          console.log(dataStorage[i]);
+          await addProperty(dataStorage[i]);
+          alert("Data skickad");
+        }
+
+      }
+
     });
 
     section.appendChild(buttonGeneralMsg);
