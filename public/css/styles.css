@@ -83,17 +83,31 @@ footer {
 
 #info {
   height: 20vh;
+  width: 100%;
 }
 
 #pTag {
   font-size: 4vh;
 }
 
-#fieldsetSales {
+.fieldsetSales {
   border: 0;
   margin-bottom: 1vh;
+  width: 100%;
+  display: flex;
 }
 
+#address{
+  width: 100%;
+}
+.salesPtag {
+  margin: 0;
+  margin-right: 2vh;
+}
+
+.saleInput {
+  width: 100%;
+}
 /*-------buyPage---------*/
 #buyForm {
   display: flex;
@@ -151,18 +165,19 @@ footer {
   font-family: 'Oswald';
 }
 
-
-
 @media screen and (max-width: 450px) {
   #saleForm {
-    width: 80%;
+    width: 100%;
   }
-
-  #fieldsetSales {
-    margin-left: 0px;
-    width: 15vh;
-  }
-
+ #fieldsetSales {
+   margin-left: 0px;
+   width: 15vh;
+   display: flex;
+   flex-direction: column;
+ }
+ .saleInput {
+  width: 100%;
+ }
   #pTag {
     font-size: 17px;
   }
