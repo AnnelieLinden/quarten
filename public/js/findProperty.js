@@ -2,7 +2,7 @@ import { getAllProperties } from "./function/server-request.js"
 
 export default async function findProperty(buyForm) {
 
-  const propertyList = await getAllProperties(); //hämtar datan från json genom getAllProperties och data array i json, och i propertyList hamnar listan som objekt
+  //const propertyList = await getAllProperties(); //hämtar datan från json genom getAllProperties och data array i json, och i propertyList hamnar listan som objekt
 
   const pTag = document.createElement('p')
   pTag.setAttribute('id', 'pTag')
@@ -35,7 +35,6 @@ export default async function findProperty(buyForm) {
   villaInput.setAttribute('name', 'villa')
   villaInput.setAttribute('value', 'checked')
 
-
   const fieldset10 = document.createElement('fieldset')
   fieldset10.setAttribute('id', 'fieldset') //för att få bort ramen runt fältet
   fieldset10.appendChild(apartmentLabel)
@@ -43,11 +42,9 @@ export default async function findProperty(buyForm) {
   fieldset10.appendChild(villaLabel)
   fieldset10.appendChild(villaInput)
 
-
   const neighborhoodLabel = document.createElement('label') //bostadsområde
   neighborhoodLabel.setAttribute('id', 'buyTitle')
   neighborhoodLabel.innerText = "Område:"
-  //const neighborhoodInput = document.createElement('input')
 
   const communityLabel = document.createElement('label')
   const communityLabel1 = document.createElement('label')
@@ -104,7 +101,6 @@ export default async function findProperty(buyForm) {
   const priceLabel = document.createElement('label')
   priceLabel.setAttribute('id', 'buyTitle')
   priceLabel.innerText = "Max pris:"
-  //const priceInput = document.createElement('input')
 
   const maxPriceLabel = document.createElement('label')
   const maxPriceLabel1 = document.createElement('label')
@@ -166,7 +162,6 @@ export default async function findProperty(buyForm) {
   maxPriceInput10.setAttribute('name', 'community')
   maxPriceInput10.setAttribute('value', 'checked')
 
-
   const fieldset30 = document.createElement('fieldset')
   fieldset30.setAttribute('id', 'fieldset') //för att få bort ramen runt fältet 
   fieldset30.appendChild(maxPriceLabel)
@@ -186,7 +181,6 @@ export default async function findProperty(buyForm) {
   const areaLabel = document.createElement('label')
   areaLabel.setAttribute('id', 'buyTitle')
   areaLabel.innerText = "Minsta bostadsarea:"
-  //const areaInput = document.createElement('input')
 
   const minAreaLabel = document.createElement('label')
   const minAreaLabel1 = document.createElement('label')
@@ -239,60 +233,15 @@ export default async function findProperty(buyForm) {
   fieldset40.appendChild(minAreaLabel6)
   fieldset40.appendChild(minAreaInput6)
 
-
   buyForm.appendChild(pTag)
   buyForm.appendChild(propertyLabel)
-  //buyForm.appendChild(propertyInput)
-
-  //radioknapp
-  /* buyForm.appendChild(apartmentInputLabel)
-   buyForm.appendChild(apartmentInput)
-   buyForm.appendChild(villaInputLabel)
-   buyForm.appendChild(villaInput)*/
-
   buyForm.appendChild(fieldset10) //för att gruppera bostadstyp
-  /*buyForm.appendChild(villaLabel)
- buyForm.appendChild(villaInput)
- buyForm.appendChild(apartmentLabel)
- buyForm.appendChild(apartmentInput)*/
-
   buyForm.appendChild(neighborhoodLabel)
-  //buyForm.appendChild(neighborhoodInput)
   buyForm.appendChild(fieldset20) //för att gruppera områden
-  /*buyForm.appendChild(communityLabel)
-  buyForm.appendChild(communityInput)
-  buyForm.appendChild(communityLabel2)
-  buyForm.appendChild(communityInput2)
-  buyForm.appendChild(communityLabel4)
-  buyForm.appendChild(communityInput4)
-  buyForm.appendChild(communityLabel6)
-  buyForm.appendChild(communityInput6)*/
-
   buyForm.appendChild(priceLabel)
-  //buyForm.appendChild(priceInput)
   buyForm.appendChild(fieldset30) //för att gruppera maxpris
-  /* buyForm.appendChild(maxPriceLabel)
-   buyForm.appendChild(maxPriceInput)
-   buyForm.appendChild(maxPriceLabel2)
-   buyForm.appendChild(maxPriceInput2)
-   buyForm.appendChild(maxPriceLabel4)
-   buyForm.appendChild(maxPriceInput4)
-   buyForm.appendChild(maxPriceLabel6)
-   buyForm.appendChild(maxPriceInput6)*/
-
   buyForm.appendChild(areaLabel)
   buyForm.appendChild(fieldset40) //för att gruppera bostadsarea
-  /*buyForm.appendChild(minAreaLabel)
-  buyForm.appendChild(minAreaInput)
-  buyForm.appendChild(minAreaLabel2)
-  buyForm.appendChild(minAreaInput2)
-  buyForm.appendChild(minAreaLabel4)
-  buyForm.appendChild(minAreaInput4)
-  buyForm.appendChild(minAreaLabel6)
-  buyForm.appendChild(minAreaInput6)*/
-
-
-  // buyForm.appendChild(areaInput)
 
   const searchbtn = document.createElement('input')
   searchbtn.setAttribute('type', 'submit')
@@ -301,6 +250,5 @@ export default async function findProperty(buyForm) {
   buyForm.appendChild(searchbtn)
 
   content.appendChild(buyForm)
-
 
 }
