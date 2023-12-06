@@ -2,16 +2,11 @@ import { getAllProperties, addProperty, addGenaralForm, login, getOneProperty, g
 import createForm from "./function/createForm.js";
 import generalForm from "./generalForm.js";
 import renderSaleForm from "./salepage.js";
-import Villa from "./villa.js"
 import findProperty from "./findProperty.js"
 import createLoginForm from "./function/createForm.js";
 import aboutUs from "./about-us.js";
-//import footer from "./footer.js"
-
+import footer from "./footer.js";
 const content = document.querySelector('#content')
-//const footerElement = document.querySelector('#footer')
-
-
 
 onhashchange = changePage;
 

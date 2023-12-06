@@ -69,9 +69,7 @@ export default function renderSaleForm(saleForm) {
   villaTypeLabel.innerText = "Villa:"
   const fieldset = document.createElement('fieldset')
   fieldset.setAttribute('id', 'fieldsetSales')
-
   //____________________________________________________________________
-
   const communityLabel = document.createElement('label')
   const karlskronaLabel = document.createElement('label')
   const malmoLabel = document.createElement('label')
@@ -106,19 +104,6 @@ export default function renderSaleForm(saleForm) {
 
   const fieldset20 = document.createElement('fieldset')
   fieldset20.setAttribute('id', 'fieldsetSales')
-
-
-  fieldset20.appendChild(karlskronaLabel)
-  fieldset20.appendChild(communityInput)
-  fieldset20.appendChild(malmoLabel)
-  fieldset20.appendChild(communityInput2)
-  fieldset20.appendChild(ronnebyLabel)
-  fieldset20.appendChild(communityInput3)
-  fieldset20.appendChild(stockholmLabel)
-  fieldset20.appendChild(communityInput4)
-
-
-
   //________________________________________________________________________________________________
 
   communityInput.setAttribute('id', 'community')
@@ -137,10 +122,18 @@ export default function renderSaleForm(saleForm) {
   fieldset.appendChild(villaTypeLabel)
   fieldset.appendChild(villaType)
   saleForm.appendChild(fieldset)
-  saleForm.appendChild(communityLabel)
-  saleForm.appendChild(fieldset20)
   saleForm.appendChild(addressLabel)
   saleForm.appendChild(addressInput)
+  saleForm.appendChild(communityLabel)
+  fieldset20.appendChild(karlskronaLabel)
+  fieldset20.appendChild(communityInput)
+  fieldset20.appendChild(malmoLabel)
+  fieldset20.appendChild(communityInput2)
+  fieldset20.appendChild(ronnebyLabel)
+  fieldset20.appendChild(communityInput3)
+  fieldset20.appendChild(stockholmLabel)
+  fieldset20.appendChild(communityInput4)
+   saleForm.appendChild(fieldset20)
   saleForm.appendChild(startBidLabel)
   saleForm.appendChild(startBidInput)
   saleForm.appendChild(spaceLabel)

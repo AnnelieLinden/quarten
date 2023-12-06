@@ -73,6 +73,23 @@
       "fiberConnection": "ja",
       "heating": "ja",
       "id": 8
+    },
+    {
+      "address": "aaa",
+      "community": {},
+      "startBid": "Karlskrona",
+      "kvmArea": "111",
+      "buildYear": "111",
+      "amountRoom": "10",
+      "info": "11",
+      "fee": "222",
+      "balcony": "checked",
+      "floor": "1",
+      "elevator": "checked",
+      "storeHouse": "checked",
+      "parking": "checked",
+      "patio": "checked",
+      "id": 9
     }
   ],
   "generalForms": [
