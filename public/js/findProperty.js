@@ -4,6 +4,40 @@ export default async function findProperty(buyForm) {
 
   //const propertyList = await getAllProperties(); //hämtar datan från json genom getAllProperties och data array i json, och i propertyList hamnar listan som objekt
 
+  const villaObject =
+  {
+    address: "Tomtevägen",
+    startBid: "3000000",
+    kvmArea: "150",
+    buildYear: "2005",
+    amountRoom: "5",
+    info: "rött hus med vita knutar",
+    lot: "4000",
+    garage: "ja",
+    waterAndSewer: "ja",
+    fiberConnection: "ja",
+    heating: "ja",
+    //id:1
+  }
+
+  const apartmentObject =
+  {
+    address: "Luciagränd",
+    startBid: "1000000",
+    kvmArea: "75",
+    buildYear: "1906",
+    amountRoom: "3",
+    info: "sekelskiftesvåning",
+    fee: "50000",
+    balcony:"nej",
+    floor:"3",
+    elevator: "ja",
+    storeHouse: "ja",
+    parking:"nej",
+    patio: "ja",
+    //id:2
+  }
+
   const pTag = document.createElement('p')
   pTag.setAttribute('id', 'pTag')
   pTag.innerText = "Hitta din bostad!"
