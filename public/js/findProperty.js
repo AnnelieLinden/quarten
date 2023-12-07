@@ -17,8 +17,9 @@ export default async function findProperty(buyForm) {
     waterAndSewer: "ja",
     fiberConnection: "ja",
     heating: "ja",
-    //id:1
   }
+  console.log(villaObject);
+
 
   const apartmentObject =
   {
@@ -29,18 +30,44 @@ export default async function findProperty(buyForm) {
     amountRoom: "3",
     info: "sekelskiftesvåning",
     fee: "50000",
-    balcony:"nej",
-    floor:"3",
+    balcony: "nej",
+    floor: "3",
     elevator: "ja",
     storeHouse: "ja",
-    parking:"nej",
+    parking: "nej",
     patio: "ja",
-    //id:2
   }
+  console.log(apartmentObject);
+
 
   const pTag = document.createElement('p')
   pTag.setAttribute('id', 'pTag')
   pTag.innerText = "Hitta din bostad!"
+
+  //export default function listProperties() { }
+
+  const objectSection = document.createElement('objectSection')
+  objectSection.setAttribute('id', 'objectSection')
+
+  const pTagAddress = document.createElement('p')
+  pTagAddress.setAttribute('id', 'pTagAddress')
+  pTagAddress.innerText = villaObject.address
+
+  const pTagPrice = document.createElement('p')
+  pTagPrice.setAttribute('id', 'pTagPrice')
+  pTagPrice.innerText = villaObject.startBid + " SEK"
+
+  const pTagArea = document.createElement('p')
+  pTagArea.setAttribute('id', 'pTagArea')
+  pTagArea.innerText = villaObject.kvmArea + " kvm"
+
+  
+
+
+
+  //pTagObject.innerText = Object.values(villaObject)
+  //pTagObject.innerText = villaObject.address + villaObject.startBid + villaObject.kvmArea
+
 
   buyForm.setAttribute('id', 'buyForm')
 
@@ -284,5 +311,11 @@ export default async function findProperty(buyForm) {
   buyForm.appendChild(searchbtn)
 
   content.appendChild(buyForm)
+
+  objectSection.appendChild(pTagAddress)
+  objectSection.appendChild(pTagPrice)
+  objectSection.appendChild(pTagArea)
+
+  content.appendChild(objectSection)
 
 }
