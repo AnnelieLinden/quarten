@@ -64,6 +64,23 @@
       "fiberConnection": "ja",
       "heating": "ja",
       "id": 2
+    },
+    {
+      "address": "Brunnen",
+      "community": {},
+      "startBid": "Karlskrona",
+      "kvmArea": "10000",
+      "buildYear": "45",
+      "amountRoom": "1700",
+      "info": "6",
+      "fee": "5300",
+      "balcony": "checked",
+      "floor": "2",
+      "elevator": "checked",
+      "storeHouse": "checked",
+      "parking": "checked",
+      "patio": "checked",
+      "id": 3
     }
   ],
   "generalForms": [
