@@ -32,6 +32,39 @@ body {
   margin: 0%;
 }
 
+#homeSection {
+
+  color: #313161;
+  background-color: #7291c0;
+  font-size: 2.5vh;
+  font-family: 'Oswald';
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  margin: 1.5vh;
+  border: solid 2px #313161;
+  padding: 1.5vh;
+}
+
+#homeSection2 {
+  color: #313161;
+  background-color: #7291c0;
+    font-size: 2.5vh;
+    font-family: 'Oswald';
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5vh;
+    border: solid 2px #313161;
+    padding: 1.5vh;
+}
+
+
+
 #content {
   display: flex;
   justify-items: center;
@@ -153,6 +186,7 @@ footer {
   height: 20vh;
   margin: 3vh;
 }
+
 /*-------AboutUsPage---------*/
 #aboutSection {
   justify-content: start;
