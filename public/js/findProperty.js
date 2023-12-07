@@ -46,8 +46,8 @@ export default async function findProperty(buyForm) {
 
   //export default function listProperties() { }
 
-  const objectSection = document.createElement('objectSection')
-  objectSection.setAttribute('id', 'objectSection')
+  const objectSectionVilla = document.createElement('objectSection')
+  objectSectionVilla.setAttribute('id', 'objectSection')
 
   const pTagAddress = document.createElement('p')
   pTagAddress.setAttribute('id', 'pTagAddress')
@@ -61,9 +61,20 @@ export default async function findProperty(buyForm) {
   pTagArea.setAttribute('id', 'pTagArea')
   pTagArea.innerText = villaObject.kvmArea + " kvm"
 
-  
+  const objectSectionApartment = document.createElement('objectSection')
+  objectSectionApartment.setAttribute('id', 'objectSection')
 
+  const pTagAddress2 = document.createElement('p')
+  pTagAddress2.setAttribute('id', 'pTagAddress')
+  pTagAddress2.innerText = apartmentObject.address
 
+  const pTagPrice2 = document.createElement('p')
+  pTagPrice2.setAttribute('id', 'pTagPrice')
+  pTagPrice2.innerText = apartmentObject.startBid + " SEK"
+
+  const pTagArea2 = document.createElement('p')
+  pTagArea2.setAttribute('id', 'pTagArea')
+  pTagArea2.innerText = apartmentObject.kvmArea + " kvm"
 
   //pTagObject.innerText = Object.values(villaObject)
   //pTagObject.innerText = villaObject.address + villaObject.startBid + villaObject.kvmArea
@@ -312,10 +323,16 @@ export default async function findProperty(buyForm) {
 
   content.appendChild(buyForm)
 
-  objectSection.appendChild(pTagAddress)
-  objectSection.appendChild(pTagPrice)
-  objectSection.appendChild(pTagArea)
+  objectSectionVilla.appendChild(pTagAddress)
+  objectSectionVilla.appendChild(pTagPrice)
+  objectSectionVilla.appendChild(pTagArea)
 
-  content.appendChild(objectSection)
+  content.appendChild(objectSectionVilla)
+
+  objectSectionApartment.appendChild(pTagAddress2)
+  objectSectionApartment.appendChild(pTagPrice2)
+  objectSectionApartment.appendChild(pTagArea2)
+
+  content.appendChild(objectSectionApartment)
 
 }
