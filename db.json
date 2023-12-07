@@ -1,16 +1,32 @@
 {
   "data": [
     {
-      "id": 1,
-      "home": "home"
+      "address": "Soft Center",
+      "startBid": "1000000",
+      "kvmArea": "20000",
+      "buildYear": "2000",
+      "amountRoom": "200",
+      "info": "katt",
+      "lot": "2000",
+      "garage": "checked",
+      "waterAndSewer": "ja",
+      "fiberConnection": "ja",
+      "heating": "ja",
+      "id": 1
     },
     {
-      "home": " house",
+      "address": "Fortress of Doom",
+      "startBid": "100000000",
+      "kvmArea": "200000",
+      "buildYear": "0",
+      "amountRoom": "200",
+      "info": "Doom",
+      "lot": "0",
+      "garage": "checked",
+      "waterAndSewer": "ja",
+      "fiberConnection": "ja",
+      "heating": "ja",
       "id": 2
-    },
-    {
-      "home": " house",
-      "id": 3
     }
   ],
   "users": [
@@ -22,43 +38,18 @@
   ],
   "saleForms": [
     {
-      "id": 1,
-      "phone": "07000000",
-      "email": "ex.ex@ex.ex",
-      "firstName": "____",
-      "lastName": "-----"
-    },
-    {
-      "home": "anywere",
-      "property": "house",
+      "address": "Fortress of Doom",
+      "startBid": "100000000",
+      "kvmArea": "200000",
+      "buildYear": "0",
+      "amountRoom": "200",
+      "info": "Doom",
+      "lot": "0",
+      "garage": "checked",
+      "waterAndSewer": "ja",
+      "fiberConnection": "ja",
+      "heating": "ja",
       "id": 2
-    },
-    {
-      "home": "anywere",
-      "property": "house",
-      "id": 3
-    },
-    {
-      "phone": "07000000",
-      "email": "ex.ex@ex.ex",
-      "firstName": "____",
-      "lastName": "-----",
-      "home": "house",
-      "id": 4
-    },
-    {
-      "phone": "07000000",
-      "email": "ex.ex@ex.ex",
-      "firstName": "____",
-      "lastName": "-----",
-      "home": "house",
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
     },
     {
       "address": "Soft Center",
@@ -72,7 +63,7 @@
       "waterAndSewer": "ja",
       "fiberConnection": "ja",
       "heating": "ja",
-      "id": 8
+      "id": 2
     }
   ],
   "generalForms": [
