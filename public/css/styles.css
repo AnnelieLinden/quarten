@@ -25,6 +25,7 @@ nav {
 a {
   color: #313161;
   text-decoration: none;
+  font-size: 3vh;
 }
 
 body {
@@ -32,53 +33,16 @@ body {
   margin: 0%;
 }
 
-#homeSection {
-
-  color: #313161;
-  background-color: #7291c0;
-  font-size: 2.5vh;
-  font-family: 'Oswald';
-  margin-top: 15vh;
-  margin-bottom: 15vh;
-  display: flex;  
-  justify-content: center;
-  align-items: center;
-  margin: 1.5vh;
-  border: solid 2px #313161;
-  padding: 1.5vh;
-}
-
-#homeSection2 {
-  color: #313161;
-  background-color: #7291c0;
-    font-size: 2.5vh;
-    font-family: 'Oswald';
-    margin-top: 15vh;
-    margin-bottom: 15vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1.5vh;
-    border: solid 2px #313161;
-    padding: 1.5vh;
-}
-
-
 
 #content {
   display: flex;
   justify-items: center;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   height: 100%;
-  margin: 1vh;
+  margin: 3vh;
   justify-content: space-around;
-}
-
-#content>a {
-  font-size: 12vh;
-  font-family: 'Oswald';
-  align-self: center;
+  
 }
 
 footer {
@@ -90,14 +54,49 @@ footer {
   padding: 4vh;
   font-family: 'Oswald';
 }
+/*---------homePage---------*/
+#content>a {
+  font-size: 12vh;
+  font-family: 'Oswald';
+  align-self: center;
+  margin: 8%;
+  margin-bottom: 2%;
+}
+#homeSection {
+  display: flex;
+  flex-direction: row;
+  font-family: 'oswald';
+  width: 80%;
+  margin-top: 3vh;
+}
+
+#homeDiv1 {
+  margin-right: 1vh;
+  background-color: rgb(125 191 225);
+  padding: 1vh;
+  border-radius: 40px 40px 40px 40px;
+  box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#homeDiv2 {
+  margin-left: 1vh;
+  background-color: rgb(125 191 225);
+  padding:1vh;
+  border-radius: 40px 40px 40px 40px;
+  box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.75);
+}
 
 /*---------salePage---------*/
 #saleForm {
   display: flex;
   flex-direction: column;
-  height: 200vh;
+  height: 140vh;
   width: 70%;
   font-family: 'Oswald';
+  background-color: rgb(125 191 225);
+  padding: 3vh;
+  border-radius: 40px 40px 40px 40px;
+  box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 #apartmentTitel {
@@ -105,13 +104,14 @@ footer {
   margin-top: 3vh;
   margin-bottom: 3vh;
   color: blue;
+
 }
 
 #villaTitel {
   font-size: 3vh;
   margin-top: 3vh;
   margin-bottom: 3vh;
-  color: #15a475;
+  color: #0f7956;
 }
 
 #info {
@@ -130,9 +130,10 @@ footer {
   display: flex;
 }
 
-#address{
+#address {
   width: 100%;
 }
+
 .salesPtag {
   margin: 0;
   margin-right: 2vh;
@@ -141,6 +142,7 @@ footer {
 .saleInput {
   width: 100%;
 }
+
 /*-------buyPage---------*/
 #buyForm {
   display: flex;
@@ -202,22 +204,31 @@ footer {
 @media screen and (max-width: 450px) {
   #saleForm {
     width: 100%;
+    height: 240vh;
   }
- #fieldsetSales {
-   margin-left: 0px;
-   width: 15vh;
-   display: flex;
-   flex-direction: column;
- }
- .saleInput {
-  width: 100%;
- }
+  #content>a {
+    font-size: 3vh;
+  }
+  .fieldsetSales {
+    margin-left: 0px;
+    width: 15vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header>p {
+    width: 100%;
+  }
+  .saleInput {
+    width: 100%;
+  }
+
   #pTag {
     font-size: 17px;
   }
 
   a {
-    font-size: small;
+    font-size: 10px;
+    margin: 2vh;
   }
 
   #generalQuestionsForm {
@@ -245,5 +256,15 @@ footer {
     width: 227px;
     display: flex;
     flex-wrap: wrap;
+  }
+  #homeSection {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    margin: 2vh;
+    margin-bottom: 5vh;
+  }
+  #homeDiv1 {
+    margin-bottom: 3vh;
   }
 }

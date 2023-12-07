@@ -22,32 +22,6 @@ export default function renderSaleForm(saleForm) {
   appendVillaForm(saleForm)
 
 }
-/*
-function apartmentSaleForm(saleForm) {
-createElevator();
- createFee();
- const balconyLabel = createBalcony();
- const floorLabel = createFloor();
- const storeHouseLabel = createStoreHouse();
- const parkingLabel = createParking();
- const patioLabel = createPatio();
-
- appendApartmentForm(saleForm);
-}
-
-function villaSaleForm(saleForm) {
- 
- const lotLabel = createLot();
- const garageLabel = createGarage();
- const waterAndSewerLabel = createWaterAndSewer();
- const conectionLabel = createConnections();
- const heatingLabel = createHeating();
- const submitbtn = createSubmitBtn();
-
-
-
- appendVillaForm(saleForm, label, lotLabel, waterAndSewerLabel, conectionLabel, heatingLabel, fieldset2, garageLabel, submitbtn);
-}*/
 
 function saveSaleInfo(event) {
   event.preventDefault()

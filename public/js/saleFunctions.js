@@ -1,4 +1,3 @@
-
 export function appendSaleForm(saleForm) {
   saleForm.appendChild(createPTag());
   saleForm.appendChild(createBuildType());
