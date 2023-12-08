@@ -42,7 +42,7 @@ body {
   height: 100%;
   margin: 3vh;
   justify-content: space-around;
-  
+
 }
 
 footer {
@@ -54,6 +54,7 @@ footer {
   padding: 4vh;
   font-family: 'Oswald';
 }
+
 /*---------homePage---------*/
 #content>a {
   font-size: 12vh;
@@ -62,6 +63,7 @@ footer {
   margin: 8%;
   margin-bottom: 2%;
 }
+
 #homeSection {
   display: flex;
   flex-direction: row;
@@ -81,7 +83,7 @@ footer {
 #homeDiv2 {
   margin-left: 1vh;
   background-color: rgb(125 191 225);
-  padding:1vh;
+  padding: 1vh;
   border-radius: 40px 40px 40px 40px;
   box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.75);
 }
@@ -90,7 +92,7 @@ footer {
 #saleForm {
   display: flex;
   flex-direction: column;
-  height: 140vh;
+  height: 100%;
   width: 70%;
   font-family: 'Oswald';
   background-color: rgb(125 191 225);
@@ -148,8 +150,16 @@ footer {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 80%;
+  width: 95%;
   font-family: 'Oswald';
+
+  padding: 3vh;
+  /*background-color: rgb(125 191 225);
+  border-radius: 40px 40px 40px 40px;
+  box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.75);*/
+  border: solid #7291c0 4px;
+  border-radius: 30px 30px 30px 30px;
+  box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 #fieldset {
@@ -158,11 +168,11 @@ footer {
 
 #objectSection {
   margin-top: 5vh;
-  margin-bottom: 3vh;
-  margin-right: 3vh;
+  margin-bottom: 2vh;
+  margin-right: 2vh;
   margin-left: 3vh;
-  border: solid #7291c0 3px; 
-  border-radius: 18px 18px 18px 18px;
+  border: solid #7291c0 4px;
+  border-radius: 30px 30px 30px 30px;
   box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   flex-wrap: wrap;
@@ -241,18 +251,22 @@ footer {
     width: 100%;
     height: 240vh;
   }
+
   #content>a {
     font-size: 3vh;
   }
+
   .fieldsetSales {
     margin-left: 0px;
     width: 15vh;
     display: flex;
     flex-direction: column;
   }
+
   header>p {
     width: 100%;
   }
+
   .saleInput {
     width: 100%;
   }
@@ -292,13 +306,15 @@ footer {
     display: flex;
     flex-wrap: wrap;
   }
+
   #homeSection {
     width: 100%;
-    display:flex;
+    display: flex;
     flex-direction: column;
     margin: 2vh;
     margin-bottom: 5vh;
   }
+
   #homeDiv1 {
     margin-bottom: 3vh;
   }

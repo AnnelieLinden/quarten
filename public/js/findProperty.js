@@ -1,67 +1,80 @@
 import { getAllProperties } from "./function/server-request.js"
 
+const villaObject =
+{
+  address: "Tomtevägen",
+  startBid: "3000000",
+  kvmArea: "150",
+  buildYear: "2005",
+  amountRoom: "5",
+  info: "rött hus med vita knutar",
+  lot: "4000",
+  garage: "ja",
+  waterAndSewer: "ja",
+  fiberConnection: "ja",
+  heating: "ja",
+}
+console.log(villaObject);
+
+
+const apartmentObject =
+{
+  address: "Luciagränd",
+  startBid: "1000000",
+  kvmArea: "75",
+  buildYear: "1906",
+  amountRoom: "3",
+  info: "sekelskiftesvåning",
+  fee: "50000",
+  balcony: "nej",
+  floor: "3",
+  elevator: "ja",
+  storeHouse: "ja",
+  parking: "nej",
+  patio: "ja",
+}
+console.log(apartmentObject);
+
+
+function listProperties() {
+
+  for (let i = 0; i < 20; i++) {
+
+    const objectSectionVilla = document.createElement('objectSection')
+    objectSectionVilla.setAttribute('id', 'objectSection')
+
+    const pTagAddress = document.createElement('p')
+    pTagAddress.setAttribute('id', 'pTagAddress')
+    pTagAddress.innerText = villaObject.address
+
+    const pTagPrice = document.createElement('p')
+    pTagPrice.setAttribute('id', 'pTagPrice')
+    pTagPrice.innerText = villaObject.startBid + " SEK"
+
+    const pTagArea = document.createElement('p')
+    pTagArea.setAttribute('id', 'pTagArea')
+    pTagArea.innerText = villaObject.kvmArea + " kvm"
+
+    objectSectionVilla.appendChild(pTagAddress)
+    objectSectionVilla.appendChild(pTagPrice)
+    objectSectionVilla.appendChild(pTagArea)
+
+    content.appendChild(objectSectionVilla)
+
+  }
+
+}
+
+
 export default async function findProperty(buyForm) {
 
   //const propertyList = await getAllProperties(); //hämtar datan från json genom getAllProperties och data array i json, och i propertyList hamnar listan som objekt
-
-  const villaObject =
-  {
-    address: "Tomtevägen",
-    startBid: "3000000",
-    kvmArea: "150",
-    buildYear: "2005",
-    amountRoom: "5",
-    info: "rött hus med vita knutar",
-    lot: "4000",
-    garage: "ja",
-    waterAndSewer: "ja",
-    fiberConnection: "ja",
-    heating: "ja",
-  }
-  console.log(villaObject);
-
-
-  const apartmentObject =
-  {
-    address: "Luciagränd",
-    startBid: "1000000",
-    kvmArea: "75",
-    buildYear: "1906",
-    amountRoom: "3",
-    info: "sekelskiftesvåning",
-    fee: "50000",
-    balcony: "nej",
-    floor: "3",
-    elevator: "ja",
-    storeHouse: "ja",
-    parking: "nej",
-    patio: "ja",
-  }
-  console.log(apartmentObject);
-
 
   const pTag = document.createElement('p')
   pTag.setAttribute('id', 'pTag')
   pTag.innerText = "Hitta din bostad!"
 
-  //export default function listProperties() { }
-
-  const objectSectionVilla = document.createElement('objectSection')
-  objectSectionVilla.setAttribute('id', 'objectSection')
-
-  const pTagAddress = document.createElement('p')
-  pTagAddress.setAttribute('id', 'pTagAddress')
-  pTagAddress.innerText = villaObject.address
-
-  const pTagPrice = document.createElement('p')
-  pTagPrice.setAttribute('id', 'pTagPrice')
-  pTagPrice.innerText = villaObject.startBid + " SEK"
-
-  const pTagArea = document.createElement('p')
-  pTagArea.setAttribute('id', 'pTagArea')
-  pTagArea.innerText = villaObject.kvmArea + " kvm"
-
-  const objectSectionApartment = document.createElement('objectSection')
+  /* const objectSectionApartment = document.createElement('objectSection')
   objectSectionApartment.setAttribute('id', 'objectSection')
 
   const pTagAddress2 = document.createElement('p')
@@ -74,7 +87,7 @@ export default async function findProperty(buyForm) {
 
   const pTagArea2 = document.createElement('p')
   pTagArea2.setAttribute('id', 'pTagArea')
-  pTagArea2.innerText = apartmentObject.kvmArea + " kvm"
+  pTagArea2.innerText = apartmentObject.kvmArea + " kvm"*/
 
   //pTagObject.innerText = Object.values(villaObject)
   //pTagObject.innerText = villaObject.address + villaObject.startBid + villaObject.kvmArea
@@ -323,16 +336,11 @@ export default async function findProperty(buyForm) {
 
   content.appendChild(buyForm)
 
-  objectSectionVilla.appendChild(pTagAddress)
-  objectSectionVilla.appendChild(pTagPrice)
-  objectSectionVilla.appendChild(pTagArea)
+  listProperties()
 
-  content.appendChild(objectSectionVilla)
-
-  objectSectionApartment.appendChild(pTagAddress2)
+  /*objectSectionApartment.appendChild(pTagAddress2)
   objectSectionApartment.appendChild(pTagPrice2)
   objectSectionApartment.appendChild(pTagArea2)
-
-  content.appendChild(objectSectionApartment)
+  content.appendChild(objectSectionApartment)*/
 
 }
