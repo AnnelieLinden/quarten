@@ -1,6 +1,6 @@
 import createSection from "./minorComponets/createSection.js";
 import createButton from "./minorComponets/createButton.js";
-import { getAllGeneralMsg, getAllSaleMsg, addProperty } from "./server-request.js";
+import { getAllProperties, getAllGeneralMsg, getAllSaleMsg, addProperty } from "./server-request.js";
 import createParagraf from "./minorComponets/createParagraf.js";
 
 export default function createSellerVeiw(validUser, form) {
@@ -41,10 +41,11 @@ export default function createSellerVeiw(validUser, form) {
     });
 
     sellerSection.addEventListener("click", async function (event) {
+      const dataLength = await getAllProperties();
       const sellFormData = event.target.innerText;
       for (var i = 0; i < dataStorage.length; i++) {
         if (dataStorage[i].id == sellFormData[sellFormData.length - 1]) {
-          console.log(dataStorage[i]);
+          dataStorage[i].id = dataLength.length + 1;
           await addProperty(dataStorage[i]);
           alert("Data skickad");
         }
@@ -53,8 +54,8 @@ export default function createSellerVeiw(validUser, form) {
 
     });
 
-    section.appendChild(buttonGeneralMsg);
-    section.appendChild(buttonSellerMsg);
+    form.appendChild(buttonGeneralMsg);
+    form.appendChild(buttonSellerMsg);
     form.appendChild(section);
   }
 }
