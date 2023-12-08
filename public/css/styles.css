@@ -33,6 +33,41 @@ body {
   margin: 0%;
 }
 
+<<<<<<< Updated upstream
+=======
+#homeSection {
+
+  color: #313161;
+  background-color: #7291c0;
+  font-size: 2.5vh;
+  font-family: 'Oswald';
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5vh;
+  border: solid 2px #313161;
+  padding: 1.5vh;
+}
+
+#homeSection2 {
+  color: #313161;
+  background-color: #7291c0;
+  font-size: 2.5vh;
+  font-family: 'Oswald';
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5vh;
+  border: solid 2px #313161;
+  padding: 1.5vh;
+}
+
+
+>>>>>>> Stashed changes
 
 #content {
   display: flex;
@@ -257,6 +292,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
   }
+<<<<<<< Updated upstream
   #homeSection {
     width: 100%;
     display:flex;
@@ -267,4 +303,34 @@ footer {
   #homeDiv1 {
     margin-bottom: 3vh;
   }
+=======
+}
+
+form>section {
+  color: #313161;
+  background-color: #7291c0;
+  font-family: 'Oswald';
+  font-size: small;
+  margin: 2.5vh;
+  flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+form>section>button {
+  color: #313161;
+  background-color: rgb(125 191 225);
+  border-style: solid;
+  border-color: #313161;
+  padding: 2.5vh;
+  
+}
+
+form>section>button>p {
+  color: #313161;
+  background-color: #15a475;
+  font-family: 'Oswald';
+  font-size: small;
+>>>>>>> Stashed changes
 }
