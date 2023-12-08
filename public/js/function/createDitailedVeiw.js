@@ -22,10 +22,10 @@ export default function createDitailedVeiw(propertyInfoData, propertyType) {
 function propertyToArr(property, propertyType) {
   const dataArr = [];
   dataArr.push(property.address);
-  dataArr.push(property.amountRoom);
+  dataArr.push(property.amountRoom + "st");
   dataArr.push(property.buildYear);
-  dataArr.push(property.kvmArea);
-  dataArr.push(property.startBid);
+  dataArr.push(property.kvmArea + "kvm");
+  dataArr.push(property.startBid + "kr");
   dataArr.push(property.info);
   if (propertyType === "villa") {
     dataArr.push(property.fiberConnection);
@@ -38,7 +38,7 @@ function propertyToArr(property, propertyType) {
   else {
     dataArr.push(property.balcony);
     dataArr.push(property.elevator);
-    dataArr.push(property.fee);
+    dataArr.push(property.fee + "kr");
     dataArr.push(property.floor);
     dataArr.push(property.parking);
     dataArr.push(property.patio);

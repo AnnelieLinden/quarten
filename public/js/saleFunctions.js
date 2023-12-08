@@ -64,6 +64,63 @@ export function createBuildType() {
   apartmentType.setAttribute('type', 'radio');
   apartmentType.setAttribute('name', 'propertyType');
   apartmentType.setAttribute('value', 'Bostadsrätt');
+
+  apartmentType.addEventListener('click', () => {
+    const apartmentPatio = document.querySelector('#patio');
+    apartmentPatio.disabled = false;
+    const apartmentParking = document.querySelector('#parking');
+    apartmentParking.disabled = false;
+    const apartmentStoreHouse = document.querySelector('#storage');
+    apartmentStoreHouse.disabled = false;
+    const apartmentFloor = document.querySelector('#floor');
+    apartmentFloor.disabled = false;
+    const apartmentBalcony = document.querySelector('#balcony');
+    apartmentBalcony.disabled = false;
+    const apartmentElevator = document.querySelector('#elevator');
+    apartmentElevator.disabled = false;
+    const apartmentFee = document.querySelector('#fee');
+    apartmentFee.disabled = false;
+
+    const villaHeating = document.querySelector('#heating');
+    villaHeating.disabled = true;
+    const villaConnections = document.querySelector('#connections');
+    villaConnections.disabled = true;
+    const villaWaterAndSewer = document.querySelector('#wAndS');
+    villaWaterAndSewer.disabled = true;
+    const villaGarage = document.querySelector('#garage');
+    villaGarage.disabled = true;
+    const villaLot = document.querySelector('#lot');
+    villaLot.disabled = true;
+
+  });
+  villaType.addEventListener('click', () => {
+    const villaHeating = document.querySelector('#heating');
+    villaHeating.disabled = false;
+    const villaConnections = document.querySelector('#connections');
+    villaConnections.disabled = false;
+    const villaWaterAndSewer = document.querySelector('#wAndS');
+    villaWaterAndSewer.disabled = false;
+    const villaGarage = document.querySelector('#garage');
+    villaGarage.disabled = false;
+    const villaLot = document.querySelector('#lot');
+    villaLot.disabled = false;
+
+    const apartmentPatio = document.querySelector('#patio');
+    apartmentPatio.disabled = true;
+    const apartmentParking = document.querySelector('#parking');
+    apartmentParking.disabled = true;
+    const apartmentStoreHouse = document.querySelector('#storage');
+    apartmentStoreHouse.disabled = true;
+    const apartmentFloor = document.querySelector('#floor');
+    apartmentFloor.disabled = true;
+    const apartmentBalcony = document.querySelector('#balcony');
+    apartmentBalcony.disabled = true;
+    const apartmentElevator = document.querySelector('#elevator');
+    apartmentElevator.disabled = true;
+    const apartmentFee = document.querySelector('#fee');
+    apartmentFee.disabled = true;
+  });
+
   const apartmentTypeLabel = document.createElement('label');
   apartmentTypeLabel.innerText = "Bostadsrätt:";
   villaType.setAttribute('type', 'radio');
@@ -279,7 +336,8 @@ export function appendVillaForm(saleForm) {
 export function createSubmitBtn() {
   const submitbtn = document.createElement('input');
   submitbtn.setAttribute('type', 'submit');
-  submitbtn.setAttribute('value', 'Skicka till mäklare');
+  submitbtn.setAttribute('value', 'Skicka');
+  submitbtn.setAttribute('id','sendToBroker')
   return submitbtn;
 }
 export function createHeating() {

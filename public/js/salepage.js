@@ -20,44 +20,42 @@ export default function renderSaleForm(saleForm) {
   appendSaleForm(saleForm);
   appendApartmentForm(saleForm)
   appendVillaForm(saleForm)
-
 }
 
 function saveSaleInfo(event) {
   event.preventDefault()
   const savedSales = allValues(event.target.elements)
   addSaleForm(savedSales);
-  console.log(savedSales)
 
 }
 
 function allValues(elements) {
-  elements.community.value
-  elements.villa.value
-  elements.apartment.value
-  elements.fee.value
-  elements.balcony.value
-  elements.floor.value
-  elements.elevator.value
-  elements.storage.value
-  elements.parking.value
-  elements.patio.Valie
-  elements.address.value
-  elements.startBid.value
-  elements.kvm.value
-  elements.rooms.value
-  elements.built.value
-  elements.info.value
-  elements.lot.value
-  elements.garage.value
-  elements.wAndS.value
-  elements.connections.value
-  elements.heating.Value
+  const villa = elements.villa.checked
+  const apartment = elements.apartment.checked
+  const fee = elements.fee.value
+  const balcony = elements.balcony.value
+  const floor = elements.floor.value
+  const elevator = elements.elevator.value
+  const storage = elements.storage.value
+  const parking = elements.parking.value
+  const patio = elements.patio.Valie
+  const address = elements.address.value
+  const bid = elements.startBid.value
+  const community = elements.community.value
+  const kvm = elements.kvm.value
+  const rooms = elements.rooms.value
+  const built = elements.built.value
+  const info = elements.info.value
+  const lot = elements.lot.value
+  const garage = elements.garage.value
+  const wAndS = elements.wAndS.value
+  const connections = elements.connections.value
+  const heating = elements.heating.Value
 
-  if (apartmentType.checked) {
-    return new Apartment(fee.value, balcony.value, floor.value, elevator.value, storage.value, parking.value, patio.value, address.value, community.value, startBid.value, kvm.value, built.value, rooms.value, info.value)
-  } else if (villaType.checked) {
-    return new Villa(lot.value, garage.value, wAndS.value, connections.value, heating.value, address.value, community.Value, startBid.value, kvm.value, built.value, rooms.value, info.value)
+  if (apartment == true) {
+    return new Apartment(fee, balcony, floor, elevator, storage, parking, patio, address, community, bid, kvm, built, rooms, info)
+  } else if (villa == true) {
+    return new Villa(lot, garage, wAndS, connections, heating, address, community, bid, kvm, built, rooms, info)
   }
 }
 
