@@ -1,4 +1,5 @@
 import { getAllProperties } from "./function/server-request.js"
+import createDitailedVeiw from "./function/createDitailedVeiw.js"
 
 const villaObject =
 {
@@ -36,70 +37,58 @@ const apartmentObject =
 console.log(apartmentObject);
 
 
-function listProperties() {
+function listProperties(objectList) {
+  for (let i = 0; i < objectList.length; i++) {
 
-  for (let i = 0; i < 20; i++) {
-
-    const objectSectionVilla = document.createElement('objectSection')
-    objectSectionVilla.setAttribute('id', 'objectSection')
+    const objectSection = document.createElement('objectSection')
+    objectSection.setAttribute('id', 'objectSection')
 
     const pTagAddress = document.createElement('p')
     pTagAddress.setAttribute('id', 'pTagAddress')
-    pTagAddress.innerText = villaObject.address
+    pTagAddress.innerText = objectList[i].address
 
     const pTagPrice = document.createElement('p')
     pTagPrice.setAttribute('id', 'pTagPrice')
-    pTagPrice.innerText = villaObject.startBid + " SEK"
+    pTagPrice.innerText = objectList[i].startBid + " SEK"
 
     const pTagArea = document.createElement('p')
     pTagArea.setAttribute('id', 'pTagArea')
-    pTagArea.innerText = villaObject.kvmArea + " kvm"
+    pTagArea.innerText = objectList[i].kvmArea + " kvm"
 
-    objectSectionVilla.appendChild(pTagAddress)
-    objectSectionVilla.appendChild(pTagPrice)
-    objectSectionVilla.appendChild(pTagArea)
+    objectSection.addEventListener("click", function (event) {
+      let propertyType = "villa"
+      objectSection.innerHTML = ""
+      if (!objectList[i].fee === undefined) {
+        propertyType = "apartment"
+      }
 
-    content.appendChild(objectSectionVilla)
+      objectSection.appendChild(createDitailedVeiw(objectList[i], propertyType))
+
+
+    })
+    objectSection.appendChild(pTagAddress)
+    objectSection.appendChild(pTagPrice)
+    objectSection.appendChild(pTagArea)
+
+    content.appendChild(objectSection)
 
   }
-
 }
 
 
 export default async function findProperty(buyForm) {
 
-  //const propertyList = await getAllProperties(); //hämtar datan från json genom getAllProperties och data array i json, och i propertyList hamnar listan som objekt
+  const propertyList = await getAllProperties(); //hämtar datan från json genom getAllProperties och data array i json, och i propertyList hamnar listan som objekt
 
   const pTag = document.createElement('p')
   pTag.setAttribute('id', 'pTag')
   pTag.innerText = "Hitta din bostad!"
-
-  /* const objectSectionApartment = document.createElement('objectSection')
-  objectSectionApartment.setAttribute('id', 'objectSection')
-
-  const pTagAddress2 = document.createElement('p')
-  pTagAddress2.setAttribute('id', 'pTagAddress')
-  pTagAddress2.innerText = apartmentObject.address
-
-  const pTagPrice2 = document.createElement('p')
-  pTagPrice2.setAttribute('id', 'pTagPrice')
-  pTagPrice2.innerText = apartmentObject.startBid + " SEK"
-
-  const pTagArea2 = document.createElement('p')
-  pTagArea2.setAttribute('id', 'pTagArea')
-  pTagArea2.innerText = apartmentObject.kvmArea + " kvm"*/
-
-  //pTagObject.innerText = Object.values(villaObject)
-  //pTagObject.innerText = villaObject.address + villaObject.startBid + villaObject.kvmArea
-
 
   buyForm.setAttribute('id', 'buyForm')
 
   const propertyLabel = document.createElement('label')
   propertyLabel.setAttribute('id', 'buyTitle')
   propertyLabel.innerText = "Bostadstyp:"
-
-  // const propertyInput = document.createElement('input')
 
   const apartmentLabel = document.createElement('label')
   const apartmentLabel1 = document.createElement('label')
@@ -336,11 +325,6 @@ export default async function findProperty(buyForm) {
 
   content.appendChild(buyForm)
 
-  listProperties()
-
-  /*objectSectionApartment.appendChild(pTagAddress2)
-  objectSectionApartment.appendChild(pTagPrice2)
-  objectSectionApartment.appendChild(pTagArea2)
-  content.appendChild(objectSectionApartment)*/
+  listProperties(propertyList)
 
 }

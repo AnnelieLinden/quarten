@@ -6,7 +6,6 @@ export default function createDitailedVeiw(propertyInfoData, propertyType) {
   const propertyData = propertyToArr(propertyInfoData, propertyType)
   const section = createSection();
   propertyType = propertyType.toLowerCase().trim();
-
   const property = propertyInfo(propertyData);
   section.appendChild(property);
   if (propertyType === "villa") {
