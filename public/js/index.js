@@ -74,7 +74,6 @@ function textHomepage() {
   Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
   
   Kontakta oss för mer information om vår policy.`
- 
   homeDiv1.appendChild(homeTitel1)
   homeDiv1.appendChild(hometext1)
   homeDiv2.appendChild(homeTitel2)

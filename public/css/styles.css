@@ -31,6 +31,7 @@ a {
 body {
   background-color: antiquewhite;
   margin: 0%;
+
 }
 
 
@@ -42,7 +43,7 @@ body {
   height: 100%;
   margin: 3vh;
   justify-content: space-around;
-  
+
 }
 
 footer {
@@ -54,6 +55,7 @@ footer {
   padding: 4vh;
   font-family: 'Oswald';
 }
+
 /*---------homePage---------*/
 #content>a {
   font-size: 12vh;
@@ -61,7 +63,12 @@ footer {
   align-self: center;
   margin: 8%;
   margin-bottom: 2%;
+  background-color: rgb(125 191 225);
+  padding: 3vh;
+  border-radius: 40px 40px 40px 40px;
+  box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.75);
 }
+
 #homeSection {
   display: flex;
   flex-direction: row;
@@ -73,7 +80,7 @@ footer {
 #homeDiv1 {
   margin-right: 1vh;
   background-color: rgb(125 191 225);
-  padding: 1vh;
+  padding: 2vh;
   border-radius: 40px 40px 40px 40px;
   box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.75);
 }
@@ -81,7 +88,7 @@ footer {
 #homeDiv2 {
   margin-left: 1vh;
   background-color: rgb(125 191 225);
-  padding:1vh;
+  padding: 2vh;
   border-radius: 40px 40px 40px 40px;
   box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.75);
 }
@@ -90,13 +97,17 @@ footer {
 #saleForm {
   display: flex;
   flex-direction: column;
-  height: 140vh;
+  height: 100%;
   width: 70%;
   font-family: 'Oswald';
   background-color: rgb(125 191 225);
   padding: 3vh;
   border-radius: 40px 40px 40px 40px;
   box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#sendToBroker {
+  width: 20%;
 }
 
 #apartmentTitel {
@@ -165,6 +176,10 @@ footer {
   font-size: 3vh;
   font-family: 'Oswald';
   margin-bottom: 10vh;
+  background-color: rgb(125 191 225);
+  padding: 3vh;
+  border-radius: 40px 40px 40px 40px;
+  box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 /*-------ContactUsPage---------*/
@@ -178,6 +193,10 @@ footer {
   font-size: 3vh;
   font-family: 'Oswald';
   justify-content: flex-end;
+  background-color: rgb(125 191 225);
+  padding: 3vh;
+  border-radius: 40px 40px 40px 40px;
+  box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 #messageLabel {
@@ -206,18 +225,22 @@ footer {
     width: 100%;
     height: 240vh;
   }
+
   #content>a {
     font-size: 3vh;
   }
+
   .fieldsetSales {
     margin-left: 0px;
     width: 15vh;
     display: flex;
     flex-direction: column;
   }
+
   header>p {
     width: 100%;
   }
+
   .saleInput {
     width: 100%;
   }
@@ -257,13 +280,15 @@ footer {
     display: flex;
     flex-wrap: wrap;
   }
+
   #homeSection {
     width: 100%;
-    display:flex;
+    display: flex;
     flex-direction: column;
     margin: 2vh;
     margin-bottom: 5vh;
   }
+
   #homeDiv1 {
     margin-bottom: 3vh;
   }
