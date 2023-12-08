@@ -33,8 +33,6 @@ body {
   margin: 0%;
 }
 
-<<<<<<< Updated upstream
-=======
 #homeSection {
 
   color: #313161;
@@ -67,7 +65,6 @@ body {
 }
 
 
->>>>>>> Stashed changes
 
 #content {
   display: flex;
@@ -292,18 +289,6 @@ footer {
     display: flex;
     flex-wrap: wrap;
   }
-<<<<<<< Updated upstream
-  #homeSection {
-    width: 100%;
-    display:flex;
-    flex-direction: column;
-    margin: 2vh;
-    margin-bottom: 5vh;
-  }
-  #homeDiv1 {
-    margin-bottom: 3vh;
-  }
-=======
 }
 
 form>section {
@@ -332,5 +317,4 @@ form>section>button>p {
   background-color: #15a475;
   font-family: 'Oswald';
   font-size: small;
->>>>>>> Stashed changes
 }
