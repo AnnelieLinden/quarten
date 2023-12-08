@@ -28,7 +28,7 @@ function propertyToArr(property, propertyType) {
   dataArr.push(property.startBid + " SEK");
   dataArr.push("Övrig info: " + property.info);
   if (propertyType === "villa") {
-    dataArr.push("Uppkoppling: " + property.fiberConnection);
+    dataArr.push("Bredband: " + property.fiberConnection);
     dataArr.push("Garage: " + property.garage);
     dataArr.push("Tomtstorlek: " + property.lot);
     dataArr.push("V/A: " + property.waterAndSewer);

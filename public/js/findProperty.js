@@ -58,10 +58,11 @@ function listProperties(objectList) {
     pTagArea.innerText = objectList[i].kvmArea + " kvm"
 
     objectSection.addEventListener("click", function (event) {
-      let propertyType = "villa"
+      let propertyType = "apartment"
       objectSection.innerHTML = ""
-      if (!objectList[i].fee === undefined) {
-        propertyType = "apartment"
+      console.log(objectList[i].fee)
+      if (objectList[i].fee == undefined) {
+        propertyType = "villa" 
       }
 
       objectSection.appendChild(createDitailedVeiw(objectList[i], propertyType))
@@ -81,7 +82,7 @@ function listProperties(objectList) {
 export default async function findProperty(buyForm) {
 
   const propertyList = await getAllProperties(); //hämtar datan från json genom getAllProperties och data array i json, och i propertyList hamnar listan som objekt
-console.log(propertyList);
+  console.log(propertyList);
   const pTag = document.createElement('p')
   pTag.setAttribute('id', 'pTag')
   pTag.innerText = "Hitta din bostad!"
