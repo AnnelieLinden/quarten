@@ -31,41 +31,7 @@ a {
 body {
   background-color: antiquewhite;
   margin: 0%;
-
 }
-
-#homeSection {
-
-  color: #313161;
-  background-color: #7291c0;
-  font-size: 2.5vh;
-  font-family: 'Oswald';
-  margin-top: 15vh;
-  margin-bottom: 15vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1.5vh;
-  border: solid 2px #313161;
-  padding: 1.5vh;
-}
-
-#homeSection2 {
-  color: #313161;
-  background-color: #7291c0;
-  font-size: 2.5vh;
-  font-family: 'Oswald';
-  margin-top: 15vh;
-  margin-bottom: 15vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1.5vh;
-  border: solid 2px #313161;
-  padding: 1.5vh;
-}
-
-
 
 #content {
   display: flex;
@@ -75,7 +41,6 @@ body {
   height: 100%;
   margin: 3vh;
   justify-content: space-around;
-
 }
 
 footer {
