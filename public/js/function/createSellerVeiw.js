@@ -11,8 +11,8 @@ export default function createSellerVeiw(validUser, form) {
     const buttonSellerMsg = createButton();
     const sellerSection = createSection();
     const generalSection = createSection();
-    buttonGeneralMsg.innerText = "<v>";
-    buttonSellerMsg.innerText = "<-v->";
+    buttonGeneralMsg.innerText = "Allmänna frågor: ";
+    buttonSellerMsg.innerText = "Säljformulär: ";
     var dataStorage = "";
 
     buttonGeneralMsg.addEventListener("click", async function (event) {
