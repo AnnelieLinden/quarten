@@ -22,27 +22,27 @@ export default function createDitailedVeiw(propertyInfoData, propertyType) {
 function propertyToArr(property, propertyType) {
   const dataArr = [];
   dataArr.push(property.address);
-  dataArr.push(property.amountRoom + "st");
-  dataArr.push(property.buildYear);
-  dataArr.push(property.kvmArea + "kvm");
-  dataArr.push(property.startBid + "kr");
-  dataArr.push(property.info);
+  dataArr.push(property.amountRoom + " st rum");
+  dataArr.push("Byggår: " + property.buildYear);
+  dataArr.push(property.kvmArea + " kvm");
+  dataArr.push(property.startBid + " SEK");
+  dataArr.push("Övrig info: " + property.info);
   if (propertyType === "villa") {
-    dataArr.push(property.fiberConnection);
-    dataArr.push(property.garage);
-    dataArr.push(property.lot);
-    dataArr.push(property.waterAndSewer);
-    dataArr.push(property.heating);
+    dataArr.push("Uppkoppling: " + property.fiberConnection);
+    dataArr.push("Garage: " + property.garage);
+    dataArr.push("Tomtstorlek: " + property.lot);
+    dataArr.push("V/A: " + property.waterAndSewer);
+    dataArr.push("Uppvärming: " + property.heating);
 
   }
   else {
-    dataArr.push(property.balcony);
-    dataArr.push(property.elevator);
-    dataArr.push(property.fee + "kr");
-    dataArr.push(property.floor);
-    dataArr.push(property.parking);
-    dataArr.push(property.patio);
-    dataArr.push(property.storeHouse);
+    dataArr.push("Balkong: " + property.balcony);
+    dataArr.push("Hiss: " + property.elevator);
+    dataArr.push(property.fee + " SEK");
+    dataArr.push("Våning: " + property.floor);
+    dataArr.push("Parkering: " + property.parking);
+    dataArr.push("Uteplats: " + property.patio);
+    dataArr.push("Förråd: " + property.storeHouse);
   }
   return dataArr;
 }

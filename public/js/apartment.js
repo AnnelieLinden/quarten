@@ -10,7 +10,7 @@ export default class Apartment extends Property {
   patio; //innegård eller uteplats
 
 
-  constructor(fee, balcony, floor, elevator, storeHouse, parking, patio, address, startBid, kvmArea, buildYear, amountRoom, info) {
+  constructor(fee, balcony, floor, elevator, storeHouse, parking, patio, address, community, startBid, kvmArea, buildYear, amountRoom, info) {
 
    super(address, community, startBid, kvmArea, buildYear, amountRoom, info);
 

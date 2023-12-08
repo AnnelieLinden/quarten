@@ -4,6 +4,7 @@ import createDitailedVeiw from "./function/createDitailedVeiw.js"
 const villaObject =
 {
   address: "Tomtevägen",
+  community: "Karlskrona",
   startBid: "3000000",
   kvmArea: "150",
   buildYear: "2005",
@@ -21,6 +22,7 @@ console.log(villaObject);
 const apartmentObject =
 {
   address: "Luciagränd",
+  community: "Stockholm",
   startBid: "1000000",
   kvmArea: "75",
   buildYear: "1906",
@@ -79,7 +81,7 @@ function listProperties(objectList) {
 export default async function findProperty(buyForm) {
 
   const propertyList = await getAllProperties(); //hämtar datan från json genom getAllProperties och data array i json, och i propertyList hamnar listan som objekt
-
+console.log(propertyList);
   const pTag = document.createElement('p')
   pTag.setAttribute('id', 'pTag')
   pTag.innerText = "Hitta din bostad!"
