@@ -142,7 +142,7 @@ export function createBuildType() {
 export function createInfo() {
   const infoLabel = document.createElement('label');
   infoLabel.innerText = "Info:";
-  const infoInput = document.createElement('input');
+  const infoInput = document.createElement('textarea');
   infoInput.setAttribute('id', 'info');
   
   infoLabel.appendChild(infoInput)

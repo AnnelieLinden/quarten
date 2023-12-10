@@ -22,8 +22,15 @@ export async function addSaleForm(saleForm) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(saleForm)
   })
-  response = await response.json();
-  console.log(response);
+ 
+  console.log(response)
+  if (response.ok) {
+    const responseJson = await response.json();
+    document.getElementById('saleForm').reset();
+    alert("Formuläret är skickat och läggs upp på sidan när det granskats av en mäklare.")
+    return responseJson
+  }
+
 }
 
 export async function addGenaralForm(generalForm) {
