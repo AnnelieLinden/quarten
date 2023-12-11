@@ -2,12 +2,11 @@ import { getAllProperties } from "./function/server-request.js"
 import createDitailedVeiw from "./function/createDitailedVeiw.js"
 
 function listProperties(objectList) {
+
   const propertiesSection = document.createElement('propertiesSection')
   propertiesSection.setAttribute('id', 'propertiesSection')
   
   for (let i = 0; i < objectList.length; i++) {
-
-    
 
     const objectSection = document.createElement('objectSection')
     objectSection.setAttribute('id', 'objectSection')
@@ -32,7 +31,6 @@ function listProperties(objectList) {
       }
 
       objectSection.appendChild(createDitailedVeiw(objectList[i], propertyType))
-
 
     })
     objectSection.appendChild(pTagAddress)
