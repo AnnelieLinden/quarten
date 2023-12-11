@@ -125,9 +125,6 @@ export default async function findProperty(buyForm) {
     if (filteredList.length > 0) {
       listProperties(filteredList);
     }
-    else {
-      listProperties(propertyList);
-    }
 
   })
   buyForm.appendChild(searchbtn)
