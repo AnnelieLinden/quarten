@@ -2,6 +2,7 @@ import { getAllProperties } from "./function/server-request.js"
 import createDitailedVeiw from "./function/createDitailedVeiw.js"
 
 function listProperties(objectList) {
+
   const propertiesSection = document.createElement('propertiesSection')
   propertiesSection.setAttribute('id', 'propertiesSection')
   
