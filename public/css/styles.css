@@ -99,6 +99,7 @@ footer {
   flex-direction: column;
   height: 100%;
   width: 70%;
+  font-size: 3vh;
   font-family: 'Oswald';
   background-color: rgb(125 191 225);
   padding: 3vh;
@@ -162,6 +163,7 @@ footer {
   height: 100%;
   width: 75%;
   font-family: 'Oswald';
+  font-size: 3vh;
 
   padding: 3vh;
   background-color: rgb(125 191 225);
@@ -206,7 +208,6 @@ footer {
 #pTagAddress {
   font-size: 2.5vh;
   color: #313161;
-
 }
 
 #pTagPrice {
@@ -285,7 +286,6 @@ footer {
     height: 240vh;
   }
   
-
   #content>a {
     font-size: 3vh;
   }
