@@ -185,7 +185,7 @@ footer {
   flex-wrap: wrap;
   height: 100%;
   width: 75%;
-  }
+}
 
 #objectSection {
   margin-top: 5vh;
@@ -226,7 +226,7 @@ footer {
   flex-direction: column;
   display: flex;
   justify-content: space-between;
-  height: 40vh;
+  min-height: 40vh;
   font-size: 3vh;
   font-family: 'Oswald';
   margin-bottom: 10vh;
@@ -262,6 +262,7 @@ footer {
   height: 30vh;
   margin: 3vh;
 }
+
 #generalFormBtn {
   width: 10vh;
   display: flex;
@@ -285,7 +286,7 @@ footer {
     width: 100%;
     height: 240vh;
   }
-  
+
   #content>a {
     font-size: 3vh;
   }
@@ -357,6 +358,7 @@ footer {
     flex-direction: column;
     display: flex;
   }
+
   #objectSection {
     width: 90%;
   }
