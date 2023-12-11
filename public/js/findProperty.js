@@ -1,42 +1,6 @@
 import { getAllProperties } from "./function/server-request.js"
 import createDitailedVeiw from "./function/createDitailedVeiw.js"
 
-const villaObject =
-{
-  address: "Tomtevägen",
-  community: "Karlskrona",
-  startBid: "3000000",
-  kvmArea: "150",
-  buildYear: "2005",
-  amountRoom: "5",
-  info: "rött hus med vita knutar",
-  lot: "4000",
-  garage: "ja",
-  waterAndSewer: "ja",
-  fiberConnection: "ja",
-  heating: "ja",
-}
-console.log(villaObject);
-
-
-const apartmentObject =
-{
-  address: "Luciagränd",
-  community: "Stockholm",
-  startBid: "1000000",
-  kvmArea: "75",
-  buildYear: "1906",
-  amountRoom: "3",
-  info: "sekelskiftesvåning",
-  fee: "50000",
-  balcony: "nej",
-  floor: "3",
-  elevator: "ja",
-  storeHouse: "ja",
-  parking: "nej",
-  patio: "ja",
-}
-console.log(apartmentObject);
 
 
 function listProperties(objectList) {
