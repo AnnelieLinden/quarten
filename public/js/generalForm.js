@@ -7,33 +7,33 @@ export default function generalForm() {
     messageInfo: ''
   };
 
-  const generalFormNames = ['Förnamn: ', 'Efternamn: ', 'Telefonnummer: ', 'E-mail:', 'Meddelande: ']
+  const generalFormNames = ['Förnamn: ', 'Efternamn: ', 'Telefonnummer: ', 'E-mail:']
   const generalFormCreate = document.createElement('form');
   generalFormCreate.setAttribute('id', 'generalQuestionsForm')
   const content = document.querySelector('#content');
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 4; i++) {
     const label = document.createElement('label');
-    if (i == 4) {
-      label.id="messageLabel"
-    }
     const input = document.createElement('input');
     const lineBreak = document.createElement("br");
     input.type = "text";
-    if (i==4) {
-      input.id="message"
-    }
     label.innerText = generalFormNames[i];    
     generalFormCreate.appendChild(label);    
     generalFormCreate.appendChild(input);
     generalFormCreate.appendChild(lineBreak);
-   
   }
-  
+  const messageLabel = document.createElement('label')
+  messageLabel.setAttribute('id', 'messageLabel')
+  messageLabel.innerText="Meddelande:"
+  const messageInput = document.createElement('textarea')
+  messageInput.setAttribute('id', 'message')
+
   const submitBtn = document.createElement('input');
   submitBtn.setAttribute('type', 'submit');
   submitBtn.setAttribute('id', 'generalFormBtn')
   submitBtn.innerText = 'Send Message';
+  generalFormCreate.appendChild(messageLabel)  
+  generalFormCreate.appendChild(messageInput)
   generalFormCreate.appendChild(submitBtn);
 
   let sendMessage = "";

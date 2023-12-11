@@ -7,7 +7,6 @@ function listProperties(objectList) {
   propertiesSection.setAttribute('id', 'propertiesSection')
   
   for (let i = 0; i < objectList.length; i++) {
-
     const objectSection = document.createElement('objectSection')
     objectSection.setAttribute('id', 'objectSection')
 
@@ -29,9 +28,7 @@ function listProperties(objectList) {
       if (objectList[i].fee == undefined) {
         propertyType = "villa"
       }
-
       objectSection.appendChild(createDitailedVeiw(objectList[i], propertyType))
-
     })
     objectSection.appendChild(pTagAddress)
     objectSection.appendChild(pTagPrice)
