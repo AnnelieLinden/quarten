@@ -21,8 +21,11 @@ export default function createSellerVeiw(validUser, form) {
       sellerSection.innerHTML = "";
       for (var i = 0; i < generalMsg.length; i++) {
         const paragraf = createParagraf();
+        const generalPSection = createSection();
+        generalPSection.id = "generalPSecton" + i;
         paragraf.innerText = Object.values(generalMsg[i]);
-        generalSection.appendChild(paragraf);
+        generalPSection.appendChild(paragraf);
+        generalSection.appendChild(generalPSection);
         section.appendChild(generalSection);
       }
     });
@@ -34,8 +37,11 @@ export default function createSellerVeiw(validUser, form) {
       dataStorage = sellerMsg;
       for (var i = 0; i < sellerMsg.length; i++) {
         const paragraf = createParagraf();
+        const sellPSection = createSection();
+        sellPSection.id = "sellPSection" + i;
         paragraf.innerText = Object.values(sellerMsg[i]);
-        sellerSection.appendChild(paragraf);
+        sellPSection.appendChild(paragraf);
+        sellerSection.appendChild(sellPSection);
         section.appendChild(sellerSection);
       }
     });
