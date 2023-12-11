@@ -1,21 +1,8 @@
 {
   "data": [
     {
-      "address": "Soft Center",
-      "startBid": "1000000",
-      "kvmArea": "20000",
-      "buildYear": "2000",
-      "amountRoom": "200",
-      "info": "katt",
-      "lot": "2000",
-      "garage": "checked",
-      "waterAndSewer": "ja",
-      "fiberConnection": "ja",
-      "heating": "ja",
-      "id": 1
-    },
-    {
       "address": "Fortress of Doom",
+      "community": "Malmö",
       "startBid": "100000000",
       "kvmArea": "200000",
       "buildYear": "0",
@@ -26,12 +13,27 @@
       "waterAndSewer": "ja",
       "fiberConnection": "ja",
       "heating": "ja",
+      "id": 1
+    },
+    {
+      "address": "Soft Center",
+      "community": "Malmö",
+      "startBid": "1000000",
+      "kvmArea": "20000",
+      "buildYear": "2000",
+      "amountRoom": "200",
+      "info": "katt",
+      "lot": "2000",
+      "garage": "checked",
+      "waterAndSewer": "ja",
+      "fiberConnection": "ja",
+      "heating": "ja",
       "id": 2
     },
     {
       "address": "Brunnen",
-      "community": {},
-      "startBid": "Karlskrona",
+      "community": "Karlskrona",
+      "startBid": "10000000",
       "kvmArea": "10000",
       "buildYear": "45",
       "amountRoom": "1700",
@@ -46,19 +48,20 @@
       "id": 3
     },
     {
-      "address": "Skolvägen 11",
+      "address": "Annanas",
       "community": "Karlskrona",
-      "startBid": "2000000",
-      "kvmArea": "200",
-      "buildYear": "1988",
-      "amountRoom": "7",
-      "info": "testar att skapa bostadsrätt",
-      "fee": "40000",
+      "startBid": "200000",
+      "kvmArea": "2000",
+      "buildYear": "25",
+      "amountRoom": "1988",
+      "info": "2",
+      "fee": "20",
       "balcony": "checked",
-      "floor": "3",
+      "floor": "1",
       "elevator": "checked",
       "storeHouse": "checked",
       "parking": "checked",
+      "patio": "checked",
       "id": 4
     },
     {
@@ -76,6 +79,22 @@
       "storeHouse": "checked",
       "parking": "checked",
       "id": 5
+    },
+    {
+      "address": "Sandgatan 800A",
+      "community": "Malmö",
+      "startBid": "20000",
+      "kvmArea": "120",
+      "buildYear": "2020",
+      "amountRoom": "10",
+      "info": "This is somthing???",
+      "fee": "2000",
+      "balcony": "checked",
+      "floor": "4",
+      "elevator": "checked",
+      "storeHouse": "checked",
+      "parking": "checked",
+      "id": 6
     }
   ],
   "users": [
@@ -88,6 +107,7 @@
   "saleForms": [
     {
       "address": "Fortress of Doom",
+      "community": "Malmö",
       "startBid": "100000000",
       "kvmArea": "200000",
       "buildYear": "0",
@@ -98,10 +118,11 @@
       "waterAndSewer": "ja",
       "fiberConnection": "ja",
       "heating": "ja",
-      "id": 2
+      "id": 1
     },
     {
       "address": "Soft Center",
+      "community": "Malmö",
       "startBid": "1000000",
       "kvmArea": "20000",
       "buildYear": "2000",
@@ -116,8 +137,8 @@
     },
     {
       "address": "Brunnen",
-      "community": {},
-      "startBid": "Karlskrona",
+      "community": "Karlskrona",
+      "startBid": "10000000",
       "kvmArea": "10000",
       "buildYear": "45",
       "amountRoom": "1700",
@@ -133,8 +154,8 @@
     },
     {
       "address": "Annanas",
-      "community": {},
-      "startBid": "Karlskrona",
+      "community": "Karlskrona",
+      "startBid": "200000",
       "kvmArea": "2000",
       "buildYear": "25",
       "amountRoom": "1988",
