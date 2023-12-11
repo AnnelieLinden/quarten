@@ -16,6 +16,7 @@ export default function createSellerVeiw(validUser, form) {
     var dataStorage = "";
 
     buttonGeneralMsg.addEventListener("click", async function (event) {
+      event.preventDefault();
       const generalMsg = await getAllGeneralMsg();
       generalSection.innerHTML = "";
       sellerSection.innerHTML = "";
@@ -31,6 +32,7 @@ export default function createSellerVeiw(validUser, form) {
     });
 
     buttonSellerMsg.addEventListener("click", async function (event) {
+      event.preventDefault();
       const sellerMsg = await getAllSaleMsg();
       generalSection.innerHTML = "";
       sellerSection.innerHTML = "";
@@ -47,6 +49,7 @@ export default function createSellerVeiw(validUser, form) {
     });
 
     sellerSection.addEventListener("click", async function (event) {
+      event.preventDefault();
       const dataLength = await getAllProperties();
       const sellFormData = event.target.innerText;
       for (var i = 0; i < dataStorage.length; i++) {
