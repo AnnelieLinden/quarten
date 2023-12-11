@@ -36,7 +36,6 @@ function listProperties(objectList) {
 
     propertiesSection.appendChild(objectSection)
 
-    //content.appendChild(objectSection)
     content.appendChild(propertiesSection)
 
   }
