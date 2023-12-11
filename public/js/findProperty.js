@@ -2,10 +2,10 @@ import { getAllProperties } from "./function/server-request.js"
 import createDitailedVeiw from "./function/createDitailedVeiw.js"
 
 function listProperties(objectList) {
-
+  objectList.reverse();
   const propertiesSection = document.createElement('propertiesSection')
   propertiesSection.setAttribute('id', 'propertiesSection')
-  
+
   for (let i = 0; i < objectList.length; i++) {
     const objectSection = document.createElement('objectSection')
     objectSection.setAttribute('id', 'objectSection')
@@ -61,7 +61,76 @@ export default async function findProperty(buyForm) {
 
   appendBuyForm(buyForm, pTag, propertyLabel, fieldset10, neighborhoodLabel, fieldset20, priceLabel, fieldset30, areaLabel, fieldset40)
 
-  listProperties(propertyList)
+  const searchbtn = document.createElement('input')
+
+  searchbtn.setAttribute('type', 'submit')
+  searchbtn.setAttribute('value', 'Sök')
+  searchbtn.addEventListener("click", function (event) {
+    const filteredList = [];
+    event.preventDefault();
+    const locationInputArr = fieldset20.querySelectorAll("input");
+    const priceInputArr = fieldset30.querySelectorAll("input");
+    const areaInputArr = fieldset40.querySelectorAll("input");
+
+    for (var i = 0; i < propertyList.length; i++) {
+      var addToFilterdList = false;
+      if (locationInputArr[0].checked && propertyList[i].community === "Karlskrona") {
+        addToFilterdList = true;
+      }
+      if (locationInputArr[1].checked && propertyList[i].community === "Malmö") {
+        addToFilterdList = true;
+      }
+      if (locationInputArr[2].checked && propertyList[i].community === "Ronneby") {
+        addToFilterdList = true;
+      }
+      if (locationInputArr[3].checked && propertyList[i].community === "Stockholm") {
+        addToFilterdList = true;
+      }
+      if (priceInputArr[0].checked && parseInt(propertyList[i].startBid) >= 1000000) {
+        addToFilterdList = true;
+      }
+      if (priceInputArr[1].checked && parseInt(propertyList[i].startBid) >= 2000000) {
+        addToFilterdList = true;
+      }
+      if (priceInputArr[2].checked && parseInt(propertyList[i].startBid) >= 4000000) {
+        addToFilterdList = true;
+      }
+      if (priceInputArr[3].checked && parseInt(propertyList[i].startBid) >= 6000000) {
+        addToFilterdList = true;
+      }
+      if (priceInputArr[4].checked && parseInt(propertyList[i].startBid) >= 8000000) {
+        addToFilterdList = true;
+      }
+      if (priceInputArr[5].checked && parseInt(propertyList[i].startBid) >= 10000000) {
+        addToFilterdList = true;
+      }
+      if (areaInputArr[0].checked && parseInt(propertyList[i].kvmArea) >= 30) {
+        addToFilterdList = true;
+      }
+      if (areaInputArr[1].checked && parseInt(propertyList[i].kvmArea) >= 90) {
+        addToFilterdList = true;
+      }
+      if (areaInputArr[2].checked && parseInt(propertyList[i].kvmArea) >= 150) {
+        addToFilterdList = true;
+      }
+      if (areaInputArr[3].checked && parseInt(propertyList[i].kvmArea) >= 200) {
+        addToFilterdList = true;
+      }
+      if (addToFilterdList) {
+        filteredList.push(propertyList[i]);
+      }
+    }
+    if (filteredList.length > 0) {
+      listProperties(filteredList);
+    }
+    else {
+      listProperties(propertyList);
+    }
+
+  })
+  buyForm.appendChild(searchbtn)
+
+  //listProperties(propertyList)
 
 }
 
@@ -75,12 +144,6 @@ function appendBuyForm(buyForm, pTag, propertyLabel, fieldset10, neighborhoodLab
   buyForm.appendChild(fieldset30) //för att gruppera maxpris
   buyForm.appendChild(areaLabel)
   buyForm.appendChild(fieldset40) //för att gruppera bostadsarea
-
-  const searchbtn = document.createElement('input')
-  searchbtn.setAttribute('type', 'submit')
-  searchbtn.setAttribute('value', 'Sök')
-
-  buyForm.appendChild(searchbtn)
 
   content.appendChild(buyForm)
 }
@@ -107,28 +170,24 @@ function searchArea() {
   const minAreaInput = document.createElement('input')
   minAreaInput.setAttribute('type', 'radio')
   minAreaInput.setAttribute('name', 'community')
-  minAreaInput.setAttribute('value', 'checked')
 
   minAreaLabel2.innerText = 90 + " kvm"
   minAreaLabel3.innerText = "Ja"
   const minAreaInput2 = document.createElement('input')
   minAreaInput2.setAttribute('type', 'radio')
   minAreaInput2.setAttribute('name', 'community')
-  minAreaInput2.setAttribute('value', 'checked')
 
   minAreaLabel4.innerText = 150 + " kvm"
   minAreaLabel5.innerText = "Ja"
   const minAreaInput4 = document.createElement('input')
   minAreaInput4.setAttribute('type', 'radio')
   minAreaInput4.setAttribute('name', 'community')
-  minAreaInput4.setAttribute('value', 'checked')
 
   minAreaLabel6.innerText = 200 + " kvm"
   minAreaLabel7.innerText = "Ja"
   const minAreaInput6 = document.createElement('input')
   minAreaInput6.setAttribute('type', 'radio')
   minAreaInput6.setAttribute('name', 'community')
-  minAreaInput6.setAttribute('value', 'checked')
 
   const fieldset40 = document.createElement('fieldset')
   fieldset40.setAttribute('id', 'fieldset') //för att få bort ramen runt fältet 
@@ -171,42 +230,36 @@ function searchPrice() {
   const maxPriceInput = document.createElement('input')
   maxPriceInput.setAttribute('type', 'radio')
   maxPriceInput.setAttribute('name', 'community')
-  maxPriceInput.setAttribute('value', 'checked')
 
   maxPriceLabel2.innerText = 2000000 + " SEK"
   maxPriceLabel3.innerText = "Ja"
   const maxPriceInput2 = document.createElement('input')
   maxPriceInput2.setAttribute('type', 'radio')
   maxPriceInput2.setAttribute('name', 'community')
-  maxPriceInput2.setAttribute('value', 'checked')
 
   maxPriceLabel4.innerText = 4000000 + " SEK"
   maxPriceLabel5.innerText = "Ja"
   const maxPriceInput4 = document.createElement('input')
   maxPriceInput4.setAttribute('type', 'radio')
   maxPriceInput4.setAttribute('name', 'community')
-  maxPriceInput4.setAttribute('value', 'checked')
 
   maxPriceLabel6.innerText = 6000000 + " SEK"
   maxPriceLabel7.innerText = "Ja"
   const maxPriceInput6 = document.createElement('input')
   maxPriceInput6.setAttribute('type', 'radio')
   maxPriceInput6.setAttribute('name', 'community')
-  maxPriceInput6.setAttribute('value', 'checked')
 
   maxPriceLabel8.innerText = 8000000 + " SEK"
   maxPriceLabel9.innerText = "Ja"
   const maxPriceInput8 = document.createElement('input')
   maxPriceInput8.setAttribute('type', 'radio')
   maxPriceInput8.setAttribute('name', 'community')
-  maxPriceInput8.setAttribute('value', 'checked')
 
   maxPriceLabel10.innerText = 10000000 + " SEK"
   maxPriceLabel11.innerText = "Ja"
   const maxPriceInput10 = document.createElement('input')
   maxPriceInput10.setAttribute('type', 'radio')
   maxPriceInput10.setAttribute('name', 'community')
-  maxPriceInput10.setAttribute('value', 'checked')
 
   const fieldset30 = document.createElement('fieldset')
   fieldset30.setAttribute('id', 'fieldset') //för att få bort ramen runt fältet 
@@ -247,28 +300,23 @@ function searchCommunity() {
   const communityInput = document.createElement('input')
   communityInput.setAttribute('type', 'checkbox')
   communityInput.setAttribute('name', 'community')
-  communityInput.setAttribute('value', 'checked')
-
   communityLabel2.innerText = "Malmö:"
   communityLabel3.innerText = "Ja"
   const communityInput2 = document.createElement('input')
   communityInput2.setAttribute('type', 'checkbox')
   communityInput2.setAttribute('name', 'community')
-  communityInput2.setAttribute('value', 'checked')
 
   communityLabel4.innerText = "Ronneby:"
   communityLabel5.innerText = "Ja"
   const communityInput4 = document.createElement('input')
   communityInput4.setAttribute('type', 'checkbox')
   communityInput4.setAttribute('name', 'community')
-  communityInput4.setAttribute('value', 'checked')
 
   communityLabel6.innerText = "Stockholm:"
   communityLabel7.innerText = "Ja"
   const communityInput6 = document.createElement('input')
   communityInput6.setAttribute('type', 'checkbox')
   communityInput6.setAttribute('name', 'community')
-  communityInput6.setAttribute('value', 'checked')
 
   const fieldset20 = document.createElement('fieldset')
   fieldset20.setAttribute('id', 'fieldset') //för att få bort ramen runt fältet 
@@ -295,7 +343,6 @@ function searchPropertyType() {
   const apartmentInput = document.createElement('input')
   apartmentInput.setAttribute('type', 'checkbox')
   apartmentInput.setAttribute('name', 'apartment')
-  apartmentInput.setAttribute('value', 'checked')
 
   const villaLabel = document.createElement('label')
   const villaLabel1 = document.createElement('label')
@@ -305,7 +352,6 @@ function searchPropertyType() {
   const villaInput = document.createElement('input')
   villaInput.setAttribute('type', 'checkbox')
   villaInput.setAttribute('name', 'villa')
-  villaInput.setAttribute('value', 'checked')
 
   const fieldset10 = document.createElement('fieldset')
   fieldset10.setAttribute('id', 'fieldset') //för att få bort ramen runt fältet
