@@ -1,3 +1,5 @@
+import { addGenaralForm } from "./function/server-request.js";
+
 export default function generalForm() {
   const generalFormObj = {
     firstName: '',
@@ -38,18 +40,16 @@ export default function generalForm() {
 
   let sendMessage = "";
 
-  content.addEventListener('click', function (event) {
+  submitBtn.addEventListener('click', async function (event) {
     event.preventDefault();
+    addGenaralForm()
     const allInput = document.querySelectorAll('input');
-    
-
-    
     generalFormObj.firstName = allInput[0].value
     generalFormObj.lastName = allInput[1].value
     generalFormObj.phoneNumber = allInput[2].value
     generalFormObj.mailAddress = allInput[3].value
     generalFormObj.messageInfo = allInput[4].value
-    
+    await addGenaralForm(generalFormObj);
   
   });
   content.appendChild(generalFormCreate);

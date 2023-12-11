@@ -5,7 +5,6 @@ import renderSaleForm from "./salepage.js";
 import findProperty from "./findProperty.js"
 import createLoginForm from "./function/createForm.js";
 import aboutUs from "./about-us.js";
-import footer from "./footer.js";
 const content = document.querySelector('#content')
 
 onhashchange = changePage;

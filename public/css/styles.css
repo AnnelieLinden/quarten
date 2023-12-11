@@ -273,6 +273,7 @@ footer {
   justify-content: start;
   display: flex;
   flex-wrap: wrap;
+  font-size: 3vh;
   flex-direction: column;
   align-content: flex-start;
   width: 80%;
@@ -284,6 +285,7 @@ footer {
   #saleForm {
     width: 100%;
     height: 240vh;
+    font-size: 2vh;
   }
   
   #content>a {
@@ -306,7 +308,7 @@ footer {
   }
 
   #pTag {
-    font-size: 17px;
+    font-size: 3vh;
   }
 
   a {
