@@ -60,6 +60,22 @@
       "storeHouse": "checked",
       "parking": "checked",
       "id": 4
+    },
+    {
+      "address": "Skolvägen 11",
+      "community": "Karlskrona",
+      "startBid": "2000000",
+      "kvmArea": "200",
+      "buildYear": "1988",
+      "amountRoom": "7",
+      "info": "testar att skapa bostadsrätt",
+      "fee": "40000",
+      "balcony": "checked",
+      "floor": "3",
+      "elevator": "checked",
+      "storeHouse": "checked",
+      "parking": "checked",
+      "id": 5
     }
   ],
   "users": [
@@ -147,6 +163,22 @@
       "storeHouse": "checked",
       "parking": "checked",
       "id": 5
+    },
+    {
+      "address": "Sandgatan 800A",
+      "community": "Malmö",
+      "startBid": "20000",
+      "kvmArea": "120",
+      "buildYear": "2020",
+      "amountRoom": "10",
+      "info": "This is somthing???",
+      "fee": "2000",
+      "balcony": "checked",
+      "floor": "4",
+      "elevator": "checked",
+      "storeHouse": "checked",
+      "parking": "checked",
+      "id": 6
     }
   ],
   "generalForms": [
