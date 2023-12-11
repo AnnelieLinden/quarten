@@ -67,11 +67,13 @@ export default async function findProperty(buyForm) {
   searchbtn.addEventListener("click", function (event) {
     const filteredList = [];
     event.preventDefault();
+
     const locationInputArr = fieldset20.querySelectorAll("input");
     const priceInputArr = fieldset30.querySelectorAll("input");
     const areaInputArr = fieldset40.querySelectorAll("input");
 
     for (var i = 0; i < propertyList.length; i++) {
+      content.innerHTML = "";
       var addToFilterdList = false;
       if (locationInputArr[0].checked && propertyList[i].community === "Karlskrona") {
         addToFilterdList = true;
@@ -119,6 +121,7 @@ export default async function findProperty(buyForm) {
         filteredList.push(propertyList[i]);
       }
     }
+    content.appendChild(buyForm)
     if (filteredList.length > 0) {
       listProperties(filteredList);
     }
@@ -129,7 +132,7 @@ export default async function findProperty(buyForm) {
   })
   buyForm.appendChild(searchbtn)
 
-  //listProperties(propertyList)
+  listProperties(propertyList)
 
 }
 
