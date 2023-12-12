@@ -1,6 +1,6 @@
 import createSection from "./minorComponets/createSection.js";
 import createButton from "./minorComponets/createButton.js";
-import { getAllProperties, getAllGeneralMsg, getAllSaleMsg, addProperty } from "./server-request.js";
+import { getAllProperties, getAllGeneralMsg, getAllSaleMsg, addProperty, removeProperty } from "./server-request.js";
 import createParagraf from "./minorComponets/createParagraf.js";
 
 export default function createSellerVeiw(validUser, form) {
@@ -56,6 +56,7 @@ export default function createSellerVeiw(validUser, form) {
         if (dataStorage[i].id == sellFormData[sellFormData.length - 1]) {
           dataStorage[i].id = dataLength.length + 1;
           await addProperty(dataStorage[i]);
+          await removeProperty(dataStorage[i].id - 1);
           alert("Data skickad");
         }
 
