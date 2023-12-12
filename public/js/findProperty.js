@@ -170,25 +170,25 @@ function searchArea() {
   minAreaLabel.innerText = 30 + " kvm"
   minAreaLabel1.innerText = "Ja"
   const minAreaInput = document.createElement('input')
-  minAreaInput.setAttribute('type', 'radio')
+  minAreaInput.setAttribute('type', 'checkbox')
   minAreaInput.setAttribute('name', 'community')
 
   minAreaLabel2.innerText = 90 + " kvm"
   minAreaLabel3.innerText = "Ja"
   const minAreaInput2 = document.createElement('input')
-  minAreaInput2.setAttribute('type', 'radio')
+  minAreaInput2.setAttribute('type', 'checkbox')
   minAreaInput2.setAttribute('name', 'community')
 
   minAreaLabel4.innerText = 150 + " kvm"
   minAreaLabel5.innerText = "Ja"
   const minAreaInput4 = document.createElement('input')
-  minAreaInput4.setAttribute('type', 'radio')
+  minAreaInput4.setAttribute('type', 'checkbox')
   minAreaInput4.setAttribute('name', 'community')
 
   minAreaLabel6.innerText = 200 + " kvm"
   minAreaLabel7.innerText = "Ja"
   const minAreaInput6 = document.createElement('input')
-  minAreaInput6.setAttribute('type', 'radio')
+  minAreaInput6.setAttribute('type', 'checkbox')
   minAreaInput6.setAttribute('name', 'community')
 
   const fieldset40 = document.createElement('fieldset')
@@ -207,7 +207,7 @@ function searchArea() {
 function searchPrice() {
   const priceLabel = document.createElement('label')
   priceLabel.setAttribute('id', 'buyTitle')
-  priceLabel.innerText = "Max pris:"
+  priceLabel.innerText = "Utgångspris:"
 
   const maxPriceLabel = document.createElement('label')
   const maxPriceLabel1 = document.createElement('label')
