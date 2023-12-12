@@ -1,4 +1,4 @@
-import { getAllProperties, addProperty, addGenaralForm, login, getOneProperty, getAllGeneralMsg, getAllSaleMsg, addSaleForm, updateUser } from "./function/server-request.js";
+
 import createForm from "./function/createForm.js";
 import generalForm from "./generalForm.js";
 import renderSaleForm from "./salepage.js";
@@ -54,8 +54,8 @@ function renderHomepage() {
 function textHomepage() {
   const homeSection = document.createElement('section');
   homeSection.setAttribute('id', 'homeSection')
-  const homeTitel1= document.createElement('h3')
-  const homeTitel2= document.createElement('h3')
+  const homeTitel1 = document.createElement('h3')
+  const homeTitel2 = document.createElement('h3')
   const hometext1 = document.createElement('p');
   const hometext2 = document.createElement('p');
   const homeDiv1 = document.createElement('div')
