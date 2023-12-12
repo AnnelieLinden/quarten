@@ -25,7 +25,10 @@ export default function renderSaleForm(saleForm) {
 function saveSaleInfo(event) {
   event.preventDefault()
   const savedSales = allValues(event.target.elements)
-  addSaleForm(savedSales);
+  if (savedSales) {
+    addSaleForm(savedSales);
+  }
+ 
 
 }
 
@@ -50,12 +53,25 @@ function allValues(elements) {
   const garage = elements.garage.value
   const wAndS = elements.wAndS.value
   const connections = elements.connections.value
-  const heating = elements.heating.Value
-
+  const heating = elements.heating.value
+ 
   if (apartment == true) {
-    return new Apartment(fee, balcony, floor, elevator, storage, parking, patio, "Bostadsrätt", address, community, bid, kvm, built, rooms, info)
+    if (!address || !community || !bid || !kvm || !built || !rooms || !info || !fee || !floor) {
+      alert("Du har inte fyllt i alla obligatoriska fälten")
+      return false;
+    }
+    else {
+      return new Apartment(fee, balcony, floor, elevator, storage, parking, patio, "Bostadsrätt", address, community, bid, kvm, built, rooms, info)
+    }
+    
   } else if (villa == true) {
-    return new Villa(lot, garage, wAndS, connections, heating, "Villa", address, community, bid, kvm, built, rooms, info)
+    if (!address || !community || !bid || !kvm || !built || !rooms || !info || !lot||  !wAndS|| !connections|| !heating ) {
+      alert("Du har inte fyllt i alla obligatoriska fälten")
+      return false;
+    }
+    else {
+      return new Villa(lot, garage, wAndS, connections, heating, "Villa", address, community, bid, kvm, built, rooms, info)
+    }
   }
 }
 

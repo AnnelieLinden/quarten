@@ -319,6 +319,38 @@
       "storeHouse": "checked",
       "parking": "checked",
       "id": 20
+    },
+    {
+      "type": "Villa",
+      "address": "Rödebyvägen 4",
+      "community": "Malmö",
+      "startBid": "2500000",
+      "kvmArea": "112",
+      "buildYear": "1989",
+      "amountRoom": "3",
+      "info": "aaa",
+      "lot": "1360",
+      "garage": "checked",
+      "waterAndSewer": "kommunalt vatten och avlopp",
+      "fiberConnection": "fiber",
+      "heating": "pellets",
+      "id": 21
+    },
+    {
+      "type": "Villa",
+      "address": "Rödebyvägen 4",
+      "community": "Malmö",
+      "startBid": "2500000",
+      "kvmArea": "112",
+      "buildYear": "1989",
+      "amountRoom": "3",
+      "info": "aaa",
+      "lot": "1360",
+      "garage": "checked",
+      "waterAndSewer": "kommunalt vatten och avlopp",
+      "fiberConnection": "fiber",
+      "heating": "pellets",
+      "id": 22
     }
   ],
   "users": [
@@ -329,6 +361,7 @@
     }
   ],
   "saleForms": [
+ 
   ],
   "generalForms": []
 }
