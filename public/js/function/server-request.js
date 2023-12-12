@@ -22,6 +22,8 @@ export async function addSaleForm(saleForm) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(saleForm)
   })
+
+  console.log(response)
   if (response.ok) {
     const responseJson = await response.json();
     document.getElementById('saleForm').reset();
@@ -74,11 +76,10 @@ export async function getOneProperty(propertyId) {
   return data;
 }
 
-export async function updateUser(user) {
-  let response = await fetch('/data/' + user.id, {
-    method: 'put',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(user)
+export async function removeProperty(idToRemove) {
+  let response = await fetch('/saleForms/' + idToRemove, {
+    method: 'delete',
+    headers: { 'Content-Type': 'application/json' }
   });
 
   response = await response.json()
