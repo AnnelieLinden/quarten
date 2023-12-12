@@ -119,17 +119,7 @@
       "waterAndSewer": "kommunalt vatten och avlopp",
       "fiberConnection": "Fiber",
       "id": 8
-    }
-
-  ],
-  "users": [
-    {
-      "id": 1,
-      "userName": "Sakuya",
-      "pass": "4444"
-    }
-  ],
-  "saleForms": [
+    },
     {
       "address": "Trädgårdsgatan 4a",
       "community": "Malmö",
@@ -144,7 +134,7 @@
       "elevator": "checked",
       "storeHouse": "checked",
       "parking": "checked",
-      "id": 10
+      "id": 9
     },
     {
       "address": "Älgbacken 12B",
@@ -160,7 +150,7 @@
       "elevator": "checked",
       "storeHouse": "checked",
       "parking": "checked",
-      "id": 11
+      "id": 10
     },
     {
       "address": "Västerholm",
@@ -174,7 +164,7 @@
       "garage": "checked",
       "waterAndSewer": "kommunalt vatten och avlopp",
       "fiberConnection": "Fiber",
-      "id": 12
+      "id": 11
     },
     {
       "address": "Rosenholmsvägen 13F",
@@ -190,7 +180,7 @@
       "elevator": "checked",
       "storeHouse": "checked",
       "parking": "checked",
-      "id": 13
+      "id": 12
     },
     {
       "address": "Valdemarsrovägen 3",
@@ -204,7 +194,7 @@
       "garage": "checked",
       "waterAndSewer": "kommunalt vatten och avlopp",
       "fiberConnection": "Fiber",
-      "id": 14
+      "id": 13
     },
     {
       "address": "Kalleberga 35",
@@ -218,7 +208,150 @@
       "garage": "checked",
       "waterAndSewer": "enskilt avlopp och enskilt vatten",
       "fiberConnection": "Ej anslutet till fiber.",
+      "id": 14
+    },
+    {
+      "address": "Drottninggatan 32",
+      "community": "Karlskrona",
+      "startBid": "3400000",
+      "kvmArea": "64",
+      "buildYear": "1958",
+      "amountRoom": "2",
+      "info": "Välkommen till denna charmiga 2:a på norra Trossö, med stor inglasad balkong i söderläge och möjlighet till parkeringsplats! Här möts du av retroinspirerade toner som pryder väggarna och skapar en unik atmosfär. Det rymliga köket är smakfullt renoverat och har hög standard med moderna bekvämligheter. Lägenhetens två sovrum har smart förvaring, varav ett med en separat klädkammare. Vardagsrummet rymmer både soffa och matbord och har även utgång till den generösa balkongen med utsikt över föreningens innergård. Det helkaklade badrummet är renoverat vid stambytet 2006 och inrymmer även en praktiskt tvättmaskin. Här bor du bekvämt i en välskött och stabil förening med närhet till såväl buss- och tågstation som fina parkområden, restauranger och butiker. I föreningen finns ett gemensamt gym samt möjlighet till parkeringsplats på gården.",
+      "fee": "3367",
+      "balcony": "checked",
+      "floor": "4",
+      "elevator": "checked",
+      "storeHouse": "checked",
+      "parking": "checked",
       "id": 15
+    },
+    {
+      "address": "Ronnebygatan 10B",
+      "community": "Karlskrona",
+      "startBid": "1700000",
+      "kvmArea": "75",
+      "buildYear": "1968",
+      "amountRoom": "3",
+      "info": "Trivsam genomgångslägenhet i mycket gott skick. Smakfullt renoverad under senare år med bl a nytt kök och nya ytskikt i samtliga rum. Denna tvåa med inglasad balkong är centralt belägen med bara några minuters gångväg till Resecentrum. Varmt välkomna på visning!",
+      "fee": "3272",
+      "balcony": "checked",
+      "floor": "2",
+      "elevator": "checked",
+      "storeHouse": "checked",
+      "parking": "checked",
+      "id": 16
+    },
+    {
+      "address": "Fredriksdalsvägen 4",
+      "community": "Karlskrona",
+      "startBid": "3000000",
+      "kvmArea": "135",
+      "buildYear": "1977",
+      "amountRoom": "4",
+      "info": "Mycket fint renoverat med ljusa fina ytskikt, spotlights i taket, integrerade högtalare mm.\nStor välkomnande entré med intilliggande klädkammare/skafferi. Vitt stilrent kök från Ikea med bra bänkyta och plats för stort matsalsbord. I anslutning ligger ett mysigt vardagsrum med utgång till stor altan med tak i härligt söderläge. ”Läsrum” med dubbeldörrar ut till altanen. Två fina helkaklade duschrum, tre sovrum på övre plan med klädkammare.\nFräscht renoverad källare med bra biutrymme såsom tvättrum, stort förråd, pannrum mm. Vattenburen golvvärme på båda våningsplanen via luft-vatten värmepump från 2011 som ger en låg driftskostnad. Huset dränerades 2016.",
+      "lot": "1230",
+      "garage": "checked",
+      "waterAndSewer": "kommunalt vatten och avlopp",
+      "fiberConnection": "Fiber",
+      "id": 17
+    },
+    {
+      "address": "Stora Vargvägen1",
+      "community": "Ronneby",
+      "startBid": "1890000",
+      "kvmArea": "194",
+      "buildYear": "1989",
+      "amountRoom": "7",
+      "info": "Varmt välkommen till denna charmiga villa vid Härstorpssjön. Här bor du med natursköna omgivningar endast en kort bilfärd från Ronneby och med badplats nära huset. Cykelväg finns hela vägen till centrum och även vidare mot havet och Saxemara.",
+      "lot": "3220",
+      "garage": "checked",
+      "waterAndSewer": "kommunalt vatten och avlopp",
+      "fiberConnection": "fiber vid tomtgräns men ej inkopplat",
+      "id": 18
+    },
+    {
+      "address": "Flädergränden 6",
+      "community": "Ronneby",
+      "startBid": "1900000",
+      "kvmArea": "163",
+      "buildYear": "1993",
+      "amountRoom": "7",
+      "info": "Denna familjevilla ligger i ett fridfullt och naturskönt område. Villakvarteret är stängt för genomfart vilket bidrar till lite trafik, perfekt för barnfamiljer. Området är strategiskt placerat med närhet till naturen, lekpark och promenadstråk. Dessutom är det enbart en kort cykeltur till centrum, skolor, förskolor och Ronneby resecentrum, vilket gör detta hem både praktiskt och bekvämt placerat. Fastigheten är fördelaktigt belägen på en hörntomt och inkluderar ett rymligt dubbelgarage med stenlagd uppfart. Villan erbjuder 5 sovrum och stora sociala utrymmen, perfekt för den större familjen som vill ha utrymme att trivas och växa i. Här finns allt som behövs för att skapa ett underbart och harmoniskt boende.",
+      "lot": "2011",
+      "garage": "checked",
+      "waterAndSewer": "enskillt vatten och avlopp ",
+      "fiberConnection": "fiber",
+      "id": 19
+    },
+    {
+      "address": "Nydalavägen 7",
+      "community": "Malmö",
+      "startBid": "2100000",
+      "kvmArea": "110",
+      "buildYear": "1988",
+      "amountRoom": "4",
+      "info": "I hjärtat av staden, bara ett stenkast från livliga Slussen och den lugna oasen Rörsjöparken, upptäcker du en äkta pärla från 30-talet, där moderna bekvämligheter blandas med tidstypisk elegans. Denna lägenhet på första våningen bjuder på en atmosfär fylld av historia, samtidigt som den ger alla de fördelar som dagens boende kräver.",
+      "fee": "4103",
+      "balcony": "checked",
+      "floor": "3",
+      "elevator": "checked",
+      "storeHouse": "checked",
+      "parking": "checked",
+      "id": 20
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "userName": "Sakuya",
+      "pass": "4444"
+    }
+  ],
+  "saleForms": [
+    {
+      "address": "Stora Vargvägen1",
+      "community": "Ronneby",
+      "startBid": "1890000",
+      "kvmArea": "194",
+      "buildYear": "1989",
+      "amountRoom": "7",
+      "info": "Varmt välkommen till denna charmiga villa vid Härstorpssjön. Här bor du med natursköna omgivningar endast en kort bilfärd från Ronneby och med badplats nära huset. Cykelväg finns hela vägen till centrum och även vidare mot havet och Saxemara.",
+      "lot": "3220",
+      "garage": "checked",
+      "waterAndSewer": "kommunalt vatten och avlopp",
+      "fiberConnection": "fiber vid tomtgräns men ej inkopplat",
+      "id": 1
+    },
+    {
+      "address": "Flädergränden 6",
+      "community": "Ronneby",
+      "startBid": "1900000",
+      "kvmArea": "163",
+      "buildYear": "1993",
+      "amountRoom": "7",
+      "info": "Denna familjevilla ligger i ett fridfullt och naturskönt område. Villakvarteret är stängt för genomfart vilket bidrar till lite trafik, perfekt för barnfamiljer. Området är strategiskt placerat med närhet till naturen, lekpark och promenadstråk. Dessutom är det enbart en kort cykeltur till centrum, skolor, förskolor och Ronneby resecentrum, vilket gör detta hem både praktiskt och bekvämt placerat. Fastigheten är fördelaktigt belägen på en hörntomt och inkluderar ett rymligt dubbelgarage med stenlagd uppfart. Villan erbjuder 5 sovrum och stora sociala utrymmen, perfekt för den större familjen som vill ha utrymme att trivas och växa i. Här finns allt som behövs för att skapa ett underbart och harmoniskt boende.",
+      "lot": "2011",
+      "garage": "checked",
+      "waterAndSewer": "enskillt vatten och avlopp ",
+      "fiberConnection": "fiber",
+      "id": 2
+    },
+    {
+      "address": "Nydalavägen 7",
+      "community": "Malmö",
+      "startBid": "2100000",
+      "kvmArea": "110",
+      "buildYear": "1988",
+      "amountRoom": "4",
+      "info": "I hjärtat av staden, bara ett stenkast från livliga Slussen och den lugna oasen Rörsjöparken, upptäcker du en äkta pärla från 30-talet, där moderna bekvämligheter blandas med tidstypisk elegans. Denna lägenhet på första våningen bjuder på en atmosfär fylld av historia, samtidigt som den ger alla de fördelar som dagens boende kräver.",
+      "fee": "4103",
+      "balcony": "checked",
+      "floor": "3",
+      "elevator": "checked",
+      "storeHouse": "checked",
+      "parking": "checked",
+      "id": 3
     }
   ],
   "generalForms": []
