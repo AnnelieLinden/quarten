@@ -49,7 +49,6 @@ export default function createSellerVeiw(validUser, form) {
     });
 
     sellerSection.addEventListener("click", async function (event) {
-      debugger
       event.preventDefault();
       const dataLength = await getAllProperties();
       const sellFormData = event.target.innerText;
@@ -60,7 +59,7 @@ export default function createSellerVeiw(validUser, form) {
           dataStorage[i].id = dataLength.length + 1;
           await addProperty(dataStorage[i]);
           await removeProperty(dataStorage[i].id - 1);
-          alert("Data skickad");
+          alert("Bostaden laddas upp till mäklarsidan.");
         }
 
       }

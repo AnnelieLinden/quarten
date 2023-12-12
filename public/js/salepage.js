@@ -53,9 +53,9 @@ function allValues(elements) {
   const heating = elements.heating.Value
 
   if (apartment == true) {
-    return new Apartment(fee, balcony, floor, elevator, storage, parking, patio, address, community, bid, kvm, built, rooms, info)
+    return new Apartment(fee, balcony, floor, elevator, storage, parking, patio, "Bostadsrätt", address, community, bid, kvm, built, rooms, info)
   } else if (villa == true) {
-    return new Villa(lot, garage, wAndS, connections, heating, address, community, bid, kvm, built, rooms, info)
+    return new Villa(lot, garage, wAndS, connections, heating, "Villa", address, community, bid, kvm, built, rooms, info)
   }
 }
 

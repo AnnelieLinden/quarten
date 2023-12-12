@@ -68,6 +68,7 @@ export default async function findProperty(buyForm) {
     const filteredList = [];
     event.preventDefault();
 
+    const typeInputArr = fieldset10.querySelectorAll("input");
     const locationInputArr = fieldset20.querySelectorAll("input");
     const priceInputArr = fieldset30.querySelectorAll("input");
     const areaInputArr = fieldset40.querySelectorAll("input");
@@ -75,6 +76,12 @@ export default async function findProperty(buyForm) {
     for (var i = 0; i < propertyList.length; i++) {
       content.innerHTML = "";
       var addToFilterdList = false;
+      if (typeInputArr[0].checked && propertyList[i].type === "Bostadsrätt") {
+        addToFilterdList = true;
+      }
+      if (typeInputArr[1].checked && propertyList[i].type === "Villa") {
+        addToFilterdList = true;
+      }
       if (locationInputArr[0].checked && propertyList[i].community === "Karlskrona") {
         addToFilterdList = true;
       }

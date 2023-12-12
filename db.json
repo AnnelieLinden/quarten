@@ -1,6 +1,7 @@
 {
   "data": [
     {
+      "type": "Bostadsrätt",
       "address": "Fredriksväg",
       "community": "Stockholm",
       "startBid": "5000000",
@@ -17,6 +18,7 @@
       "id": 1
     },
     {
+      "type": "Villa",
       "address": "Norra Flymenvägen 2",
       "community": "Karlskrona",
       "startBid": "1420000",
@@ -31,6 +33,7 @@
       "id": 2
     },
     {
+      "type": "Bostadsrätt",
       "address": "Vagnmakaregatan 13",
       "community": "Malmö",
       "startBid": "2350000",
@@ -47,6 +50,7 @@
       "id": 3
     },
     {
+      "type": "Villa",
       "address": "Hultavägen 4",
       "community": "Ronneby",
       "startBid": "1300000",
@@ -61,6 +65,7 @@
       "id": 4
     },
     {
+      "type": "Bostadsrätt",
       "address": "Brogatan 35",
       "community": "Stockholm",
       "startBid": "2990000",
@@ -77,6 +82,7 @@
       "id": 5
     },
     {
+      "type": "Villa",
       "address": "Murvägen 4",
       "community": "Karlskrona",
       "startBid": "3250000",
@@ -91,6 +97,7 @@
       "id": 6
     },
     {
+      "type": "Bostadsrätt",
       "address": "Havby",
       "community": "Malmö",
       "startBid": "1200000",
@@ -107,6 +114,7 @@
       "id": 7
     },
     {
+      "type": "Villa",
       "address": "Johannishusvägen 14",
       "community": "Ronneby",
       "startBid": "1200000",
@@ -121,6 +129,7 @@
       "id": 8
     },
     {
+      "type": "Bostadsrätt",
       "address": "Trädgårdsgatan 4a",
       "community": "Malmö",
       "startBid": "3400000",
@@ -137,6 +146,7 @@
       "id": 9
     },
     {
+      "type": "Bostadsrätt",
       "address": "Älgbacken 12B",
       "community": "Ronneby",
       "startBid": "2100000",
@@ -153,6 +163,7 @@
       "id": 10
     },
     {
+      "type": "Villa",
       "address": "Västerholm",
       "community": "Stockholm",
       "startBid": "4850000",
@@ -167,6 +178,7 @@
       "id": 11
     },
     {
+      "type": "Bostadsrätt",
       "address": "Rosenholmsvägen 13F",
       "community": "Karlskrona",
       "startBid": "545000",
@@ -183,6 +195,7 @@
       "id": 12
     },
     {
+      "type": "Villa",
       "address": "Valdemarsrovägen 3",
       "community": "Malmö",
       "startBid": "4300000",
@@ -197,6 +210,7 @@
       "id": 13
     },
     {
+      "type": "Villa",
       "address": "Kalleberga 35",
       "community": "Ronneby",
       "startBid": "535000",
@@ -211,6 +225,7 @@
       "id": 14
     },
     {
+      "type": "Bostadsrätt",
       "address": "Drottninggatan 32",
       "community": "Karlskrona",
       "startBid": "3400000",
@@ -227,6 +242,7 @@
       "id": 15
     },
     {
+      "type": "Bostadsrätt",
       "address": "Ronnebygatan 10B",
       "community": "Karlskrona",
       "startBid": "1700000",
@@ -243,6 +259,7 @@
       "id": 16
     },
     {
+      "type": "Villa",
       "address": "Fredriksdalsvägen 4",
       "community": "Karlskrona",
       "startBid": "3000000",
@@ -257,6 +274,7 @@
       "id": 17
     },
     {
+      "type": "Villa",
       "address": "Stora Vargvägen1",
       "community": "Ronneby",
       "startBid": "1890000",
@@ -271,6 +289,7 @@
       "id": 18
     },
     {
+      "type": "Villa",
       "address": "Flädergränden 6",
       "community": "Ronneby",
       "startBid": "1900000",
@@ -285,6 +304,7 @@
       "id": 19
     },
     {
+      "type": "Bostadsrätt",
       "address": "Nydalavägen 7",
       "community": "Malmö",
       "startBid": "2100000",
@@ -309,50 +329,6 @@
     }
   ],
   "saleForms": [
-    {
-      "address": "Stora Vargvägen1",
-      "community": "Ronneby",
-      "startBid": "1890000",
-      "kvmArea": "194",
-      "buildYear": "1989",
-      "amountRoom": "7",
-      "info": "Varmt välkommen till denna charmiga villa vid Härstorpssjön. Här bor du med natursköna omgivningar endast en kort bilfärd från Ronneby och med badplats nära huset. Cykelväg finns hela vägen till centrum och även vidare mot havet och Saxemara.",
-      "lot": "3220",
-      "garage": "checked",
-      "waterAndSewer": "kommunalt vatten och avlopp",
-      "fiberConnection": "fiber vid tomtgräns men ej inkopplat",
-      "id": 1
-    },
-    {
-      "address": "Flädergränden 6",
-      "community": "Ronneby",
-      "startBid": "1900000",
-      "kvmArea": "163",
-      "buildYear": "1993",
-      "amountRoom": "7",
-      "info": "Denna familjevilla ligger i ett fridfullt och naturskönt område. Villakvarteret är stängt för genomfart vilket bidrar till lite trafik, perfekt för barnfamiljer. Området är strategiskt placerat med närhet till naturen, lekpark och promenadstråk. Dessutom är det enbart en kort cykeltur till centrum, skolor, förskolor och Ronneby resecentrum, vilket gör detta hem både praktiskt och bekvämt placerat. Fastigheten är fördelaktigt belägen på en hörntomt och inkluderar ett rymligt dubbelgarage med stenlagd uppfart. Villan erbjuder 5 sovrum och stora sociala utrymmen, perfekt för den större familjen som vill ha utrymme att trivas och växa i. Här finns allt som behövs för att skapa ett underbart och harmoniskt boende.",
-      "lot": "2011",
-      "garage": "checked",
-      "waterAndSewer": "enskillt vatten och avlopp ",
-      "fiberConnection": "fiber",
-      "id": 2
-    },
-    {
-      "address": "Nydalavägen 7",
-      "community": "Malmö",
-      "startBid": "2100000",
-      "kvmArea": "110",
-      "buildYear": "1988",
-      "amountRoom": "4",
-      "info": "I hjärtat av staden, bara ett stenkast från livliga Slussen och den lugna oasen Rörsjöparken, upptäcker du en äkta pärla från 30-talet, där moderna bekvämligheter blandas med tidstypisk elegans. Denna lägenhet på första våningen bjuder på en atmosfär fylld av historia, samtidigt som den ger alla de fördelar som dagens boende kräver.",
-      "fee": "4103",
-      "balcony": "checked",
-      "floor": "3",
-      "elevator": "checked",
-      "storeHouse": "checked",
-      "parking": "checked",
-      "id": 3
-    }
   ],
   "generalForms": []
 }
