@@ -53,7 +53,9 @@ export default function createSellerVeiw(validUser, form) {
       const dataLength = await getAllProperties();
       const sellFormData = event.target.innerText;
       for (var i = 0; i < dataStorage.length; i++) {
-        if (dataStorage[i].id == sellFormData[sellFormData.length - 1]) {
+        const sellFormDataSplit = sellFormData.split(",")
+        const id = sellFormDataSplit[sellFormDataSplit.length - 1]
+        if (dataStorage[i].id == id) {
           dataStorage[i].id = dataLength.length + 1;
           await addProperty(dataStorage[i]);
           alert("Data skickad");
