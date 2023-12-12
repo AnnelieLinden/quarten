@@ -195,10 +195,13 @@ footer {
   flex-wrap: wrap;
   flex-direction: column;
   align-content: center;
-  justify-content: space;
+
   height: 100%;
   width: 20%;
   font-family: 'Oswald';
+}
+.showProperty {
+  width: 100% !important;
 }
 
 #pTagAddress {

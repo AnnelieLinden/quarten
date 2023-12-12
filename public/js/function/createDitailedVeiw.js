@@ -22,27 +22,34 @@ export default function createDitailedVeiw(propertyInfoData, propertyType) {
 function propertyToArr(property, propertyType) {
   const dataArr = [];
   dataArr.push(property.address);
-  dataArr.push(property.amountRoom + " st rum");
+  dataArr.push("Antal rum: " + property.amountRoom );
   dataArr.push("Byggår: " + property.buildYear);
-  dataArr.push(property.kvmArea + " kvm");
-  dataArr.push(property.startBid + " SEK");
+  dataArr.push("Boyta: " + property.kvmArea + " kvm");
+  dataArr.push("Utgångspris: " + property.startBid + " SEK");
   dataArr.push("Övrig info: " + property.info);
   if (propertyType === "villa") {
-    dataArr.push("Bredband: " + property.fiberConnection);
-    dataArr.push("Garage: " + property.garage);
-    dataArr.push("Tomtstorlek: " + property.lot);
+    dataArr.push("Anslutning: " + property.fiberConnection);
+    dataArr.push("Tomtstorlek: " + property.lot + " kvm");
     dataArr.push("V/A: " + property.waterAndSewer);
     dataArr.push("Uppvärming: " + property.heating);
-
+    if (property.garage == "checked") {
+      dataArr.push("Garage finns");
+    }
   }
   else {
-    dataArr.push("Balkong: " + property.balcony);
-    dataArr.push("Hiss: " + property.elevator);
-    dataArr.push(property.fee + " SEK");
+    dataArr.push("Månadsavgift: " + property.fee + " SEK");
     dataArr.push("Våning: " + property.floor);
-    dataArr.push("Parkering: " + property.parking);
-    dataArr.push("Uteplats: " + property.patio);
-    dataArr.push("Förråd: " + property.storeHouse);
+    if (property.balcony == "checked") {
+      dataArr.push("Balkong finns");
+    } if (property.elevator == "checked") {
+      dataArr.push("Hiss finns");
+    } if (property.parking == "checked") {
+       dataArr.push("Parkering finns");
+    } if (property.patio == "checked") {
+      dataArr.push("Uteplats finns");
+    } if (property.storeHouse == "checked") {
+      dataArr.push("Förråd finns");
+    }
   }
   return dataArr;
 }

@@ -23,6 +23,8 @@ function listProperties(objectList) {
     pTagArea.innerText = objectList[i].kvmArea + " kvm"
 
     objectSection.addEventListener("click", function (event) {
+      const clickProperty = event.currentTarget
+      clickProperty.classList.add('showProperty')
       let propertyType = "apartment"
       objectSection.innerHTML = ""
       if (objectList[i].fee == undefined) {
