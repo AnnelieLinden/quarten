@@ -87,22 +87,22 @@ export default async function findProperty(buyForm) {
       if (locationInputArr[3].checked && propertyList[i].community === "Stockholm") {
         addToFilterdList = true;
       }
-      if (priceInputArr[0].checked && parseInt(propertyList[i].startBid) >= 1000000) {
+      if (priceInputArr[0].checked && parseInt(propertyList[i].startBid) <= 1000000) {
         addToFilterdList = true;
       }
-      if (priceInputArr[1].checked && parseInt(propertyList[i].startBid) >= 2000000) {
+      if (priceInputArr[1].checked && parseInt(propertyList[i].startBid) <= 2000000) {
         addToFilterdList = true;
       }
-      if (priceInputArr[2].checked && parseInt(propertyList[i].startBid) >= 4000000) {
+      if (priceInputArr[2].checked && parseInt(propertyList[i].startBid) <= 4000000) {
         addToFilterdList = true;
       }
-      if (priceInputArr[3].checked && parseInt(propertyList[i].startBid) >= 6000000) {
+      if (priceInputArr[3].checked && parseInt(propertyList[i].startBid) <= 6000000) {
         addToFilterdList = true;
       }
-      if (priceInputArr[4].checked && parseInt(propertyList[i].startBid) >= 8000000) {
+      if (priceInputArr[4].checked && parseInt(propertyList[i].startBid) <= 8000000) {
         addToFilterdList = true;
       }
-      if (priceInputArr[5].checked && parseInt(propertyList[i].startBid) >= 10000000) {
+      if (priceInputArr[5].checked && parseInt(propertyList[i].startBid) <= 10000000) {
         addToFilterdList = true;
       }
       if (areaInputArr[0].checked && parseInt(propertyList[i].kvmArea) >= 30) {
