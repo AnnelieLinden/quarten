@@ -49,6 +49,7 @@ export default function createSellerVeiw(validUser, form) {
     });
 
     sellerSection.addEventListener("click", async function (event) {
+      debugger
       event.preventDefault();
       const dataLength = await getAllProperties();
       const sellFormData = event.target.innerText;

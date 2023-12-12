@@ -1,6 +1,126 @@
 {
   "data": [
- 
+    {
+      "address": "Fredriksväg",
+      "community": "Stockholm",
+      "startBid": "5000000",
+      "kvmArea": "74",
+      "buildYear": "1985",
+      "amountRoom": "3",
+      "info": "Välkommen till en modern 3:a med eftermiddags- och kvällssol Vill du dessutom att bostaden ska ligga i en ekonomiskt stabil förening och ha max 5 minuter till t-bana, bussar och service?",
+      "fee": "5274",
+      "balcony": "checked",
+      "floor": "2",
+      "elevator": "checked",
+      "storeHouse": "checked",
+      "parking": "checked",
+      "id": 1
+    },
+    {
+      "address": "Norra Flymenvägen 2",
+      "community": "Karlskrona",
+      "startBid": "1420000",
+      "kvmArea": "174",
+      "buildYear": "2008",
+      "amountRoom": "6",
+      "info": "Enplansvilla med källare byggd 1938 och tillbyggd på 2011. Huset är väldisponerat och här finns gott om plats på 146 kvadratmeter med fem sovrum och två badrum och separat tvättstuga. Vardagsrummet är rymligt, här finns plats för både soffgrupp o matbord. Från vardagsrummet nås en stora altan med plats för poolen och med eftermiddags- kvällssol. Välplanerat kök med intilliggande matplats.\nEn trappa upp finns oinredd vind.\nTrädgård med med utrymme för lek o spel. Garage med plats för två bilar och förvaring samt rymlig uppfart.",
+      "lot": "2462",
+      "garage": "checked",
+      "waterAndSewer": "kommunalt vatten och avlopp",
+      "fiberConnection": "Fiber",
+      "id": 2
+    },
+    {
+      "address": "Vagnmakaregatan 13",
+      "community": "Malmö",
+      "startBid": "2350000",
+      "kvmArea": "82",
+      "buildYear": "1979",
+      "amountRoom": "3",
+      "info": "Direkt innanför dörren möts du av genomgående parkettgolv och sobra färgval som skapar en varm och inbjudande atmosfär. Den luftiga planlösningen ger dig gott om utrymme att leva och umgås, och det generösa ljusinsläppet skapar en känsla av luftighet.\nTre bra sovrum ger plats för hela familjen och ackompanjeras av ett helkaklat badrum, bekvämt utrustat med tvättmaskin samt ett fullt utrustat kök. Lägg där till vardagsrum med plats för både soffa och matrumsmöblemang. Dessutom med strålande ljusinsläpp från fönster i två väderstreck tack vare det attraktiva gavelläget",
+      "fee": "6124",
+      "balcony": "checked",
+      "floor": "3",
+      "elevator": "checked",
+      "storeHouse": "checked",
+      "parking": "checked",
+      "id": 3
+    },
+    {
+      "address": "Hultavägen 4",
+      "community": "Ronneby",
+      "startBid": "1300000",
+      "kvmArea": "120",
+      "buildYear": "1920",
+      "amountRoom": "4",
+      "info": "Bostad i Ronneby med närhet till centrum , kommunikationer, skola, livsmedelsaffärer och allmän service. Huset har 4 rok och är nyrenoverat med nytt kök, toalett, ny el, nya innerdörrar, bytt de flesta fönsterna och nymålat invändigt och utvändigt. Även uthuset är renoverat med nytt tak och takstolar, ytterdörrar, nymålat invändigt och utvändigt, ny el och vatten.",
+      "lot": "520",
+      "garage": "checked",
+      "waterAndSewer": "kommunalt vatten och avlopp",
+      "fiberConnection": "fiber ej anslutet",
+      "id": 4
+    },
+    {
+      "address": "Brogatan 35",
+      "community": "Stockholm",
+      "startBid": "2990000",
+      "kvmArea": "42",
+      "buildYear": "1978",
+      "amountRoom": "1",
+      "info": "Äntligen saluförs denna optimala tvårummare med ljuvlig utsikt. Bo högt upp i huset med balkong i soligt västerläge. Bostaden har en yteffektiv planlösning, gott om förvaringsmöjligheter samt fint ljusflöde från stora fönsterpartier. En perfekt bostad med allt du behöver! Bo på charmiga Lilla Essingen med bara några meter till vatten och närmsta matbutik. För större sällskap finns föreningens gemensamma takterrass med vacker utsikt. Området erbjuder närhet till all tänkbar service, flertalet restauranger och caféer, mysiga promenadstråk, badplatser och kommunikationer. Varmt välkomna på visning, en bostad som måste upplevas!",
+      "fee": "2334",
+      "balcony": "checked",
+      "floor": "1",
+      "elevator": "checked",
+      "storeHouse": "checked",
+      "parking": "checked",
+      "id": 5
+    },
+    {
+      "address": "Murvägen 4",
+      "community": "Karlskrona",
+      "startBid": "3250000",
+      "kvmArea": "140",
+      "buildYear": "1985",
+      "amountRoom": "4",
+      "info": "Välkommen till denna vackra villa, belägen endast 500 meter från havet på natursköna Senoren, där varje detalj av såväl interiören som exteriören är noggrant genomtänkt. Byggt år 2022 i en imponerande sekelskiftesstil sträcker sig detta tvåplanshus över en stor tomt med vackra stenmurar och panoramautsikt över omgärdande fält. Här möts stil och funktionalitet på ett exemplariskt sätt. Som komplement finns även ett isolerat dubbelgarage med förråd. För den odlingsintresserade ingår även en odlingslott om 1000 kvm som är belägen på bekvämt avstånd en bit bort.",
+      "lot": "628",
+      "garage": "checked",
+      "waterAndSewer": "djupborrad brunn och eget avlopp",
+      "fiberConnection": "Fiber",
+      "id": 6
+    },
+    {
+      "address": "Havby",
+      "community": "Malmö",
+      "startBid": "1200000",
+      "kvmArea": "45",
+      "buildYear": "1954",
+      "amountRoom": "1",
+      "info": "Perfekta 1:a bostaden! Välplanerad och praktisk lägenhet högst upp med hiss och fransk balkong. Stilrent, nytt helkaklat badrum med dusch. Renoverat kök med gedigna trä-luckor samt ny ekparkett i hela lägenheten. Ett hem där det \"bara är att flytta in\" och njuta av!",
+      "fee": "3245",
+      "balcony": "checked",
+      "floor": "2",
+      "elevator": "checked",
+      "storeHouse": "checked",
+      "parking": "checked",
+      "id": 7
+    },
+    {
+      "address": "Johannishusvägen 14",
+      "community": "Ronneby",
+      "startBid": "1200000",
+      "kvmArea": "152",
+      "buildYear": "1946",
+      "amountRoom": "5",
+      "info": "Mysigt boende beläget i utkanten av samhället i lugnt område. Trivsam äldre villa som löpande har underhållits samt viss renovering som gjorts under senare år bl a badrum. Uppvuxen trädgård med fruktträd och bär och med utsikt över åkrar och mot ån. Uppvärmning via vattenburet värmesystem samt luftvärmepump. Fastigheten säljes med friskrivningsklausul. Besiktningsprotokoll finns, utfört av säljaren ifrån 2022. Vattenbrunn på tomten med elektrisk pump som kan användas till bevattning. 200 meter till plantskola och ICA butik med bra utbud. Välkommen på visning!\n",
+      "lot": "1020",
+      "garage": "checked",
+      "waterAndSewer": "kommunalt vatten och avlopp",
+      "fiberConnection": "Fiber",
+      "id": 8
+    }
+
   ],
   "users": [
     {
@@ -10,8 +130,96 @@
     }
   ],
   "saleForms": [
+    {
+      "address": "Trädgårdsgatan 4a",
+      "community": "Malmö",
+      "startBid": "3400000",
+      "kvmArea": "82",
+      "buildYear": "1984",
+      "amountRoom": "3",
+      "info": "På Stora trädgårdsgatan 3C har du nu möjlighet att förvärva denna charmiga trerummare vid det populära Drottningtorget. Belägen på fjärde våningen, bjuder lägenheten på en ljus och smakfull interiör med en tilltalande planlösning. Det smakfulla köket, det generösa vardagsrummet, de två sovrummen och det helkaklade badrummet med tvättmöjligheter utgör harmoniska miljöer. Dessutom finns en härlig balkong för stunder av avkoppling. Här bor man i en stabil och omtyckt föreningen belägen på bästa läge i city med Drottningtorget och dess trevliga utbud med restauranger runt hörnet och för pendlaren är Malmö Centralstation endast ett stenkast bort. Varmt välkomna på visning!",
+      "fee": "3863",
+      "balcony": "checked",
+      "floor": "5",
+      "elevator": "checked",
+      "storeHouse": "checked",
+      "parking": "checked",
+      "id": 10
+    },
+    {
+      "address": "Älgbacken 12B",
+      "community": "Ronneby",
+      "startBid": "2100000",
+      "kvmArea": "94",
+      "buildYear": "1956",
+      "amountRoom": "3",
+      "info": "Lägenheten har renoverats och är i mycket gott skick genomgående, bara att flytta in.\nHär finns ett bra kök, stort vardagsrum med inglasad balkong och två sovrum. Fönster åt båda håll som ger ett bra ljusinsläpp.\nOmrådet är välhållet och direkt när du parkerar bilen så ser man att allt är mycket väl i ordning.",
+      "fee": "4200",
+      "balcony": "checked",
+      "floor": "1",
+      "elevator": "checked",
+      "storeHouse": "checked",
+      "parking": "checked",
+      "id": 11
+    },
+    {
+      "address": "Västerholm",
+      "community": "Stockholm",
+      "startBid": "4850000",
+      "kvmArea": "132",
+      "buildYear": "1954",
+      "amountRoom": "5",
+      "info": "Välkommen till denna vackra 50-talsvilla i eftertraktat område. Huset har löpande underhållits och renoverats i en och samma ägares regi sedan byggåret. Det höga läget och den stora naturtomten med majestätiska tallarna ger dig en unik, lugn och insynsskyddad boendemiljö. Den putsade 1-plansvillan har härliga sociala ytor och fyra möjliga sovrum.",
+      "lot": "1234",
+      "garage": "checked",
+      "waterAndSewer": "kommunalt vatten och avlopp",
+      "fiberConnection": "Fiber",
+      "id": 12
+    },
+    {
+      "address": "Rosenholmsvägen 13F",
+      "community": "Karlskrona",
+      "startBid": "545000",
+      "kvmArea": "66",
+      "buildYear": "1967",
+      "amountRoom": "2",
+      "info": "Trevlig och välplanerad med genomgående planlösning! Balkong i västerläge som kan inglasas. Stort vardagsrum, skönt sovrum och bra kök. Stort förråd en halvtrappa upp. Luftig läge med trevliga grönytor direkt utanför. Bra parkeringsmöjligheter.",
+      "fee": "5832",
+      "balcony": "checked",
+      "floor": "2",
+      "elevator": "checked",
+      "storeHouse": "checked",
+      "parking": "checked",
+      "id": 13
+    },
+    {
+      "address": "Valdemarsrovägen 3",
+      "community": "Malmö",
+      "startBid": "4300000",
+      "kvmArea": "130",
+      "buildYear": "1977",
+      "amountRoom": "5",
+      "info": "Entréplan är hjärtat av detta hem med generösa sociala ytor. Här hittar du ett centralt placerat allrum där en mysig braskamin sprider värme och skapar en trivsam atmosfär. I fil med allrummet ligger ett lika inbjudande vardagsrum där familj och vänner kan samlas och umgås. Det sociala köket är perfekt för matlagning och underhållning, och det inkluderar även ett välinrett skafferi för förvaring och organisation. Dessutom finner du ett helkaklat badrum med ett härligt badkar samt en separat tvättstuga, vilket gör vardagslivet smidigt och bekvämt.",
+      "lot": "1111",
+      "garage": "checked",
+      "waterAndSewer": "kommunalt vatten och avlopp",
+      "fiberConnection": "Fiber",
+      "id": 14
+    },
+    {
+      "address": "Kalleberga 35",
+      "community": "Ronneby",
+      "startBid": "535000",
+      "kvmArea": "72",
+      "buildYear": "1904",
+      "amountRoom": "2",
+      "info": "Äldre hus belägen på en stor tomt delvis omgärdad av stengärdesgård. Bostaden har ett stort renoveringsbehov både interiört och exteriört. Kommunalt vatten och och avlopp är indraget i fastigheten. På tomten finns ett gårdshus med vedbod och tidigare tvättstuga. Friskrivningsklausul kommer att tillämpas. Nära all tänkbar service och kommunikation. Välkommen på visning!",
+      "lot": "3204",
+      "garage": "checked",
+      "waterAndSewer": "enskilt avlopp och enskilt vatten",
+      "fiberConnection": "Ej anslutet till fiber.",
+      "id": 15
+    }
   ],
-  "generalForms": [
-
-  ]
+  "generalForms": []
 }
