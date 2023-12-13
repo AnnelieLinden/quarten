@@ -19,14 +19,14 @@ export default function generalForm() {
     const input = document.createElement('input');
     const lineBreak = document.createElement("br");
     input.type = "text";
-    label.innerText = generalFormNames[i];    
-    generalFormCreate.appendChild(label);    
+    label.innerText = generalFormNames[i];
+    generalFormCreate.appendChild(label);
     generalFormCreate.appendChild(input);
     generalFormCreate.appendChild(lineBreak);
   }
   const messageLabel = document.createElement('label')
   messageLabel.setAttribute('id', 'messageLabel')
-  messageLabel.innerText="Meddelande:"
+  messageLabel.innerText = "Meddelande:"
   const messageInput = document.createElement('textarea')
   messageInput.setAttribute('id', 'message')
 
@@ -34,23 +34,20 @@ export default function generalForm() {
   submitBtn.setAttribute('type', 'submit');
   submitBtn.setAttribute('id', 'generalFormBtn')
   submitBtn.innerText = 'Send Message';
-  generalFormCreate.appendChild(messageLabel)  
+  generalFormCreate.appendChild(messageLabel)
   generalFormCreate.appendChild(messageInput)
   generalFormCreate.appendChild(submitBtn);
 
-  let sendMessage = "";
-
   submitBtn.addEventListener('click', async function (event) {
     event.preventDefault();
-    addGenaralForm()
     const allInput = document.querySelectorAll('input');
+    const formTextArea = document.getElementById("message");
     generalFormObj.firstName = allInput[0].value
     generalFormObj.lastName = allInput[1].value
     generalFormObj.phoneNumber = allInput[2].value
     generalFormObj.mailAddress = allInput[3].value
-    generalFormObj.messageInfo = allInput[4].value
+    generalFormObj.messageInfo = formTextArea.value;
     await addGenaralForm(generalFormObj);
-  
   });
   content.appendChild(generalFormCreate);
 }
