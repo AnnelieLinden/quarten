@@ -234,6 +234,12 @@ footer {
   border: solid #7291c0 4px;
 }
 
+#logInForm>button {
+  font-family: 'Oswald';
+  width:fit-content;
+  font-size: x-large;
+}
+
 /*-------ContactUsPage---------*/
 #generalQuestionsForm {
   margin-top: 5vh;
