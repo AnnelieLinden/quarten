@@ -26,6 +26,10 @@ export default function createSellerVeiw(validUser, form) {
         const paragraf = createParagraf();
         const generalPSection = createSection();
         generalPSection.id = "generalPSecton" + i;
+        generalPSection.style.backgroundColor = 'antiquewhite';
+        generalPSection.style.borderStyle = 'double';
+        generalPSection.style.borderColor = 'black';
+        generalPSection.style.fontFamily = 'Calibri';
         paragraf.innerText = Object.values(generalMsg[i]);
         generalPSection.appendChild(paragraf);
         generalSection.appendChild(generalPSection);
@@ -45,6 +49,10 @@ export default function createSellerVeiw(validUser, form) {
         const paragraf = createParagraf();
         const sellPSection = createSection();
         sellPSection.id = "sellPSection" + i;
+        sellPSection.style.backgroundColor = 'antiquewhite';
+        sellPSection.style.borderStyle = 'double';
+        sellPSection.style.borderColor = 'black';
+        sellPSection.style.fontFamily = 'Calibri';
         paragraf.innerText = Object.values(sellerMsg[i]);
         sellPSection.appendChild(paragraf);
         sellerSection.appendChild(sellPSection);
