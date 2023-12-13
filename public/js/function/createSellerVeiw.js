@@ -20,6 +20,8 @@ export default function createSellerVeiw(validUser, form) {
       const generalMsg = await getAllGeneralMsg();
       generalSection.innerHTML = "";
       sellerSection.innerHTML = "";
+      buttonGeneralMsg.style.backgroundColor = 'yellowgreen';
+      buttonSellerMsg.style.backgroundColor = 'antiquewhite';
       for (var i = 0; i < generalMsg.length; i++) {
         const paragraf = createParagraf();
         const generalPSection = createSection();
@@ -36,6 +38,8 @@ export default function createSellerVeiw(validUser, form) {
       const sellerMsg = await getAllSaleMsg();
       generalSection.innerHTML = "";
       sellerSection.innerHTML = "";
+      buttonSellerMsg.style.backgroundColor = 'yellowgreen';
+      buttonGeneralMsg.style.backgroundColor = 'antiquewhite';
       dataStorage = sellerMsg;
       for (var i = 0; i < sellerMsg.length; i++) {
         const paragraf = createParagraf();

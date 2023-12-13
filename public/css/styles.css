@@ -234,6 +234,12 @@ footer {
   box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
+#logInForm>button {
+  font-family: 'Oswald';
+  width:fit-content;
+  font-size: x-large;
+}
+
 /*-------ContactUsPage---------*/
 #generalQuestionsForm {
   margin-top: 5vh;
