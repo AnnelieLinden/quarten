@@ -202,6 +202,7 @@ footer {
 }
 .showProperty {
   width: 100% !important;
+  padding: 2vh;
 }
 
 #pTagAddress {
