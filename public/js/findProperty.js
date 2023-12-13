@@ -213,7 +213,7 @@ function searchArea() {
 function searchPrice() {
   const priceLabel = document.createElement('label')
   priceLabel.setAttribute('id', 'buyTitle')
-  priceLabel.innerText = "Utgångspris:"
+  priceLabel.innerText = "Maxpris:"
 
   const maxPriceLabel = document.createElement('label')
   const maxPriceLabel1 = document.createElement('label')
