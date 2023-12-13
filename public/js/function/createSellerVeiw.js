@@ -58,7 +58,7 @@ export default function createSellerVeiw(validUser, form) {
         if (dataStorage[i].id == id) {
           dataStorage[i].id = dataLength.length + 1;
           await addProperty(dataStorage[i]);
-          await removeProperty(dataStorage[i].id - 1);
+          await removeProperty(id);
           alert("Bostaden laddas upp till mäklarsidan.");
         }
 
