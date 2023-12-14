@@ -338,19 +338,68 @@
     },
     {
       "type": "Villa",
-      "address": "Rödebyvägen 4",
-      "community": "Malmö",
+      "address": "Byavägen 4",
+      "community": "Karlskrona",
       "startBid": "2500000",
       "kvmArea": "112",
       "buildYear": "1989",
       "amountRoom": "3",
-      "info": "aaa",
+      "info": "bla bla",
       "lot": "1360",
       "garage": "checked",
       "waterAndSewer": "kommunalt vatten och avlopp",
       "fiberConnection": "fiber",
       "heating": "pellets",
       "id": 22
+    },
+    {
+      "type": "Villa",
+      "address": "Byavägen 4",
+      "community": "Karlskrona",
+      "startBid": "2500000",
+      "kvmArea": "112",
+      "buildYear": "1989",
+      "amountRoom": "3",
+      "info": "bla bla",
+      "lot": "1360",
+      "garage": "checked",
+      "waterAndSewer": "kommunalt vatten och avlopp",
+      "fiberConnection": "fiber",
+      "heating": "pellets",
+      "id": 23
+    },
+    {
+      "type": "Villa",
+      "address": "Byavägen 4",
+      "community": "Karlskrona",
+      "startBid": "2500000",
+      "kvmArea": "112",
+      "buildYear": "1989",
+      "amountRoom": "3",
+      "info": "bla bla",
+      "lot": "1360",
+      "garage": "checked",
+      "waterAndSewer": "kommunalt vatten och avlopp",
+      "fiberConnection": "fiber",
+      "heating": "pellets",
+      "id": 24
+    },
+    {
+      "type": "Bostadsrätt",
+      "address": "Drottninggatan 32",
+      "community": "Karlskrona",
+      "startBid": "3400000",
+      "kvmArea": "64",
+      "buildYear": "1958",
+      "amountRoom": "2",
+      "info": "bla bla",
+      "fee": "3367",
+      "balcony": "checked",
+      "floor": "4",
+      "elevator": "checked",
+      "storeHouse": "checked",
+      "parking": "checked",
+      "id": 25
     }
   ],
   "users": [
@@ -361,7 +410,9 @@
     }
   ],
   "saleForms": [
- 
+   
   ],
-  "generalForms": []
+  "generalForms": [
+
+  ]
 }

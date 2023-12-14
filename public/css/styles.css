@@ -241,6 +241,7 @@ footer {
   font-family: 'Oswald';
   width: fit-content;
   font-size: x-large;
+  margin:1vh;
 }
 
 /*-------ContactUsPage---------*/
@@ -289,16 +290,28 @@ footer {
   font-family: 'Oswald';
 }
 
+/*-------BrokerPage---------*/
 form>section>section>section>p {
   max-width: 70vh;
   overflow-wrap: break-word;
+  margin: 2vh;
 }
+
+form>section>section>section {
+  margin: 2vh;
+}
+
 
 @media screen and (max-width: 450px) {
   #saleForm {
     width: 100%;
-    height: 240vh;
+    height: 100%;
     font-size: 2vh;
+  }
+
+  #logInForm {
+    max-width: 100%;
+
   }
 
   #content>a {
@@ -346,6 +359,7 @@ form>section>section>section>p {
 
   #generalFormBtn {
     margin-left: 0px;
+    margin-top: 2vh;
   }
 
   #fieldset {
@@ -374,6 +388,22 @@ form>section>section>section>p {
   }
 
   #objectSection {
-    width: 90%;
+    width: 100%;
+    margin-left: 0vh;
+    margin-right: 0vh;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  #propertiesSection {
+    flex-direction: column;
+    display: flex;
+  }
+
+  #objectSection {
+    width: 100%;
+    margin-left: 0vh;
+    margin-right: 0vh;
   }
 }
