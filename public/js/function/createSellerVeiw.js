@@ -30,6 +30,7 @@ export default function createSellerVeiw(validUser, form) {
         generalPSection.style.borderStyle = 'double';
         generalPSection.style.borderColor = 'black';
         generalPSection.style.fontFamily = 'Calibri';
+        generalPSection.style.maxWidth = "70vh";
         paragraf.innerText = Object.values(generalMsg[i]);
         generalPSection.appendChild(paragraf);
         generalSection.appendChild(generalPSection);
@@ -53,6 +54,7 @@ export default function createSellerVeiw(validUser, form) {
         sellPSection.style.borderStyle = 'double';
         sellPSection.style.borderColor = 'black';
         sellPSection.style.fontFamily = 'Calibri';
+        sellPSection.style.maxWidth = "70vh";
         paragraf.innerText = Object.values(sellerMsg[i]);
         sellPSection.appendChild(paragraf);
         sellerSection.appendChild(sellPSection);
