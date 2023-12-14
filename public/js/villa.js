@@ -18,5 +18,4 @@ export default class Villa extends Property {
     this.heating = heating;
 
   }
-
 }

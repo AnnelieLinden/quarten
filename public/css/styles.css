@@ -195,7 +195,6 @@ footer {
   flex-wrap: wrap;
   flex-direction: column;
   align-content: center;
-
   height: 100%;
   width: 20%;
   font-family: 'Oswald';
@@ -233,6 +232,13 @@ footer {
   padding: 3vh;
   border-radius: 40px 40px 40px 40px;
   box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.75);
+  border: solid #7291c0 4px;
+}
+
+#logInForm>button {
+  font-family: 'Oswald';
+  width:fit-content;
+  font-size: x-large;
 }
 
 /*-------ContactUsPage---------*/

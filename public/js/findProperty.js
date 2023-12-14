@@ -45,7 +45,7 @@ function listProperties(objectList) {
 
 export default async function findProperty(buyForm) {
 
-  const propertyList = await getAllProperties(); //hämtar datan från json genom getAllProperties och data array i json, och i propertyList hamnar listan som objekt
+  const propertyList = await getAllProperties();
   const pTag = document.createElement('p')
   pTag.setAttribute('id', 'pTag')
   pTag.innerText = "Hitta din bostad!"
@@ -145,13 +145,13 @@ export default async function findProperty(buyForm) {
 function appendBuyForm(buyForm, pTag, propertyLabel, fieldset10, neighborhoodLabel, fieldset20, priceLabel, fieldset30, areaLabel, fieldset40) {
   buyForm.appendChild(pTag)
   buyForm.appendChild(propertyLabel)
-  buyForm.appendChild(fieldset10) //för att gruppera bostadstyp
+  buyForm.appendChild(fieldset10)
   buyForm.appendChild(neighborhoodLabel)
-  buyForm.appendChild(fieldset20) //för att gruppera områden
+  buyForm.appendChild(fieldset20)
   buyForm.appendChild(priceLabel)
-  buyForm.appendChild(fieldset30) //för att gruppera maxpris
+  buyForm.appendChild(fieldset30)
   buyForm.appendChild(areaLabel)
-  buyForm.appendChild(fieldset40) //för att gruppera bostadsarea
+  buyForm.appendChild(fieldset40)
 
   content.appendChild(buyForm)
 }
@@ -198,7 +198,7 @@ function searchArea() {
   minAreaInput6.setAttribute('name', 'community')
 
   const fieldset40 = document.createElement('fieldset')
-  fieldset40.setAttribute('id', 'fieldset') //för att få bort ramen runt fältet 
+  fieldset40.setAttribute('id', 'fieldset')
   fieldset40.appendChild(minAreaLabel)
   fieldset40.appendChild(minAreaInput)
   fieldset40.appendChild(minAreaLabel2)
@@ -213,7 +213,7 @@ function searchArea() {
 function searchPrice() {
   const priceLabel = document.createElement('label')
   priceLabel.setAttribute('id', 'buyTitle')
-  priceLabel.innerText = "Utgångspris:"
+  priceLabel.innerText = "Maxpris:"
 
   const maxPriceLabel = document.createElement('label')
   const maxPriceLabel1 = document.createElement('label')
@@ -270,7 +270,7 @@ function searchPrice() {
   maxPriceInput10.setAttribute('name', 'community')
 
   const fieldset30 = document.createElement('fieldset')
-  fieldset30.setAttribute('id', 'fieldset') //för att få bort ramen runt fältet 
+  fieldset30.setAttribute('id', 'fieldset') 
   fieldset30.appendChild(maxPriceLabel)
   fieldset30.appendChild(maxPriceInput)
   fieldset30.appendChild(maxPriceLabel2)
@@ -287,7 +287,7 @@ function searchPrice() {
 }
 
 function searchCommunity() {
-  const neighborhoodLabel = document.createElement('label') //bostadsområde
+  const neighborhoodLabel = document.createElement('label')
   neighborhoodLabel.setAttribute('id', 'buyTitle')
   neighborhoodLabel.innerText = "Område:"
 
@@ -327,7 +327,7 @@ function searchCommunity() {
   communityInput6.setAttribute('name', 'community')
 
   const fieldset20 = document.createElement('fieldset')
-  fieldset20.setAttribute('id', 'fieldset') //för att få bort ramen runt fältet 
+  fieldset20.setAttribute('id', 'fieldset') 
   fieldset20.appendChild(communityLabel)
   fieldset20.appendChild(communityInput)
   fieldset20.appendChild(communityLabel2)
@@ -362,7 +362,7 @@ function searchPropertyType() {
   villaInput.setAttribute('name', 'villa')
 
   const fieldset10 = document.createElement('fieldset')
-  fieldset10.setAttribute('id', 'fieldset') //för att få bort ramen runt fältet
+  fieldset10.setAttribute('id', 'fieldset')
   fieldset10.appendChild(apartmentLabel)
   fieldset10.appendChild(apartmentInput)
   fieldset10.appendChild(villaLabel)
