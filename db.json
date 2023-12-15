@@ -338,14 +338,14 @@
     },
     {
       "type": "Villa",
-      "address": "Byavägen 4",
+      "address": "Skolvägen 13",
       "community": "Karlskrona",
       "startBid": "2500000",
-      "kvmArea": "112",
-      "buildYear": "1989",
-      "amountRoom": "3",
-      "info": "bla bla",
-      "lot": "1360",
+      "kvmArea": "135",
+      "buildYear": "1986",
+      "amountRoom": "4",
+      "info": "Välkomna till en mycket välskött villa på en lugn återvändsgata i Lindesberg. Här erbjuds en fastighet med en fin insynsskyddad trädgård som angränsar till ett skogsparti. Huset har en ljus och fräsch interiör och många stora renoveringar är gjorda. Huset har bland annat nytt tak, nya fönster, fjärrvärme, fiber, renoverat badrum och en trevlig relaxavdelning med bubbelbad och bastu. Med tre sovrum och stora öppna sällskapsytor passar huset perfekt för en barnfamilj. Extra plus är det renoverade garaget med målade golv och väggar samt nytt tak. Detta hus måste ses, varmt välkomna att anmäla ert intresse redan nu och boka in en tidigare visning!",
+      "lot": "1150",
       "garage": "checked",
       "waterAndSewer": "kommunalt vatten och avlopp",
       "fiberConnection": "fiber",
@@ -353,53 +353,21 @@
       "id": 22
     },
     {
-      "type": "Villa",
-      "address": "Byavägen 4",
-      "community": "Karlskrona",
-      "startBid": "2500000",
-      "kvmArea": "112",
-      "buildYear": "1989",
-      "amountRoom": "3",
-      "info": "bla bla",
-      "lot": "1360",
-      "garage": "checked",
-      "waterAndSewer": "kommunalt vatten och avlopp",
-      "fiberConnection": "fiber",
-      "heating": "pellets",
-      "id": 23
-    },
-    {
-      "type": "Villa",
-      "address": "Byavägen 4",
-      "community": "Karlskrona",
-      "startBid": "2500000",
-      "kvmArea": "112",
-      "buildYear": "1989",
-      "amountRoom": "3",
-      "info": "bla bla",
-      "lot": "1360",
-      "garage": "checked",
-      "waterAndSewer": "kommunalt vatten och avlopp",
-      "fiberConnection": "fiber",
-      "heating": "pellets",
-      "id": 24
-    },
-    {
       "type": "Bostadsrätt",
-      "address": "Drottninggatan 32",
-      "community": "Karlskrona",
+      "address": "Karlskronagatan 16",
+      "community": "Ronneby",
       "startBid": "3400000",
       "kvmArea": "64",
       "buildYear": "1958",
       "amountRoom": "2",
-      "info": "bla bla",
+      "info": "En ljus och hemtrevlig gavellägenhet om tre rum och kök med balkong i Ronneby centrum! Kök med ny bänkskiva och plats för matgrupp. Vardagsrum med fönster i två väderstreck och utgång till möblerbar balkong (utbyggd 2020) med eftermiddagssol. Gästtoalett och kaklat badrum med dusch och toppmatad tvättmaskin. Bekvämt boende med 3-glasfönster och säkerhetsdörr.",
       "fee": "3367",
       "balcony": "checked",
       "floor": "4",
       "elevator": "checked",
       "storeHouse": "checked",
       "parking": "checked",
-      "id": 25
+      "id": 23
     }
   ],
   "users": [
@@ -409,10 +377,15 @@
       "pass": "4444"
     }
   ],
-  "saleForms": [
-   
-  ],
+  "saleForms": [],
   "generalForms": [
-
+    {
+      "firstName": "Annelie",
+      "lastName": "Linden",
+      "phoneNumber": "070000000",
+      "mailAddress": "***************",
+      "messageInfo": "** Meddelandet står här **",
+      "id": 1
+    }
   ]
 }
